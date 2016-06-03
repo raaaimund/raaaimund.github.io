@@ -21,7 +21,10 @@ I am a programmer with a passion for web applications, cooking and everything re
 With this Blog I'll try to share my daily issues and their solutions while programming, simple projects and also other stuff that comes in my mind.
 
 Checkout our Youtube Channel [informatics.how][4] about serious algorithms explained the easy way.
-{% youtube Wsl8Ah4acFM %}
+<div class="embed-responsive embed-responsive-16by9">
+  <iframe class="embed-responsive-item" width="560" height="315" src="https://www.youtube.com/embed/Wsl8Ah4acFM" frameborder="0" allowfullscreen>
+  </iframe>
+</div>
 
 I hope you enjoy reading!
 
