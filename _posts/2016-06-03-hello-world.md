@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      Hello World
-date:       2016-06-03 16:37:57
+date:       2016-06-02 16:37:57
 author:     Raimund Rittnauer
 summary:    My first entry
 categories: jekyll
@@ -11,15 +11,17 @@ tags:
  - world
 ---
 
-{% console.log('hello world'); %}
+{% highlight ruby %}
+console.log('hello world');
+{% endhighlight %}
 
 This is my [personal blog][1] using the [Carte Noire][2] theme for [Jekyll][3] from Jacob Tomlinson.
 
 I am a programmer with a passion for web applications, cooking and everything regarding Microsoft.
-With this Blog I'll try to share my daily issues and their solutions while programming, simple projects and also other stuff what comes in my mind.
+With this Blog I'll try to share my daily issues and their solutions while programming, simple projects and also other stuff that comes in my mind.
 
-Checkout our Youtube Channel [informatics.how][4].
-<iframe src="http://www.youtube.com/embed/?listType=user_uploads&list=YOURCHANNELNAME" width="480" height="400"></iframe>
+Checkout our Youtube Channel [informatics.how][4] about serious algorithms explained the easy way.
+{% youtube Wsl8Ah4acFM %}
 
 I hope you enjoy reading!
 
