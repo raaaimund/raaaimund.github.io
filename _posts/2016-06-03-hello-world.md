@@ -23,7 +23,6 @@ With this Blog I'll try to share my daily issues and their solutions while progr
 Checkout our Youtube Channel [informatics.how][4] about serious algorithms explained the easy way.
 {% youtube Wsl8Ah4acFM %}
 
-
 I hope you enjoy reading!
 
 [1]: http://rittnauer.at
