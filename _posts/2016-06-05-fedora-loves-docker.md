@@ -22,14 +22,14 @@ There is a fancy dashboard with all stats about your running containers and you 
 ![Terminal][fedora-terminal]{:class="image-responsive"}
 
 Finished
-* Teamspeak 3 Server server.rittnauer.at. ([devalx/docker-teamspeak3][1]{:target="_blank"})
-* Musicbot for Teamspeak 3 running [sinusbot][2]{:target="_blank"}. ([raaaimund/docker-sinusbot-beta][3]{:target="_blank"})
-* Another bot called 'Kevin' for Teamspeak 3 running JTS3 Servermod. This bot is just for welcome messages and administrative stuff. ([raaaimund/docker-jts3servermod][4]{:target="_blank"})
+  * Teamspeak 3 Server server.rittnauer.at. ([devalx/docker-teamspeak3][1]{:target="_blank"})
+  * Musicbot for Teamspeak 3 running [sinusbot][2]{:target="_blank"}. ([raaaimund/docker-sinusbot-beta][3]{:target="_blank"})
+  * Another bot called 'Kevin' for Teamspeak 3 running JTS3 Servermod. This bot is just for welcome messages and administrative stuff. ([raaaimund/docker-jts3servermod][4]{:target="_blank"})
 
 In progress
-* DNS tunnel with a container where Iodine is running. ([raaaimund/docker-iodine][5]{:target="_blank"})
-* Cooking blog based on WordPress called kochzombie.at. ([wordpress][6]{:target="_blank"})
-* Nodejs server which is listening to incoming SMS over a USB GSM Modem. The content is parsed and pushed to all connected clients.
+  * DNS tunnel with a container where Iodine is running. ([raaaimund/docker-iodine][5]{:target="_blank"})
+  * Cooking blog based on WordPress called kochzombie.at. ([wordpress][6]{:target="_blank"})
+  * Nodejs server which is listening to incoming SMS over a USB GSM Modem. The content is parsed and pushed to all connected clients.
 
 [1]: https://hub.docker.com/r/devalx/docker-teamspeak3/
 [2]: https://www.sinusbot.com/
