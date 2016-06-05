@@ -39,4 +39,4 @@ In progress
 [6]: https://hub.docker.com/_/wordpress/
 
 [fedora-dashboard]: https://raw.githubusercontent.com/raaaimund/raaaimund.github.io/master/img/fedora-dashboard.png "Docker Dashboard"
-[fedora-terminal]: https://raw.githubusercontent.com/raaaimund/raaaimund.github.io/master/img/fedora-terminal.png "Fedora Terminal"
+[fedora-terminal]: https://raw.githubusercontent.com/raaaimund/raaaimund.github.io/master/img/fedora-terminal.PNG "Fedora Terminal"
