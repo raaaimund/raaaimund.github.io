@@ -38,5 +38,5 @@ In progress
 [5]: https://hub.docker.com/r/raaaimund/docker-iodine/
 [6]: https://hub.docker.com/_/wordpress/
 
-[fedora-dashboard]: https://raw.githubusercontent.com/raaaimund/raaaimund.github.io/master/img/fedora-dashboard.jpg "Docker Dashboard"
-[fedora-terminal]: https://raw.githubusercontent.com/raaaimund/raaaimund.github.io/master/img/fedora-terminal.jpg "Fedora Terminal"
+[fedora-dashboard]: https://raw.githubusercontent.com/raaaimund/raaaimund.github.io/master/img/fedora-dashboard.png "Docker Dashboard"
+[fedora-terminal]: https://raw.githubusercontent.com/raaaimund/raaaimund.github.io/master/img/fedora-terminal.png "Fedora Terminal"
