@@ -33,3 +33,4 @@ exclude: [vendor]
 
 gems:
   - jekyll-sitemap
+  - jekyll-seo-tag

@@ -44,10 +44,7 @@ If you use Docker, Fedora is the best joice, you simply install Fedora on your m
 * Cooking blog based on WordPress called kochzombie.at. ([wordpress][7]{:target="_blank"})
 * Nodejs server which is listening to incoming SMS over a USB GSM Modem. The content is parsed and pushed to all connected clients.
 
-### A command I needed a lot - bash into a container
-{% highlight ruby %}
-docker exec -i -t CONTAINERNAME bash
-{% endhighlight %}
+[Check out some useful Docker commands][8]
 
 [1]: https://hub.docker.com/r/devalx/docker-teamspeak3/
 [2]: https://www.sinusbot.com/
@@ -56,6 +53,7 @@ docker exec -i -t CONTAINERNAME bash
 [5]: https://hub.docker.com/r/jwilder/nginx-proxy/
 [6]: https://hub.docker.com/r/raaaimund/docker-iodine/
 [7]: https://hub.docker.com/_/wordpress/
+[8]: {% post_url 2016-06-06-useful-docker-commands %}
 
 [fedora-dashboard]: https://raw.githubusercontent.com/raaaimund/raaaimund.github.io/master/img/fedora-dashboard.png "Docker Dashboard"
 [fedora-terminal]: https://raw.githubusercontent.com/raaaimund/raaaimund.github.io/master/img/fedora-terminal.PNG "Fedora Terminal"
