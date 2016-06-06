@@ -30,3 +30,6 @@ kramdown:
 
 permalink: pretty
 exclude: [vendor]
+
+gems:
+  - jekyll-sitemap

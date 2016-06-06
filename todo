@@ -1,1 +1,2 @@
 -- hosting nginx reverse proxy routes to my container
+-- create cdn container with nginx for images
