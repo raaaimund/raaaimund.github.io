@@ -1,4 +1,1 @@
--- post about installing fedora
--- hosting a hello world container
--- nginx reverse proxy routes to my container
--- docker commands (delete all containers)
+-- hosting nginx reverse proxy routes to my container
