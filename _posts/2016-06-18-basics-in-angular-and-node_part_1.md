@@ -117,7 +117,7 @@ On the next part we will integrate [mongodb][3]{:target="_blank"} and add the fu
 images to each entry. We will store all the images on our own [cdn][4]{:target="_blank"} with
 [nginx][5]{:target="_blank"} in a [Docker container on our Fedora server][6]
 
-Here is the [source code][7] from this part.
+You can find the [source code][7] from this part in my github repo.
 
 [1]: https://nodejs.org
 [2]: https://www.jetbrains.com/webstorm/
@@ -125,4 +125,4 @@ Here is the [source code][7] from this part.
 [4]: https://en.wikipedia.org/wiki/Content_delivery_network
 [5]: https://nginx.org/
 [6]: {% post_url 2016-06-05-fedora-loves-docker %}
-[7]: https://raw.githubusercontent.com/raaaimund/raaaimund.github.io/master/files/basics-in-angular-and-node/part_1.zip
+[7]: https://github.com/raaaimund/raaaimund.github.io/tree/master/files/basics-in-angular-and-node
