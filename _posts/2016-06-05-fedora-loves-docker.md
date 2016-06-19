@@ -30,7 +30,7 @@ There is a fancy dashboard with all stats about your running containers
 and you also have access to the terminal in your browser.
 ![Terminal][fedora-terminal]{:class="image-responsive"}
 
-My old Thinkpad T410 is now running Fedora 23 (Server Edition) where I host all my web projects and other stuff in separate Docker container.
+My old Thinkpad T410 is now running Fedora 23 (Server Edition) where I host all my web projects and other stuff in separate Docker containers.
 If you use Docker, Fedora is the best joice, you simply install Fedora on your machine and configure everything over a nice web interface.
 
 ### Finished
@@ -44,7 +44,8 @@ If you use Docker, Fedora is the best joice, you simply install Fedora on your m
 * Cooking blog based on WordPress called kochzombie.at. ([wordpress][7]{:target="_blank"})
 * Nodejs server which is listening to incoming SMS over a USB GSM Modem. The content is parsed and pushed to all connected clients.
 
-[Check out some useful Docker commands][8]
+### More about Docker
+* [Check out some useful Docker commands][8]
 
 [1]: https://hub.docker.com/r/devalx/docker-teamspeak3/
 [2]: https://www.sinusbot.com/
