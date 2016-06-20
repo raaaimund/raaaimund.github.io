@@ -28,6 +28,7 @@ package.json because of our '-S' flag.
 Create your entrypoint javascript file (default 'index.js', we defined 'server.js')
 and fill it with code.
 
+__server.js__
 {% highlight ruby %}
 express = require('express');
 
@@ -40,7 +41,7 @@ app.get("/", function(req, res) {
 app.listen(3000);
 {% endhighlight %}
 
-Now you have your first express app and can browse to http://localhost:3000 to see
+Now you have your first express app and can browse to [http://localhost:3000][8]{:target="_blank"} to see
 your output.
 
 ## Integrate Angular
@@ -56,7 +57,7 @@ angular.module("pubertown", [])
     });
 {% endhighlight %}
 
-In our index.html we have to include the Angular cdn and our app.js file.
+In our index.html we have to include the [Angular CDN][9]{:target="_blank"} and our app.js file.
 After that we only have to add a new ng-app property (the value is the name
 of our module) to our html tag and a ng-controller property (the value is
 the name of our controller) to our body tag.
@@ -69,7 +70,7 @@ __index.html__
 <html lang="en" ng-app="pubertown">
 <head>
     <meta charset="UTF-8">
-    <title>Bernds App</title>
+    <title>Pubertown</title>
 
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
     <script src="app.js"></script>
@@ -80,12 +81,12 @@ __index.html__
 </html>
 {% endhighlight %}
 
-Don't forget to restart the server, checkout your new app with Angular at your localhost:3000.
+Don't forget to restart the server, checkout your new app with Angular at your [http://localhost:3000][8]{:target="_blank"}.
 
 ## Add functionality
 Now we want to use the basics of Angular to add values to a list.
 We need to add to our index.html a inputfield for our values and a button which calls a
-function to add the current value to our list, we also need a list to print our values.
+function to add the current value to our list, we also need a list to populate our values.
 
 __index.html__
 {% highlight ruby %}
@@ -93,7 +94,7 @@ __index.html__
 <html lang="en" ng-app="pubertown">
 <head>
     <meta charset="UTF-8">
-    <title>Bernds App</title>
+    <title>Pubertown</title>
 
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
     <script src="app.js"></script>
@@ -111,13 +112,13 @@ __index.html__
 
 After updating our index.html we should take a look on our new node app with
 express and server. Just restart your server again and take a look at
-localhost:3000.
+[http://localhost:3000][8]{:target="_blank"}.
 
 On the next part we will integrate [mongodb][3]{:target="_blank"} and add the functionality to add
 images to each entry. We will store all the images on our own [cdn][4]{:target="_blank"} with
-[nginx][5]{:target="_blank"} in a [Docker container on our Fedora server][6]
+[nginx][5]{:target="_blank"} in a [Docker container on our Fedora server][6].
 
-You can find the [source code][7] from this part in my github repo.
+You can find the [source code][7]{:target="_blank"} from this part in my github repo.
 
 [1]: https://nodejs.org
 [2]: https://www.jetbrains.com/webstorm/
@@ -126,3 +127,5 @@ You can find the [source code][7] from this part in my github repo.
 [5]: https://nginx.org/
 [6]: {% post_url 2016-06-05-fedora-loves-docker %}
 [7]: https://github.com/raaaimund/raaaimund.github.io/tree/master/files/basics-in-angular-and-node
+[8]: http://localhost:3000
+[9]: https://docs.angularjs.org/misc/downloading
