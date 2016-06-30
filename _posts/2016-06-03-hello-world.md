@@ -18,7 +18,7 @@ console.log('hello world');
 This is my [personal blog][1] using the [Carte Noire][2]{:target="_blank"} theme for [Jekyll][3]{:target="_blank"} from Jacob Tomlinson.
 
 I am a programmer with a passion for web applications, cooking, hiking and everything regarding Microsoft.
-With this Blog I'll try to share my daily issues and their solutions while programming, simple projects and also other stuff that comes in my mind.
+With this Blog I'll try to share my daily issues and their solutions while programming, simple projects and also other stuff that comes to my mind.
 
 Checkout our Youtube Channel [informatics.how][4]{:target="_blank"} about serious algorithms explained the easy way.
 
