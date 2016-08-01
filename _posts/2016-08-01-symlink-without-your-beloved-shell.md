@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      Symlink without your loved shell
+title:      Symlink without your beloved shell
 date:       2016-08-01 09:34:57
 author:     Raimund Rittnauer
 summary:    PHP code to create symlinks

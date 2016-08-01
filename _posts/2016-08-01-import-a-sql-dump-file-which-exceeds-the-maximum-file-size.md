@@ -29,7 +29,6 @@ have to follow these two steps
 1. import DataStructure.sql first
 2. import every other SQL file in the correct order
 
-
 Happy splitting!
 
 [1]: https://docs.typo3.org/typo3cms/InstallationGuide/QuickInstall/GetAndUnpack/Index.html

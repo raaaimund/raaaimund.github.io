@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      Unzip without your loved shell
+title:      Unzip without your beloved shell
 date:       2016-08-01 21:00:00
 author:     Raimund Rittnauer
 summary:    PHP code to unzip a file
