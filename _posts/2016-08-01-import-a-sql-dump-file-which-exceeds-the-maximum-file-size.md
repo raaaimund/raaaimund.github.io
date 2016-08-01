@@ -15,6 +15,8 @@ tags:
 I had to transfer a [typo3][1]{:target="_blank"} website to a new hoster and we had some issues. On of our issue was that the maximum file size for the SQL Dump was limited to
 2048 KiB. Our compressed SQL Dump file had about 9 MiB. We also had no access to the MySQL command line.
 
+![phpMyAdmin Maximum Upload Size][phpmyadmin-maxuploadsize]{:class="image-responsive"}
+
 At first we tried to create a dump file for each single table. The problem was that also the dump files of some tables were larger than 2048 KiB. So we tried to manually
 split these large dump files into smaller files and finally we managed to import all our data.
 
@@ -31,3 +33,5 @@ Happy splitting!
 
 [1]: https://docs.typo3.org/typo3cms/InstallationGuide/QuickInstall/GetAndUnpack/Index.html
 [2]: http://www.rusiczki.net/2007/01/24/sql-dump-file-splitter/
+
+[phpmyadmin-maxuploadsize]: https://raw.githubusercontent.com/raaaimund/raaaimund.github.io/master/img/phpmyadmin-maxuploadsize.png "phpMyAdmin Maximum Upload Size"
