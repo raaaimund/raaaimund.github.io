@@ -25,8 +25,10 @@ files into smaller one.
 
 Luckily my co-worker found a tool called [SQLDumpFileSplitter 2][2]{:target="_blank"} and with this masterpiece we could import all data and everything worked like a charm - frontend and backend! You just
 have to follow these two steps
-* import DataStructure.sql first
-* import every other SQL file in the correct order
+
+1. import DataStructure.sql first
+2. import every other SQL file in the correct order
+
 
 Happy splitting!
 
