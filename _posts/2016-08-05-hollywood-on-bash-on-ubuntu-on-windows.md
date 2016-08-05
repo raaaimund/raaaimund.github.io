@@ -23,7 +23,7 @@ You just have to add a repository which contains the package for hollywood.
 ``
 $ sudo apt-add-repository ppa:hollywood/ppa
 ``
-
+<br>
 ``
 $ sudo apt-get update  
 ``
