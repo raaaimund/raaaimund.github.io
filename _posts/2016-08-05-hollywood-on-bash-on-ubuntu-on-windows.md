@@ -21,7 +21,10 @@ script which turns your lame bash into a fancy hollywood-like bash which consume
 You just have to add a repository which contains the package for hollywood.
 
 ``
-$ sudo apt-add-repository ppa:hollywood/ppa<br/>
+$ sudo apt-add-repository ppa:hollywood/ppa
+``
+
+``
 $ sudo apt-get update  
 ``
 
