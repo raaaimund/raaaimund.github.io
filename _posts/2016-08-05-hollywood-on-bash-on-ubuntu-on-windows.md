@@ -19,6 +19,7 @@ script which turns your lame bash into a fancy hollywood-like bash which consume
 ![Bash with Hollywood][bash-hollywood]{:class="image-responsive"}
 
 You just have to add a repository which contains the package for hollywood.
+
 ``
 $ sudo apt-add-repository ppa:hollywood/ppa
 ``
@@ -28,6 +29,7 @@ $ sudo apt-get update
 ``
 
 To run hollywood you need the package [byobu][3]{:target="_blank"} (a text based window manager and terminal multiplexer) and the package hollywood.
+
 ``
 $ sudo apt-get install byobu hollywood
 ``
@@ -36,6 +38,7 @@ To start the magic you just have to run byobu and hollywood in your bash.
 ![Bash with Hollywood Animated][bash-hollywood-animated]{:class="image-responsive"}
 
 To remove byobu and hollywood from your system just use apt-get remove.
+
 ``
 $ sudo apt-get remove byobu hollywood  
 ``
