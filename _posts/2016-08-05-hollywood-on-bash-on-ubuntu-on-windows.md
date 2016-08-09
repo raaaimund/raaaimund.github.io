@@ -45,7 +45,7 @@ $ sudo apt-get remove byobu hollywood
 
 I simply <3 my new bash!
 
-[1]: https://msdn.microsoft.com/en-us/commandline/wsl/about?f=255&MSPPError=-2147217396
+[1]: https://msdn.microsoft.com/en-us/commandline/wsl/about
 [2]: https://github.com/dustinkirkland/hollywood
 [3]: http://byobu.co/
 

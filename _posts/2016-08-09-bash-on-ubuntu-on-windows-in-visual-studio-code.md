@@ -19,12 +19,12 @@ You can open your settings file with _File -> Preferences -> User Settings_.
 
 ![Open User Settings Animated][open-user-settings-animated]{:class="image-responsive"}
 
-All your settings are in a [JSON][3]{:target="_blank"} file and vscode will open your settings in a split screen. On the right side are the default settings
-and on the left side you can overwrite specific settings.
+All your settings are in a [JSON][3]{:target="_blank"} file and vscode will open your settings in a split screen. On the left side are the default settings
+and on the right side you can overwrite specific settings.
 
 ![User Settings Bash][user-settings-bash]{:class="image-responsive"}
 
-On the right side you have to overwrite the _"terminal.integrated.shell.windows"_ variable with the new value _"C:\\Windows\\sysnative\\bash.exe"_.
+On the right side you have to overwrite the _"terminal.integrated.shell.windows"_ variable with the new value _"C:\\\\Windows\\\\sysnative\\\\bash.exe"_.
 
 {% highlight ruby %}
 // Place your settings in this file to overwrite the default settings
@@ -35,11 +35,11 @@ On the right side you have to overwrite the _"terminal.integrated.shell.windows"
 
 Now you can toggle your new bash with the following shortcut 
 ``
-Strg+ö (German)
+Strg + ö (German)
 ``
 or with
 ``
-Strg+. (English)
+Strg + . (English)
 ``
 
 ![Bash in Visual Studio Code][bash-in-vscode]{:class="image-responsive"}
@@ -47,9 +47,9 @@ Strg+. (English)
 Happy bashing!
 
 [1]: https://code.visualstudio.com
-[2]: https://msdn.microsoft.com/en-us/commandline/wsl/about?f=255&MSPPError=-2147217396
+[2]: https://msdn.microsoft.com/en-us/commandline/wsl/about
 [3]: http://www.json.org/
 
-[open-user-settings-animated]: {{ site.url }}/img/open-user-settings.png "Open User Settings Animated"
+[open-user-settings-animated]: {{ site.url }}/img/open-user-settings.gif "Open User Settings Animated"
 [user-settings-bash]: {{ site.url }}/img/user-settings-bash.png "User Settings Bash"
 [bash-in-vscode]: {{ site.url }}/img/bash-in-vscode.png "Bash in Visual Studio Code"
