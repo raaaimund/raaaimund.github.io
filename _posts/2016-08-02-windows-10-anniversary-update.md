@@ -19,7 +19,7 @@ Microsoft planned to roll out the [Windows 10 Anniversary Update][1]{:target="_b
 I'm still waiting for my [bash][2]{:target="_blank"}.
 
 <div class="embed-responsive embed-responsive-16by9">
-  <script height="370px" width="658px" src="http://player.ooyala.com/iframe.js#pbid=dcc84e41db014454b08662a766057e2b&ec=I2cTF4NDE6B1nKvMaK6_0JxTtzPMFMMT"></script>
+  <script height="370px" width="658px" src="//player.ooyala.com/iframe.js#pbid=dcc84e41db014454b08662a766057e2b&ec=I2cTF4NDE6B1nKvMaK6_0JxTtzPMFMMT"></script>
 </div>
 
 [1]: https://blogs.windows.com/windowsexperience/2016/06/29/windows-10-anniversary-update-available-august-2/
