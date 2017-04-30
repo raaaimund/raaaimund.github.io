@@ -54,7 +54,7 @@ Now you have your new build definitio with these default build steps:
 * Publish Artifact: drop
    * This step will publish your artifacts (dlls, apks, ...) for you and you can download them if you want to
 
-You can get more details at the [Team Services documentation at the section build][2].
+You can get more details at the [Team Services documentation at the section build][2]{:target="_blank"}.
 
 First I removed the two steps Build solution _**/*test*.csproj_ and _Test_ because at the moment we don't use Xamarin Test Cloud,
 we only run our tests while developing on the android emulator or direct on the device.
@@ -82,7 +82,7 @@ each step and add the missing ones.
 ## Step NuGet restore
 At the _Advanced_ tab you can choose your NuGet version.
 
-You can also provide a custom nuget.exe like i did. At the [NuGet download page][3] you can get all 
+You can also provide a custom nuget.exe like i did. At the [NuGet download page][3]{:target="_blank"} you can get all 
 versions of NuGet.
 
 You just have to provide the path to the NuGet.config file and the path to the nuget.exe within your repository. So I created two variables
@@ -92,7 +92,7 @@ You just have to provide the path to the NuGet.config file and the path to the n
 
 Now to use your custom version of nuget.exe you just have to:
 
-* [download nuget.exe][3]
+* [download nuget.exe][3]{:target="_blank"}
 * add it to your souce control
    * I created a folder _.nuget_ and placed the _nuget.exe_ and _NuGet.config_ here
 * create variables including the path to the _nuget.exe_ and to the _NuGet.config_
@@ -131,7 +131,7 @@ And voila also Xamarin components are getting restored.
 This build step just searches for .csproj files with "Droid" in their name and compiles them. Here I just had to select the needed JDK Version. You can select the version in the _JDK Options_ tab.
 
 ## Signing and aligning APK file(s)
-For manual signing the apk read the post [_Manual Signing the APK_][4] on xamarin.com.
+For manual signing the apk read the post [_Manual Signing the APK_][4]{:target="_blank"} on xamarin.com.
 
 For signing you have to check _Sign the APK_ in the _Signing Options_ tab.
 Now you have to provide the following information:
@@ -148,7 +148,7 @@ For each input field I used a variable:
 * Keystore.Alias
 * Keystore.KeyPassword
 
-For [aligning][5] you have to check _Zipalign_ in the _Zipalign Options_.
+For [aligning][5]{:target="_blank"} you have to check _Zipalign_ in the _Zipalign Options_.
 
 ![signing-and-aligning][signing-and-aligning]{:class="image-responsive"}
 
@@ -172,7 +172,7 @@ I created the following variables in the _Variables_ tab
 
 and checked _Settable at queue time_ for the variables _UploadApk.VersionCode_ and _UploadApk.VersionName_. With this option you will be asked for the value of these variables, if you trigger a new build. So with each new version you can specify the new version code and the new version name.
 
-[Here is the PowerShell script][6] for uploading the apk to a database using an ASP.Net API.
+[Here is the PowerShell script][6]{:target="_blank"} for uploading the apk to a database using an ASP.Net API.
 
 Here is the code for ASP.Net API action for saving the apk file.
 
