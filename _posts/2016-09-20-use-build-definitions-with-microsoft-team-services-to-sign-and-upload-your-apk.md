@@ -198,14 +198,14 @@ public void Put(Apk apk, IFormFile apkFile)
 ## Publish Artifact
 This task will just publish the created artifact (including all compiled files) and will save it at the succeeded build. You can access all these files after a successfull build.
 
-![publish-artifact][publis-artifact]{:class="image-responsive"}
+![publish-artifact][publish-artifact]{:class="image-responsive"}
 
 [1]: https://support.microsoft.com/de-de/kb/137503
 [2]: https://www.visualstudio.com/docs/build/apps/mobile/xamarin
 [3]: https://dist.nuget.org/index.html
 [4]: https://developer.xamarin.com/guides/android/deployment,_testing,_and_metrics/publishing_an_application/part_2_-_signing_the_android_application_package/manually-signing-the-apk/
 [5]: https://developer.android.com/studio/command-line/zipalign.html
-[6]: {{ site.url }}/files/UpoadSignedApk.ps1
+[6]: {{ site.url }}/files/Upload-SignedApk.ps1
 
 [create-a-build-definition]: {{ site.url }}/img/2016-09-20-use-build-definitions-with-microsoft-team-services-to-sign-and-upload-your-apk/create-a-build-definition.gif "Create a build definition"
 [access-variables]: {{ site.url }}/img/2016-09-20-use-build-definitions-with-microsoft-team-services-to-sign-and-upload-your-apk/access-variables.png "Access variables"
