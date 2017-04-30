@@ -100,7 +100,7 @@ Now to use your custom version of nuget.exe you just have to:
 
 This is the content of my _NuGet.config_ file
 
-![nuget-variables][nuget-variables]{:class="image-responsive"}
+![nuget-configuration][nuget-configuration]{:class="image-responsive"}
 
 {% highlight ruby %}
 <?xml version="1.0" encoding="utf-8"?>
@@ -209,7 +209,7 @@ This task will just publish the created artifact (including all compiled files) 
 
 [create-a-build-definition]: {{ site.url }}/img/2016-09-20-use-build-definitions-with-microsoft-team-services-to-sign-and-upload-your-apk/create-a-build-definition.gif "Create a build definition"
 [access-variables]: {{ site.url }}/img/2016-09-20-use-build-definitions-with-microsoft-team-services-to-sign-and-upload-your-apk/access-variables.png "Access variables"
-[nuget-variables]: {{ site.url }}/img/2016-09-20-use-build-definitions-with-microsoft-team-services-to-sign-and-upload-your-apk/nuget-variables.png "NuGet variables"
+[nuget-configuration]: {{ site.url }}/img/2016-09-20-use-build-definitions-with-microsoft-team-services-to-sign-and-upload-your-apk/nuget-configuration.png "NuGet configuration"
 [xamarin-component-restore]: {{ site.url }}/img/2016-09-20-use-build-definitions-with-microsoft-team-services-to-sign-and-upload-your-apk/xamarin-component-restore.png "Xamarin component restore"
 [signing-and-aligning]: {{ site.url }}/img/2016-09-20-use-build-definitions-with-microsoft-team-services-to-sign-and-upload-your-apk/signing-and-aligning.png "Signing and aligning the APK"
 [new-powershell-task]: {{ site.url }}/img/2016-09-20-use-build-definitions-with-microsoft-team-services-to-sign-and-upload-your-apk/new-powershell-task.gif "New PowerShell task"
