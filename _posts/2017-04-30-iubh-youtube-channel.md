@@ -12,7 +12,7 @@ tags:
  - lectures
 ---
 
-While I was learning for my exam in Microeconomics I found recorded lectures on the [Youtube channel][1] from the [International University Bad Honnef][2]. They got a great collection of recorded lectures from various courses. Most of the courses are business and marketing courses, but there are also some math and some technical courses.
+While I was learning for my exam in Microeconomics I found recorded lectures on the [Youtube channel][1]{:target="_blank"} from the [International University Bad Honnef][2]{:target="_blank"}. They got a great collection of recorded lectures from various courses. Most of the courses are business and marketing courses, but there are also some math and some technical courses.
 
 The only thing is, that there are some mistakes in the videos, but just read the comments first and play an active part while wathing these lectures and you will recognize these mistakes.
 
