@@ -16,7 +16,7 @@ tags:
 ---
 
 We are using [Zumero for SQL Server (ZSS)][1]{:target="_blank"} as our library for the synchronisation of the local SQLite database of each android device with a remote MSSQL database.
-One of the main issues was that Zumero represents specific data types different in the background and to access the data you have to encode and decode it everytime.
+One of the main issues was that Zumero needs a different representation of specific data types and to access the data you have to encode and decode it everytime.
 
 I used these data types on my MSSQL database and Zumero encoded these data types to
 
@@ -29,9 +29,7 @@ I used these data types on my MSSQL database and Zumero encoded these data types
   * decimal in C#
   * for example in MSSQL DECIMAL(10, 6) you have to use the scale of Math.Pow(10, 6) to encode it to long and decode it from long
 
-The [ZSS App Generator (ZAG)][2]{:target="_blank"} generates code for encoding and decoding these data types for you, but if you have only more than one
-Guid, DateTime or decimal property in your model, your code is getting bigger and bigger.
-For a simple Guid property the following code is generated.
+The [ZSS App Generator (ZAG)][2]{:target="_blank"} is a great tool to get insights and it generates code for encoding and decoding these data types for you, but if you have only more than one Guid, DateTime or decimal property in your model, your code is getting bigger and bigger. For a simple Guid property the following code is generated.
 
 {% highlight ruby %}
 
@@ -59,7 +57,7 @@ public static byte[] Id_ConvertToBytes(Guid guid)
 
 You see that a Guid is stored as a byte array and the code for encoding and decoding is generated for every Guid, DateTime and decimal property.
 
-I wanted a clean and simple solution and started trying to create my own structs for these three structs which do automatic encoding and decoding.
+I wanted to reduce the code and started trying to create my own structs for these three structs which do automatic encoding and decoding.
 I ended up implementing these three structs
 
 * Guid -> ZumeroGuid

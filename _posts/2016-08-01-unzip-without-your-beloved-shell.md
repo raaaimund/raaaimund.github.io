@@ -29,5 +29,10 @@ _unzip.php_
 
 Now you can perform a clean typo3 installation, unless you dont get problems with other php settings during your typo3 installation check.
 
+### Links
+
+- [typo3][1]{:target="_blank"}
+- [system][2]{:target="_blank"}
+
 [1]: https://typo3.org/download/
 [2]: http://php.net/manual/en/function.system.php

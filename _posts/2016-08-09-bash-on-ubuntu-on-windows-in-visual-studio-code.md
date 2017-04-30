@@ -20,7 +20,7 @@ You can open your settings file with _File -> Preferences -> User Settings_.
 ![Open User Settings Animated][open-user-settings-animated]{:class="image-responsive"}
 
 All your settings are in a [JSON][3]{:target="_blank"} file and vscode will open your settings in a split screen. On the left side are the default settings
-and on the right side you can overwrite specific settings.
+and on the right side you can overwrite specific variables of your settings file.
 
 ![User Settings Bash][user-settings-bash]{:class="image-responsive"}
 
@@ -45,6 +45,12 @@ Strg + . (English)
 ![Bash in Visual Studio Code][bash-in-vscode]{:class="image-responsive"}
 
 Happy bashing!
+
+### Links
+
+- [Visual Studio Code][1]{:target="_blank"}
+- [Bash on Ubuntu on Windows][2]{:target="_blank"}
+- [JSON][3]{:target="_blank"}
 
 [1]: https://code.visualstudio.com
 [2]: https://msdn.microsoft.com/en-us/commandline/wsl/about
