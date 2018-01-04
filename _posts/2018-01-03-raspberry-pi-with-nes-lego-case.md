@@ -23,9 +23,12 @@ While I was searching for a christmas present for my girlfriend I stumbled acros
 
 For the OS on the raspberry pie we are using [RetroPie][3]{:target="_blank"}.
 
+There is also an image for the [ODROID C1 or ODROID C2 board][4]{:target="_blank"} available. Maybe this board is the better choice for some emus because it also has a GPU.
+
 [1]: https://www.andrerinas.de/tutorials/nespi-like-lego-nes-case-anleitunginstruction.html
 [2]: https://www.amazon.de/CSL-Gamepad-Controller-Notebook-Tablet-PC/dp/B077T732M7/ref=sr_1_11?ie=UTF8&qid=1515013142&sr=8-11&keywords=usb+nes+controller
 [3]: https://retropie.org.uk/
+[4]: https://www.amazon.de/ODROID-C2-Einplatinen-Computer-GHz-QuadCore-RAM/dp/B01CY4V5LC/ref=sr_1_1?ie=UTF8&qid=1515014438&sr=8-1&keywords=ODROID-C2
 
 [raspberry-nes-1]: {{ site.url }}/img/raspberry-nes/raspberry-nes-1.jpg "Raspberry NES Lego Case"
 [raspberry-nes-2]: {{ site.url }}/img/raspberry-nes/raspberry-nes-2.jpg "Raspberry NES Lego Case"
