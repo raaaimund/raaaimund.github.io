@@ -39,7 +39,7 @@ The backup tarball has to be available in the backup location (default location 
 docker cp <name of backup> <name of container>:/var/opt/gitlab/backups
 ```
 
-The git user has to be owner of the tar ball.
+The git user has to be owner of the tarball.
 
 ```
  docker exec -it <name of container> chown git:git /var/opt/gitlab/backups/<name of backup>
@@ -56,3 +56,7 @@ Next, restore /etc/gitlab/gitlab-secrets.json.
 ```
 docker cp gitlab-secrets.json gitlab:/etc/gitlab/gitlab-secrets.json
 ```
+
+Source: [gitlab docs][1]{:target="_blank"}
+
+[1]: https://docs.gitlab.com/ee/raketasks/backup_restore.html
