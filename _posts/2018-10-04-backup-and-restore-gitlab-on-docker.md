@@ -54,7 +54,7 @@ docker exec -it <name of container> gitlab-rake gitlab:backup:restore
 Next, restore /etc/gitlab/gitlab-secrets.json.
 
 ```
-docker cp gitlab-secrets.json gitlab:/etc/gitlab/gitlab-secrets.json
+docker cp gitlab-secrets.json <name of pod>:/etc/gitlab/gitlab-secrets.json
 ```
 
 Source: [gitlab docs][1]{:target="_blank"}
