@@ -55,6 +55,12 @@ metadata:
 kubectl create -f admin-user.yaml
 ````
 
+Or just
+
+````
+kubectl create serviceaccount --namespace kube-system admin-user
+````
+
 __cluster-role-binding.yaml__
 ````
 apiVersion: rbac.authorization.k8s.io/v1
@@ -75,11 +81,19 @@ subjects:
 kubectl create -f cluster-role-binding.yaml
 ````
 
+Or just
+
+````
+kubectl create clusterrolebinding admin-user --clusterrole=cluster-admin --serviceaccount=kube-system:admin-user
+````
+
 You can get the token with the following command.
 
 ````
 kubectl -n kube-system describe secret $(kubectl -n kube-system get secret | grep admin-user | awk '{print $1}')
 ````
+
+With this token you can sign in as the user _admin-user_.
 
 For more details about creating a service accound and a cluster role binding see the [documentation on github][3]{:target="_blank"}.
 
