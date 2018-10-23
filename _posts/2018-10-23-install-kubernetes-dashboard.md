@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      Install Kubernetes dashboard
-date:       2018-23-10 22:00:00
+date:       2018-10-23 22:00:00
 author:     Raimund Rittnauer
 summary:    How to install the Kubernetes dashboard
 categories: tech

@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      Backup and restore GitLab on k8s
-date:       2018-21-10 21:00:00
+date:       2018-10-21 21:00:00
 author:     Raimund Rittnauer
 summary:    How to backup and restore GitLab on k8s
 categories: tech
