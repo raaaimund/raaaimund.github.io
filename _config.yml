@@ -14,9 +14,9 @@ post_limit: 5
 hotjar: 507335
 
 # Social usernames/URLs
-twitter_username: raaaimund
+#twitter_username: raaaimund
 github_username:  raaaimund
-google_plus_link: https://plus.google.com/u/0/+RaimundRittnauer
+#google_plus_link: https://plus.google.com/u/0/+RaimundRittnauer
 
 # Footer
 footer_left: "Theme made with <i class=\"fa fa-heart\"></i> by <a href=\"https://twitter.com/_JacobTomlinson\">Jacob Tomlinson</a>"
