@@ -93,7 +93,7 @@ kubectl taint nodes --all node-role.kubernetes.io/master-
 
 Now we have a single node Kubernetes cluster running on Ubuntu 18.04.1 (Bionic Beaver).
 
-To install the dashboard see my other post [][7].
+To deploy the dashboard see my other post _[deploy Kubernetes dashboard][7]_.
 
 [1]: https://github.com/kubernetes/kubernetes/blob/master/CHANGELOG-1.8.md#before-upgrading
 [2]: https://github.com/kubernetes/kubernetes/releases
@@ -101,3 +101,4 @@ To install the dashboard see my other post [][7].
 [4]: https://kubernetes.io/docs/reference/setup-tools/kubeadm/kubeadm-init/
 [5]: https://kubernetes.io/docs/concepts/cluster-administration/networking/
 [6]: https://kubernetes.io/docs/concepts/configuration/taint-and-toleration/
+[7]: {% post_url 2018-10-23-deploy-kubernetes-dashboard %}
