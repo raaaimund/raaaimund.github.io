@@ -131,7 +131,7 @@ spec:
 
 For information about ACME see this [Wikipedia post][6]{:target="_blank"}.
 
-For information about how to use dns validation see this [github repo][7]{:target="_blank"}.
+For information about how to use dns validation see this [GitHub repo][7]{:target="_blank"}.
 
 [1]: https://cert-manager.readthedocs.io/en/latest/getting-started/index.html
 [2]: {% post_url 2018-10-23-deploy-helm %}
