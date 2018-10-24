@@ -43,7 +43,7 @@ spec:
 ````
 
 ````
-kubectl create -f cert-manager/cluster-issuer.yaml
+kubectl create -f cert-manager/cluster-issuer-staging.yaml
 ````
 
 The _privateKeySecretRef_ field specifies the name of the secret which is created by this cluster issuer. The specified email address and the secret is needed for authentication for the staging api.
@@ -92,6 +92,15 @@ The value of the _issuerRef.name_ field has to be the name of our cluster issuer
 
 When the certificate is issued from [letsencrypt][4]{:target="_blank"} a secret with the name specified in the _secretName_ field is created. You can use this secret in your _tls_ section of your ingress ressource.
 
+The presence of the _http01_ has the following meaning (from the [documentation][3]{:target="_blank"}):
+
+The fields ingress and ingressClass in the http01 stanza can be used to control how cert-manager interacts with Ingress resources:
+
+* If the ingress field is specified, then an Ingress resource with the same name in the same namespace as the Certificate must already exist and it will be modified only to add the appropriate rules to solve the challenge. This field is useful for the GCLB ingress controller, as well as a number of others, that assign a single public IP address for each ingress resource. Without manual intervention, creating a new ingress resource would cause any challenges to fail.
+* If the ingressClass field is specified, a new ingress resource with a randomly generated name will be created in order to solve the challenge. This new resource will have an annotation with key kubernetes.io/ingress.class and value set to the value of the ingressClass field. This works for the likes of the NGINX ingress controller.
+* If neither are specified, new ingress resources will be created with a randomly generated name, but they will not have the ingress class annotation set.
+* If both are specified, then the ingress field will take precedence.
+
 An example for the ingress ressource.
 
 __gitlab-ingress.yaml__
@@ -127,6 +136,12 @@ spec:
         backend:
           serviceName: gitlab
           servicePort: 8105
+````
+
+After creating the above Certificate, we can check whether it has been obtained successfully using the _kubectl describe_ command.
+
+````
+kubectl describe cert gitlab-my-domain-com
 ````
 
 For information about ACME see this [Wikipedia post][6]{:target="_blank"}.
