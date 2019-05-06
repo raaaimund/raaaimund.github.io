@@ -6,6 +6,7 @@ author:     Raimund Rittnauer / Andreas Rosegger
 summary:    todo
 categories: tech
 thumbnail:  heart
+comments: true
 tags:
  - angular
  - node

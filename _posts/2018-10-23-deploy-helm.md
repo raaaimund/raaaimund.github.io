@@ -6,6 +6,7 @@ author:     Raimund Rittnauer
 summary:    How to deploy helm on your Kubernetes cluster
 categories: tech
 thumbnail:  university
+comments: true
 tags:
  - k8s
  - kubernetes

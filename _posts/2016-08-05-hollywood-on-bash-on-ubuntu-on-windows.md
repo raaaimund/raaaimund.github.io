@@ -6,6 +6,7 @@ author:     Raimund Rittnauer
 summary:    How to install Hollywood on Bash on Ubuntu on Windows
 categories: tech
 thumbnail:  code
+comments: true
 tags:
  - windows 10
  - bash

@@ -6,6 +6,7 @@ author:     Raimund Rittnauer
 summary:    How to definitively delete a print job, also with access denied on windows
 categories: tech
 thumbnail:  print
+comments: true
 tags:
  - spooler
  - windows 10

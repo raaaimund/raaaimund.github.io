@@ -6,6 +6,7 @@ author:     Raimund Rittnauer
 summary:    How to use Bash on Ubuntu on Windows in Visual Studio Code
 categories: tech
 thumbnail:  code
+comments: true
 tags:
  - windows 10
  - bash

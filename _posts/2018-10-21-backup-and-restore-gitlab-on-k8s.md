@@ -6,6 +6,7 @@ author:     Raimund Rittnauer
 summary:    How to backup and restore GitLab on k8s
 categories: tech
 thumbnail:  university
+comments: true
 tags:
  - gitlab
  - k8s

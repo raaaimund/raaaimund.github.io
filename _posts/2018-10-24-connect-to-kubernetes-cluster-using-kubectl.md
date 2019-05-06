@@ -6,6 +6,7 @@ author: Raimund Rittnauer
 summary: How to connecto to a Kubernetes cluster using kubectl and a service account token
 categories: tech
 thumbnail: university
+comments: true
 tags:
   - k8s
   - kubernetes

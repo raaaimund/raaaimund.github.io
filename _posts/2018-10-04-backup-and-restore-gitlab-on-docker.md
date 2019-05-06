@@ -6,6 +6,7 @@ author:     Raimund Rittnauer
 summary:    How to backup and restore GitLab on Docker
 categories: tech
 thumbnail:  university
+comments: true
 tags:
  - gitlab
  - docker

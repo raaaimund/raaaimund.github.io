@@ -6,6 +6,7 @@ author:     Raimund Rittnauer
 summary:    I love and use GifCam
 categories: misc
 thumbnail:  heart
+comments: true
 tags:
  - recording
  - gif

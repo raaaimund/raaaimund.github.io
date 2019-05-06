@@ -6,6 +6,7 @@ author:     Raimund Rittnauer
 summary:    Fedora loves Docker
 categories: tech
 thumbnail:  heart
+comments: true
 tags:
  - fedora
  - docker

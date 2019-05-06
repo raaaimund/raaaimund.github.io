@@ -6,6 +6,7 @@ author:     Raimund Rittnauer
 summary:    My first entry
 categories: misc
 thumbnail:  globe
+comments: true
 tags:
  - hello
  - world

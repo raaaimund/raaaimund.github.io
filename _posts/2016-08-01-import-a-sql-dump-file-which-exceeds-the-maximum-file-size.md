@@ -6,6 +6,7 @@ author:     Raimund Rittnauer
 summary:    Split a SQL Dump file which exceeds the maximul file size in smaller parts, to import this file in phpMyAdmin
 categories: tech
 thumbnail:  code
+comments: true
 tags:
  - phpMyAdmin
  - MySQL

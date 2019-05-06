@@ -6,6 +6,7 @@ author:     Raimund Rittnauer
 summary:    Collection of some useful Docker commands
 categories: tech
 thumbnail:  code
+comments: true
 tags:
  - docker
  - shell

@@ -6,6 +6,7 @@ author:     Raimund Rittnauer
 summary:    A lego case for a raspberry pie
 categories: misc
 thumbnail:  university
+comments: true
 tags:
  - raspberry pie
  - retropie

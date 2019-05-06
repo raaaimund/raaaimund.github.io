@@ -6,6 +6,7 @@ author:     Raimund Rittnauer
 summary:    PHP code to unzip a file
 categories: tech
 thumbnail:  code
+comments: true
 tags:
  - php
  - shell

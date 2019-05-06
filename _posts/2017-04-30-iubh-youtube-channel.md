@@ -6,6 +6,7 @@ author:     Raimund Rittnauer
 summary:    Online lectures from International University Bad Honnef
 categories: misc
 thumbnail:  university
+comments: true
 tags:
  - university
  - youtube

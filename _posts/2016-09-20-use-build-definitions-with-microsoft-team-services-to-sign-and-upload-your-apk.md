@@ -6,6 +6,7 @@ author:     Raimund Rittnauer
 summary:    How to sign and automatic upload an apk when a build is triggered at Microsoft Team Services
 categories: tech
 thumbnail:  code-fork
+comments: true
 tags:
  - microsoft team services
  - ci

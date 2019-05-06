@@ -6,6 +6,7 @@ author:     Raimund Rittnauer
 summary:    How to deploy the Kubernetes dashboard
 categories: tech
 thumbnail:  university
+comments: true
 tags:
  - k8s
  - kubernetes

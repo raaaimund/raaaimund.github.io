@@ -6,6 +6,7 @@ author:     Raimund Rittnauer
 summary:    How to set the current kuectl context
 categories: tech
 thumbnail:  university
+comments: true
 tags:
  - k8s
  - kubernetes

@@ -6,6 +6,7 @@ author:     Raimund Rittnauer
 summary:    How to use Guid, DateTime, Decimal and other structs with Zumero
 categories: tech
 thumbnail:  code
+comments: true
 tags:
  - zumero
  - guid

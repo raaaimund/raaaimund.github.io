@@ -6,6 +6,7 @@ author:     Raimund Rittnauer
 summary:    Microsoft Windows 10 Anniversary Update
 categories: tech
 thumbnail:  code
+comments: true
 tags:
  - windows 10
  - anniversary

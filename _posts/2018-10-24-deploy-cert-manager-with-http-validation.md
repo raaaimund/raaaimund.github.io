@@ -6,6 +6,7 @@ author:     Raimund Rittnauer
 summary:    How to deploy cert-manager with http validation on your Kubernetes cluster and issue certificates from letsencrypt.org
 categories: tech
 thumbnail:  university
+comments: true
 tags:
  - k8s
  - kubernetes

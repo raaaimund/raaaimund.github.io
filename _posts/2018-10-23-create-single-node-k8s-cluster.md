@@ -6,6 +6,7 @@ author:     Raimund Rittnauer
 summary:    How to create a single node Kubernetes cluster on Ubuntu 18.04.1 (Bionic Beaver) with kubeadm
 categories: tech
 thumbnail:  university
+comments: true
 tags:
  - ubuntu
  - k8s
