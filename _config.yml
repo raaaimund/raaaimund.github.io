@@ -1,37 +1,72 @@
+# -----------------------------------------------------------------------------
 # Site settings
-title: "R"
+# -----------------------------------------------------------------------------
+name: raimund
 email: raimund@rittnauer.at
-description: "R's Blog."
-baseurl: ""
+description: >
+  My Github Page
+
 url: "https://raaaimund.github.io"
-title_description: "A blog about everything that comes to my mind."
-title_image: "https://raw.githubusercontent.com/raaaimund/raaaimund.github.io/master/img/me.jpg"
+baseurl: ""
+last_updated: # leave blank if you don't want to display last updated
+
 google_analytics: "UA-25417012-4"
-disqus_account: raaaimund
-github_repository: https://github.com/raaaimund/raaaimund.github.io
-addthis_id: ra-5751945adf840e71
-post_limit: 5
-hotjar: 507335
 
-# Social usernames/URLs
-#twitter_username: raaaimund
+# -----------------------------------------------------------------------------
+# Social integration
+# -----------------------------------------------------------------------------
 github_username:  raaaimund
-#google_plus_link: https://plus.google.com/u/0/+RaimundRittnauer
 
-# Footer
-footer_left: "Theme made with <i class=\"fa fa-heart\"></i> by <a href=\"https://twitter.com/_JacobTomlinson\">Jacob Tomlinson</a>"
-footer_right: "&lt;/&gt; on <a href=\"https://github.com/raaaimund/raaaimund.github.io\">Github</a> &nbsp;<i class=\"fa fa-github-alt\"></i>"
+# -----------------------------------------------------------------------------
+# Blog
+# -----------------------------------------------------------------------------
+blog_name: Hi
+blog_description:
 
-# Build settings
-markdown: kramdown
-
-kramdown:
-  input: GFM
-  syntax_highlighter: rouge
-
+# Pagination
+paginate: 4
 permalink: pretty
+
+text:
+  pagination:
+    newer: 'Newer'
+    older: 'Older'
+
+disqus_shortname: raaaimund
+
+show_social_icons:  false
+enable_anchorjs:    true
+enable_katex:       true
+
+# -----------------------------------------------------------------------------
+# Collections
+# -----------------------------------------------------------------------------
+
+collections:
+  pages:
+    output: true
+    permalink: /:path/
+
+# -----------------------------------------------------------------------------
+# Jekyll settings
+# -----------------------------------------------------------------------------
+
+markdown: kramdown
+highlighter: pygments
+
+include: ['_pages']
+include: ['assets']
 exclude: [vendor]
 
-gems:
-  - jekyll-sitemap
-  - jekyll-seo-tag
+plugins:
+    - jekyll-email-protect
+    - jekyll-paginate
+    - jekyll/scholar
+    - jemoji
+
+# -----------------------------------------------------------------------------
+# Other settings
+# -----------------------------------------------------------------------------
+jquery_version: "1.12.4"
+katex_version: "0.9.0"
+anchorjs_version: "3.2.2"

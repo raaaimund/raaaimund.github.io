@@ -30,6 +30,6 @@ There is also an image for the [ODROID C1 or ODROID C2 board][4]{:target="_blank
 [3]: https://retropie.org.uk/
 [4]: https://www.amazon.de/ODROID-C2-Einplatinen-Computer-GHz-QuadCore-RAM/dp/B01CY4V5LC/ref=sr_1_1?ie=UTF8&qid=1515014438&sr=8-1&keywords=ODROID-C2
 
-[raspberry-nes-1]: {{ site.url }}/img/raspberry-nes/raspberry-nes-1.jpg "Raspberry NES Lego Case"
-[raspberry-nes-2]: {{ site.url }}/img/raspberry-nes/raspberry-nes-2.jpg "Raspberry NES Lego Case"
-[raspberry-nes-3]: {{ site.url }}/img/raspberry-nes/raspberry-nes-3.jpg "Raspberry NES Lego Case"
+[raspberry-nes-1]: {{ site.baseurl }}/assets/img/raspberry-nes/raspberry-nes-1.jpg "Raspberry NES Lego Case"
+[raspberry-nes-2]: {{ site.baseurl }}/assets/img/raspberry-nes/raspberry-nes-2.jpg "Raspberry NES Lego Case"
+[raspberry-nes-3]: {{ site.baseurl }}/assets/img/raspberry-nes/raspberry-nes-3.jpg "Raspberry NES Lego Case"

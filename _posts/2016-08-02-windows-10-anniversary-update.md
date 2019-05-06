@@ -25,4 +25,4 @@ I'm still waiting for my [bash][2]{:target="_blank"}.
 [1]: https://blogs.windows.com/windowsexperience/2016/06/29/windows-10-anniversary-update-available-august-2/
 [2]: https://msdn.microsoft.com/en-us/commandline/wsl/about
 
-[windows-10-anniversary-update]: {{ site.url }}/img/windows-10-anniversary-update.png "Windows 10 Anniversary Update"
+[windows-10-anniversary-update]: {{ site.baseurl }}/assets/img/windows-10-anniversary-update.png "Windows 10 Anniversary Update"

@@ -1,3 +1,0 @@
--- hosting nginx reverse proxy routes to my container
--- create cdn container with nginx
--- create wordpress and mysql container for kochzombie.at

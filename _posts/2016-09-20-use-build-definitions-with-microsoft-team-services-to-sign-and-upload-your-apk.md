@@ -188,13 +188,13 @@ This task will just publish the created artifact (including all compiled files) 
 [3]: https://dist.nuget.org/index.html
 [4]: https://developer.xamarin.com/guides/android/deployment,_testing,_and_metrics/publishing_an_application/part_2_-_signing_the_android_application_package/manually-signing-the-apk/
 [5]: https://developer.android.com/studio/command-line/zipalign.html
-[6]: {{ site.url }}/files/Upload-SignedApk.ps1
+[6]: {{ site.baseurl }}/files/Upload-SignedApk.ps1
 
-[create-a-build-definition]: {{ site.url }}/img/2016-09-20-use-build-definitions-with-microsoft-team-services-to-sign-and-upload-your-apk/create-a-build-definition.gif "Create a build definition"
-[access-variables]: {{ site.url }}/img/2016-09-20-use-build-definitions-with-microsoft-team-services-to-sign-and-upload-your-apk/access-variables.png "Access variables"
-[nuget-configuration]: {{ site.url }}/img/2016-09-20-use-build-definitions-with-microsoft-team-services-to-sign-and-upload-your-apk/nuget-configuration.png "NuGet configuration"
-[xamarin-component-restore]: {{ site.url }}/img/2016-09-20-use-build-definitions-with-microsoft-team-services-to-sign-and-upload-your-apk/xamarin-component-restore.png "Xamarin component restore"
-[signing-and-aligning]: {{ site.url }}/img/2016-09-20-use-build-definitions-with-microsoft-team-services-to-sign-and-upload-your-apk/signing-and-aligning.png "Signing and aligning the APK"
-[new-powershell-task]: {{ site.url }}/img/2016-09-20-use-build-definitions-with-microsoft-team-services-to-sign-and-upload-your-apk/new-powershell-task.gif "New PowerShell task"
-[powershell-script]: {{ site.url }}/img/2016-09-20-use-build-definitions-with-microsoft-team-services-to-sign-and-upload-your-apk/powershell-script.png "PowerShell script"
-[publish-artifact]: {{ site.url }}/img/2016-09-20-use-build-definitions-with-microsoft-team-services-to-sign-and-upload-your-apk/publish-artifact.png "Publish artifact"
+[create-a-build-definition]: {{ site.baseurl }}/assets/img/2016-09-20-use-build-definitions-with-microsoft-team-services-to-sign-and-upload-your-apk/create-a-build-definition.gif "Create a build definition"
+[access-variables]: {{ site.baseurl }}/assets/img/2016-09-20-use-build-definitions-with-microsoft-team-services-to-sign-and-upload-your-apk/access-variables.png "Access variables"
+[nuget-configuration]: {{ site.baseurl }}/assets/img/2016-09-20-use-build-definitions-with-microsoft-team-services-to-sign-and-upload-your-apk/nuget-configuration.png "NuGet configuration"
+[xamarin-component-restore]: {{ site.baseurl }}/assets/img/2016-09-20-use-build-definitions-with-microsoft-team-services-to-sign-and-upload-your-apk/xamarin-component-restore.png "Xamarin component restore"
+[signing-and-aligning]: {{ site.baseurl }}/assets/img/2016-09-20-use-build-definitions-with-microsoft-team-services-to-sign-and-upload-your-apk/signing-and-aligning.png "Signing and aligning the APK"
+[new-powershell-task]: {{ site.baseurl }}/assets/img/2016-09-20-use-build-definitions-with-microsoft-team-services-to-sign-and-upload-your-apk/new-powershell-task.gif "New PowerShell task"
+[powershell-script]: {{ site.baseurl }}/assets/img/2016-09-20-use-build-definitions-with-microsoft-team-services-to-sign-and-upload-your-apk/powershell-script.png "PowerShell script"
+[publish-artifact]: {{ site.baseurl }}/assets/img/2016-09-20-use-build-definitions-with-microsoft-team-services-to-sign-and-upload-your-apk/publish-artifact.png "Publish artifact"

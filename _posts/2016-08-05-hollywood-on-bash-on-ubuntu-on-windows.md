@@ -49,5 +49,5 @@ I simply <3 my new bash!
 [2]: https://github.com/dustinkirkland/hollywood
 [3]: http://byobu.co/
 
-[bash-hollywood]: {{ site.url }}/img/bash-hollywood.png "Bash with Hollywood"
-[bash-hollywood-animated]: {{ site.url }}/img/bash-hollywood.gif "Bash with Hollywood Animated"
+[bash-hollywood]: {{ site.baseurl }}/assets/img/bash-hollywood.png "Bash with Hollywood"
+[bash-hollywood-animated]: {{ site.baseurl }}/assets/img/bash-hollywood.gif "Bash with Hollywood Animated"

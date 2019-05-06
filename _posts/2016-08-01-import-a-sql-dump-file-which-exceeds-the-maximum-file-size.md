@@ -34,4 +34,4 @@ Happy splitting!
 [1]: https://docs.typo3.org/typo3cms/InstallationGuide/QuickInstall/GetAndUnpack/Index.html
 [2]: http://www.rusiczki.net/2007/01/24/sql-dump-file-splitter/
 
-[phpmyadmin-maxuploadsize]: https://raw.githubusercontent.com/raaaimund/raaaimund.github.io/master/img/phpmyadmin-maxuploadsize.png "phpMyAdmin Maximum Upload Size"
+[phpmyadmin-maxuploadsize]: https://raw.githubusercontent.com/raaaimund/raaaimund.github.io/master/assets/img/phpmyadmin-maxuploadsize.png "phpMyAdmin Maximum Upload Size"

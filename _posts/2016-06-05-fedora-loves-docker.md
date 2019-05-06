@@ -56,5 +56,5 @@ If you use Docker, Fedora is the best joice, you simply install Fedora on your m
 [7]: https://hub.docker.com/_/wordpress/
 [8]: {% post_url 2016-06-06-useful-docker-commands %}
 
-[fedora-dashboard]: https://raw.githubusercontent.com/raaaimund/raaaimund.github.io/master/img/fedora-dashboard.png "Docker Dashboard"
-[fedora-terminal]: https://raw.githubusercontent.com/raaaimund/raaaimund.github.io/master/img/fedora-terminal.PNG "Fedora Terminal"
+[fedora-dashboard]: https://raw.githubusercontent.com/raaaimund/raaaimund.github.io/master/assets/img/fedora-dashboard.png "Docker Dashboard"
+[fedora-terminal]: https://raw.githubusercontent.com/raaaimund/raaaimund.github.io/master/assets/img/fedora-terminal.PNG "Fedora Terminal"

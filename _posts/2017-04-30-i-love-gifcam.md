@@ -21,4 +21,4 @@ Another great tool is [ScreenToGif][2]{:target="_blank"}, but i prefer [GifCam][
 [1]: http://blog.bahraniapps.com/gifcam/
 [2]: http://www.screentogif.com/
 
-[gifcam]: {{ site.url }}/img/gifcam.gif "GifCam"
+[gifcam]: {{ site.baseurl }}/assets/img/gifcam.gif "GifCam"

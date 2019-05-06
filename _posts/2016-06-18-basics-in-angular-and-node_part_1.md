@@ -126,6 +126,6 @@ You can find the [source code][7]{:target="_blank"} from this part in my github 
 [4]: https://en.wikipedia.org/wiki/Content_delivery_network
 [5]: https://nginx.org/
 [6]: {% post_url 2016-06-05-fedora-loves-docker %}
-[7]: https://github.com/raaaimund/raaaimund.github.io/tree/master/files/basics-in-angular-and-node
+[7]: https://github.com/raaaimund/raaaimund.github.io/tree/master/assets/blog-files/basics-in-angular-and-node
 [8]: http://localhost:3000
 [9]: https://docs.angularjs.org/misc/downloading

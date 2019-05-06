@@ -56,6 +56,6 @@ Happy bashing!
 [2]: https://msdn.microsoft.com/en-us/commandline/wsl/about
 [3]: http://www.json.org/
 
-[open-user-settings-animated]: {{ site.url }}/img/open-user-settings.gif "Open User Settings Animated"
-[user-settings-bash]: {{ site.url }}/img/user-settings-bash.png "User Settings Bash"
-[bash-in-vscode]: {{ site.url }}/img/bash-in-vscode.png "Bash in Visual Studio Code"
+[open-user-settings-animated]: {{ site.baseurl }}/assets/img/open-user-settings.gif "Open User Settings Animated"
+[user-settings-bash]: {{ site.baseurl }}/assets/img/user-settings-bash.png "User Settings Bash"
+[bash-in-vscode]: {{ site.baseurl }}/assets/img/bash-in-vscode.png "Bash in Visual Studio Code"
