@@ -52,7 +52,7 @@ collections:
 # -----------------------------------------------------------------------------
 
 markdown: kramdown
-highlighter: pygments
+highlighter: rouge
 
 include: ['_pages']
 include: ['assets']
