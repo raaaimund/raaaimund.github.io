@@ -15,7 +15,9 @@ tags:
  - xunit
 ---
 
-Just a litte example how to do simple integration testing with the Entity Framework Core Sqlite and InMemory Provider in ASP.NET Core with XUnit and [AngleSharp][3]{:target="_blank"}.
+Just a litte example how to do simple integration testing with the Entity Framework Core Sqlite and InMemory Provider in ASP.NET Core with XUnit and [AngleSharp][2]{:target="_blank"}.
+
+For more details take a look at the [ASP.NET Core documentation][4]{:target="_blank"}.
 
 Lets assume we have the following setup.
 
@@ -509,3 +511,4 @@ Useful links
 [1]: https://docs.microsoft.com/en-us/aspnet/core/test/integration-tests?view=aspnetcore-2.2#basic-tests-with-the-default-webapplicationfactory
 [2]: https://github.com/AngleSharp/AngleSharp
 [3]: https://github.com/raaaimund/ToDo
+[4]: https://docs.microsoft.com/en-us/aspnet/core/test/integration-tests?view=aspnetcore-2.2
