@@ -15,13 +15,13 @@ tags:
  - xunit
 ---
 
-Just a litte example how to use [Entity Framework Core Sqlite Provider](1){:target="_blank"} in-memory database together with simple unit testing in ASP.NET Core and XUnit.
+Just a litte example how to use [Entity Framework Core Sqlite Provider][1]{:target="_blank"} in-memory database together with simple unit testing in ASP.NET Core and XUnit.
 
 Lets assume we have the following setup.
 
 An Entity Framework Core DbContext *ToDoDbContext*
 
-{% highlight c# linenos %}
+``` c#
 public class ToDoDbContext : DbContext
 {
     public DbSet<ToDoItem> ToDoItem { get; set; }
@@ -36,11 +36,11 @@ public class ToDoDbContext : DbContext
         modelBuilder.ApplyConfigurationsFromAssembly(typeof(ToDoDbContext).Assembly);
     }
 }
-{% endhighlight %}
+```
 
 and a configuration *ToDoItemConfiguration*
 
-{% highlight c# linenos %}
+```
 class ToDoItemConfiguration : IEntityTypeConfiguration<ToDoItem>
 {
     public void Configure(EntityTypeBuilder<ToDoItem> builder)
@@ -50,25 +50,25 @@ class ToDoItemConfiguration : IEntityTypeConfiguration<ToDoItem>
         builder.Property(p => p.Name).IsRequired().HasMaxLength(128);
     }
 }
-{% endhighlight %}
+```
 
 for our model *ToDoItem*
 
-{% highlight c# linenos %}
+```
 public class ToDoItem : IDto<Guid>
 {
     public Guid Id { get; set; }
     public string Name { get; set; }
 }
-{% endhighlight %}
+```
 
-To test our configuration with an in-memory database we can use the Sqlite Provider for Entitfy Framework Core. There is also an [InMemory Provider for testing](2){:target="_blank"} but 
+To test our configuration with an in-memory database we can use the Sqlite Provider for Entitfy Framework Core. There is also an [InMemory Provider for testing][2]{:target="_blank"} but 
 
 > InMemory is designed to be a general purpose database for testing, and is not designed to mimic a relational database.
 
 In our test project, we can create a base class for creating and disposing the in-memory Sqlite database.
 
-{% highlight c# linenos %}
+```
 public abstract class TestWithSqlite : IDisposable
 {
     private const string InMemoryConnectionString = "DataSource=:memory:";
@@ -92,11 +92,11 @@ public abstract class TestWithSqlite : IDisposable
         _connection.Close();
     }
 }
-{% endhighlight %}
+```
 
 Now we can create our unit tests for our configuration.
 
-{% highlight c# linenos %}
+```
 public class ToDoItemConfigurationTests : TestWithSqlite
 {
     [Fact]
@@ -135,9 +135,9 @@ public class ToDoItemConfigurationTests : TestWithSqlite
         Assert.Equal(1, DbContext.ToDoItem.Count());
     }
 }
-{% endhighlight %}
+```
 
-The project is available on [github](3){target="_blank"}.
+The project is available on [github][3]{:target="_blank"}.
 
 [1]: https://docs.microsoft.com/en-us/ef/core/providers/sqlite/
 [2]: https://docs.microsoft.com/en-us/ef/core/miscellaneous/testing/in-memory
