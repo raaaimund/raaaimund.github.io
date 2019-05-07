@@ -17,7 +17,7 @@ Just a litte example how to use [Moq][1]{:target="_blank"} together with simple 
 
 Lets assume we have the following setup.
 
-An Controller *ToDoController*
+A Controller *ToDoController*
 
 ``` c#
 public class ToDoController : Controller

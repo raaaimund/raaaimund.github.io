@@ -94,6 +94,19 @@ public abstract class TestWithSqlite : IDisposable
 }
 ```
 
+To test our setup
+
+``` c#
+public class ToDoDbContextTests : TestWithSqlite
+{
+    [Fact]
+    public async Task DatabaseIsAvailableAndCanBeConnectedTo()
+    {
+        Assert.True(await DbContext.Database.CanConnectAsync());
+    }
+}
+````
+
 Now we can create our unit tests for our configuration
 
 ``` c#
