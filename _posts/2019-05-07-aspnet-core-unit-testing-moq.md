@@ -1,144 +1,485 @@
 ---
 layout:     post
-title:      Unit testing in ASP.NET Core with EF Sqlite in-memory and XUnit
-date:       2019-05-07 20:00:00
+title:      Unit testing in ASP.NET Core with Moq and XUnit
+date:       2019-05-07 23:00:00
 author:     Raimund Rittnauer
-summary:    A simple example how to do unit testing in ASP.NET Core with Entity Framework Core Sqlite in-memory database and XUnit
+summary:    A simple example how to do unit testing in ASP.NET Core with Moq and XUnit
 categories: tech
 comments: true
 tags:
  - unit testing
  - asp.net
- - sqlite
- - in-memory
- - entity framework
+ - moq
  - xunit
 ---
 
-Just a litte example how to use [Entity Framework Core Sqlite Provider][1]{:target="_blank"} in-memory database together with simple unit testing in ASP.NET Core and XUnit.
+Just a litte example how to use [Moq][1]{:target="_blank"} together with simple unit testing in ASP.NET Core and XUnit.
 
 Lets assume we have the following setup.
 
-An Entity Framework Core DbContext *ToDoDbContext*
+An Controller *ToDoController*
 
 ``` c#
-public class ToDoDbContext : DbContext
+public class ToDoController : Controller
 {
-    public DbSet<ToDoItem> ToDoItem { get; set; }
+    private readonly IToDoItemService _toDoItemService;
 
-    public ToDoDbContext(DbContextOptions<ToDoDbContext> options)
-        : base(options)
+    public ToDoController(IToDoItemService toDoItemService)
     {
+        this._toDoItemService = toDoItemService ?? throw new ArgumentNullException(nameof(toDoItemService));
     }
 
-    protected override void OnModelCreating(ModelBuilder modelBuilder)
+    [HttpGet]
+    public async Task<IActionResult> Index()
     {
-        modelBuilder.ApplyConfigurationsFromAssembly(typeof(ToDoDbContext).Assembly);
+        var items = await _toDoItemService.GetItemsAsync();
+        return View(items);
     }
-}
-```
 
-and a configuration *ToDoItemConfiguration*
-
-```
-class ToDoItemConfiguration : IEntityTypeConfiguration<ToDoItem>
-{
-    public void Configure(EntityTypeBuilder<ToDoItem> builder)
+    [HttpGet]
+    public IActionResult Create()
     {
-        builder.HasKey(k => k.Id);
-        builder.Property(p => p.Id).IsRequired().ValueGeneratedOnAdd();
-        builder.Property(p => p.Name).IsRequired().HasMaxLength(128);
+        return View();
+    }
+
+    [HttpPost]
+    [ValidateAntiForgeryToken]
+    public async Task<IActionResult> Create(CreateViewModel model)
+    {
+        if (!ModelState.IsValid) return View(model);
+        await _toDoItemService.AddItemAsync(new ToDoItem() {Name = model.Name});
+        return RedirectToAction(nameof(Index));
+    }
+
+    [HttpGet]
+    public async Task<IActionResult> Update(Guid id)
+    {
+        var item = await _toDoItemService.GetAsync(id);
+
+        if (item == null)
+            return NotFound();
+
+        var model = new UpdateViewModel() {Id = item.Id, Name = item.Name};
+        return View(model);
+    }
+
+    [HttpPost]
+    [ValidateAntiForgeryToken]
+    public async Task<IActionResult> Update(UpdateViewModel model)
+    {
+        if (!ModelState.IsValid) return View(model);
+        await _toDoItemService.UpdateItemAsync(new ToDoItem() {Id = model.Id, Name = model.Name});
+        return RedirectToAction(nameof(Index));
+    }
+
+    [HttpGet]
+    public async Task<IActionResult> Delete(Guid id)
+    {
+        var item = await _toDoItemService.GetAsync(id);
+
+        if (item == null)
+            return NotFound();
+
+        var model = new DeleteViewModel() {Id = item.Id, Name = item.Name};
+        return View(model);
+    }
+
+    [HttpPost]
+    [ValidateAntiForgeryToken]
+    public async Task<IActionResult> Delete(DeleteViewModel model)
+    {
+        await _toDoItemService.DeleteItemAsync(model.Id);
+        return RedirectToAction(nameof(Index));
     }
 }
 ```
 
 for our model *ToDoItem*
 
-```
-public class ToDoItem : IDto<Guid>
+``` c#
+public class ToDoItem
 {
     public Guid Id { get; set; }
     public string Name { get; set; }
 }
 ```
 
-To test our configuration with an in-memory database we can use the Sqlite Provider for Entitfy Framework Core. There is also an [InMemory Provider for testing][2]{:target="_blank"} but 
+To manipulate the data the controller uses the *IToDoItemService*.
 
-> InMemory is designed to be a general purpose database for testing, and is not designed to mimic a relational database.
-
-In our test project, we can create a base class for creating and disposing the in-memory Sqlite database.
-
-```
-public abstract class TestWithSqlite : IDisposable
+``` c#
+public interface IToDoItemService
 {
-    private const string InMemoryConnectionString = "DataSource=:memory:";
-    private readonly SqliteConnection _connection;
+    Task<ToDoItem> GetAsync(Guid id);
+    Task<IEnumerable<ToDoItem>> GetItemsAsync();
+    Task AddItemAsync(ToDoItem item);
+    Task UpdateItemAsync(ToDoItem item);
+    Task DeleteItemAsync(Guid id);
+}
+```
 
-    protected readonly ToDoDbContext DbContext;
+``` c#
+public class ToDoItemService : IToDoItemService
+{
+    private readonly ToDoDbContext _dbContext;
+    private readonly ILogger<ToDoItemService> _logger;
 
-    protected TestWithSqlite()
+    public ToDoItemService(ToDoDbContext dbContext)
     {
-        _connection = new SqliteConnection(InMemoryConnectionString);
-        _connection.Open();
-        var options = new DbContextOptionsBuilder<ToDoDbContext>()
-                .UseSqlite(_connection)
-                .Options;
-        DbContext = new ToDoDbContext(options);
-        DbContext.Database.EnsureCreated();
+        this._dbContext = dbContext ?? throw new ArgumentNullException(nameof(dbContext));
     }
 
-    public void Dispose()
+    public ToDoItemService(ToDoDbContext dbContext, ILogger<ToDoItemService> logger)
     {
-        _connection.Close();
+        this._dbContext = dbContext ?? throw new ArgumentNullException(nameof(dbContext));
+        this._logger = logger ?? throw new ArgumentNullException(nameof(logger));
+    }
+
+    public async Task<ToDoItem> GetAsync(Guid id)
+    {
+        return await _dbContext.ToDoItem.FindAsync(id);
+    }
+
+    public async Task<IEnumerable<ToDoItem>> GetItemsAsync()
+    {
+        return await _dbContext.ToDoItem.AsNoTracking().Select(s => s).ToListAsync();
+    }
+
+    public async Task AddItemAsync(ToDoItem item)
+    {
+        await _dbContext.ToDoItem.AddAsync(item);
+        await _dbContext.SaveChangesAsync();
+        _logger?.LogInformation($"{item.Name} created.");
+    }
+
+    public async Task DeleteItemAsync(Guid id)
+    {
+        var item = await _dbContext.ToDoItem.FindAsync(id);
+        _dbContext.ToDoItem.Remove(item);
+        await _dbContext.SaveChangesAsync();
+        _logger?.LogInformation($"Item {item.Name} deleted.");
+    }
+
+    public async Task UpdateItemAsync(ToDoItem item)
+    {
+        var itemInDb = await _dbContext.ToDoItem.FindAsync(item.Id);
+        itemInDb.Name = item.Name;
+        await _dbContext.SaveChangesAsync();
+        _logger?.LogInformation($"{item.Name} updated.");
     }
 }
 ```
 
-Now we can create our unit tests for our configuration.
+Now to test this controller we have to mock our service using Moq.
+We can create a base class with a default mock of the service, which nearby
+all unit tests are using and modify where needed.
 
-```
-public class ToDoItemConfigurationTests : TestWithSqlite
+``` c#
+public abstract class BaseToDoControllerTests
 {
-    [Fact]
-    public void TableShouldGetCreated()
+    protected readonly List<ToDoItem> Items;
+    protected readonly Mock<IToDoItemService> MockService;
+    protected readonly ToDoController ControllerUnderTest;
+
+    protected BaseToDoControllerTests(List<ToDoItem> items)
     {
-        Assert.False(DbContext.ToDoItem.Any());
-    }
-
-    [Fact]
-    public void NameIsRequired()
-    {
-        var newItem = new ToDoItem();
-        DbContext.ToDoItem.Add(newItem);
-
-        Assert.Throws<DbUpdateException>(() => DbContext.SaveChanges());
-    }
-
-    [Fact]
-    public void AddedItemShouldGetGeneratedId()
-    {
-        var newItem = new ToDoItem() { Name = "Testitem" };
-        DbContext.ToDoItem.Add(newItem);
-        DbContext.SaveChanges();
-
-        Assert.NotEqual(Guid.Empty, newItem.Id);
-    }
-
-    [Fact]
-    public void AddedItemShouldGetPersisted()
-    {
-        var newItem = new ToDoItem() { Name = "Testitem" };
-        DbContext.ToDoItem.Add(newItem);
-        DbContext.SaveChanges();
-
-        Assert.Equal(newItem, DbContext.ToDoItem.Find(newItem.Id));
-        Assert.Equal(1, DbContext.ToDoItem.Count());
+        Items = items;
+        MockService = new Mock<IToDoItemService>();
+        MockService.Setup(svc => svc.GetItemsAsync())
+            .ReturnsAsync(Items);
+        ControllerUnderTest = new ToDoController(MockService.Object);
     }
 }
 ```
 
-The project is available on [github][3]{:target="_blank"}.
+Now we can write tests for our controller actions.
 
-[1]: https://docs.microsoft.com/en-us/ef/core/providers/sqlite/
-[2]: https://docs.microsoft.com/en-us/ef/core/miscellaneous/testing/in-memory
-[3]: https://github.com/raaaimund/ToDo
+``` c#
+public class IndexTests : BaseToDoControllerTests
+{
+    private static readonly ToDoItem FirstItem = new ToDoItem() { Id = Guid.NewGuid(), Name = "First Item" };
+    private static readonly ToDoItem SecondItem = new ToDoItem() { Id = Guid.NewGuid(), Name = "Second Item" };
+
+    public IndexTests() : base(new List<ToDoItem>() { FirstItem, SecondItem })
+    {
+    }
+
+    [Fact]
+    public async Task IndexGetViewModelShouldBeOfTypeIEnumerableToDoItem()
+    {
+        var result = await ControllerUnderTest.Index();
+
+        var viewResult = Assert.IsType<ViewResult>(result);
+
+        Assert.IsAssignableFrom<IEnumerable<ToDoItem>>(viewResult.ViewData.Model);
+    }
+
+    [Fact]
+    public async Task IndexGetShouldReturnListOfToDoItems()
+    {
+        var result = await ControllerUnderTest.Index();
+
+        var viewResult = Assert.IsType<ViewResult>(result);
+
+        var model = Assert.IsAssignableFrom<IEnumerable<ToDoItem>>(viewResult.ViewData.Model);
+        Assert.Equal(2, model.Count());
+    }
+}
+```
+
+``` c#
+public class CreateTests : BaseToDoControllerTests
+{
+    private static readonly ToDoItem FirstItem = new ToDoItem() { Id = Guid.NewGuid(), Name = "First Item" };
+    private static readonly ToDoItem SecondItem = new ToDoItem() { Id = Guid.NewGuid(), Name = "Second Item" };
+
+    public CreateTests() : base(new List<ToDoItem>() { FirstItem, SecondItem })
+    {
+    }
+
+    [Fact]
+    public void CreateGetShouldHaveNoViewModel()
+    {
+        var result = ControllerUnderTest.Create();
+
+        var viewResult = Assert.IsType<ViewResult>(result);
+
+        Assert.Null(viewResult.ViewData.Model);
+    }
+
+    [Fact]
+    public async Task CreatePostShouldReturnCreateViewModelIfModelIsInvalid()
+    {
+        var model = new CreateViewModel();
+        ControllerUnderTest.ModelState.AddModelError("error", "testerror");
+
+        var result = await ControllerUnderTest.Create(model);
+
+        var viewResult = Assert.IsType<ViewResult>(result);
+        Assert.IsAssignableFrom<CreateViewModel>(viewResult.ViewData.Model);
+    }
+
+    [Fact]
+    public async Task CreatePostShouldReturnRedirectToActionIndexIfModelIsValid()
+    {
+        var model = new CreateViewModel();
+
+        var result = await ControllerUnderTest.Create(model);
+
+        var redirectResult = Assert.IsType<RedirectToActionResult>(result);
+        Assert.Equal(nameof(ToDoController.Index), redirectResult.ActionName);
+    }
+
+    [Fact]
+    public async Task CreatePostShouldCallAddItemAsyncOnceIfModelIsValid()
+    {
+        var model = new CreateViewModel() { Name = nameof(CreatePostShouldCallAddItemAsyncOnceIfModelIsValid) };
+
+        await ControllerUnderTest.Create(model);
+
+        MockService.Verify(mock => mock.AddItemAsync(It.IsAny<ToDoItem>()), Times.Once);
+    }
+
+    [Fact]
+    public async Task CreatePostShouldCallAddItemAsyncWithCorrectParameterIfModelIsValid()
+    {
+        var item = new ToDoItem() { Name = nameof(CreatePostShouldCallAddItemAsyncWithCorrectParameterIfModelIsValid) };
+        var model = new CreateViewModel() { Name = item.Name };
+
+        await ControllerUnderTest.Create(model);
+
+        MockService.Verify(mock => mock.AddItemAsync(It.Is<ToDoItem>(i => i.Name.Equals(item.Name))), Times.Once);
+    }
+}
+```
+
+``` c#
+public class UpdateTests : BaseToDoControllerTests
+{
+    private static readonly ToDoItem FirstItem = new ToDoItem() { Id = Guid.NewGuid(), Name = "First Item" };
+    private static readonly ToDoItem SecondItem = new ToDoItem() { Id = Guid.NewGuid(), Name = "Second Item" };
+
+    public UpdateTests() : base(new List<ToDoItem>() { FirstItem, SecondItem })
+    {
+    }
+
+    [Fact]
+    public async Task UpdateGetWithInvalidIdShouldReturnNotFound()
+    {
+        var result = await ControllerUnderTest.Update(Guid.Empty);
+
+        Assert.IsType<NotFoundResult>(result);
+    }
+
+    [Fact]
+    public async Task UpdateGetShouldCallGetAsyncOnce()
+    {
+        await ControllerUnderTest.Update(Guid.Empty);
+
+        MockService.Verify(mock => mock.GetAsync(It.IsAny<Guid>()), Times.Once);
+    }
+
+    [Fact]
+    public async Task UpdateGetViewModelShouldBeOfTypeUpdateViewModel()
+    {
+        MockService.Setup(svc => svc.GetAsync(FirstItem.Id)).ReturnsAsync(FirstItem);
+
+        var result = await ControllerUnderTest.Update(FirstItem.Id);
+
+        var viewResult = Assert.IsType<ViewResult>(result);
+        Assert.IsAssignableFrom<UpdateViewModel>(viewResult.ViewData.Model);
+    }
+
+    [Fact]
+    public async Task UpdateGetViewModelShouldHaveCorrectProperties()
+    {
+        MockService.Setup(svc => svc.GetAsync(FirstItem.Id)).ReturnsAsync(FirstItem);
+
+        var result = await ControllerUnderTest.Update(FirstItem.Id);
+
+        var viewResult = Assert.IsType<ViewResult>(result);
+        var viewModel = Assert.IsAssignableFrom<UpdateViewModel>(viewResult.ViewData.Model);
+        Assert.Equal(FirstItem.Id, viewModel.Id);
+        Assert.Equal(FirstItem.Name, viewModel.Name);
+    }
+
+    [Fact]
+    public async Task UpdatePostShouldReturnUpdateViewModelIfModelIsInvalid()
+    {
+        var model = new UpdateViewModel();
+
+        ControllerUnderTest.ModelState.AddModelError("error", "testerror");
+        var result = await ControllerUnderTest.Update(model);
+
+        var viewResult = Assert.IsType<ViewResult>(result);
+        Assert.IsAssignableFrom<UpdateViewModel>(viewResult.ViewData.Model);
+    }
+
+    [Fact]
+    public async Task UpdatePostShouldReturnRedirectToActionIndexIfModelIsValid()
+    {
+        var model = new UpdateViewModel();
+
+        var result = await ControllerUnderTest.Update(model);
+
+        var redirectResult = Assert.IsType<RedirectToActionResult>(result);
+        Assert.Equal(nameof(ToDoController.Index), redirectResult.ActionName);
+    }
+
+    [Fact]
+    public async Task UpdatePostShouldCallUpdateItemAsyncOnceIfModelIsValid()
+    {
+        var model = new UpdateViewModel() { Name = nameof(UpdatePostShouldCallUpdateItemAsyncOnceIfModelIsValid) };
+
+        await ControllerUnderTest.Update(model);
+
+        MockService.Verify(mock => mock.UpdateItemAsync(It.IsAny<ToDoItem>()), Times.Once);
+    }
+
+    [Fact]
+    public async Task UpdatePostShouldCallUpdateItemAsyncWithCorrectParameterIfModelIsValid()
+    {
+        var item = new ToDoItem() { Id = FirstItem.Id, Name = nameof(UpdatePostShouldCallUpdateItemAsyncWithCorrectParameterIfModelIsValid) };
+        var model = new UpdateViewModel() { Id = item.Id, Name = item.Name };
+
+        await ControllerUnderTest.Update(model);
+
+        MockService.Verify(mock => mock.UpdateItemAsync(It.Is<ToDoItem>(i => i.Name.Equals(item.Name) && i.Id.Equals(item.Id))), Times.Once);
+    }
+}
+```
+
+``` c#
+public class DeleteTests : BaseToDoControllerTests
+{
+    private static readonly ToDoItem FirstItem = new ToDoItem() { Id = Guid.NewGuid(), Name = "First Item" };
+    private static readonly ToDoItem SecondItem = new ToDoItem() { Id = Guid.NewGuid(), Name = "Second Item" };
+
+    public DeleteTests() : base(new List<ToDoItem>() { FirstItem, SecondItem })
+    {
+    }
+
+    [Fact]
+    public async Task DeleteGetWithInvalidIdShouldReturnNotFound()
+    {
+        var result = await ControllerUnderTest.Delete(Guid.Empty);
+
+        Assert.IsType<NotFoundResult>(result);
+    }
+
+    [Fact]
+    public async Task DeleteGetShouldCallGetAsyncOnce()
+    {
+        await ControllerUnderTest.Delete(Guid.Empty);
+
+        MockService.Verify(mock => mock.GetAsync(It.IsAny<Guid>()), Times.Once);
+    }
+
+    [Fact]
+    public async Task DeleteGetViewModelShouldBeOfTypeDeleteViewModel()
+    {
+        MockService.Setup(svc => svc.GetAsync(FirstItem.Id)).ReturnsAsync(FirstItem);
+
+        var result = await ControllerUnderTest.Delete(FirstItem.Id);
+
+        var viewResult = Assert.IsType<ViewResult>(result);
+        Assert.IsAssignableFrom<DeleteViewModel>(viewResult.ViewData.Model);
+    }
+
+    [Fact]
+    public async Task DeleteGetViewModelShouldHaveCorrectProperties()
+    {
+        MockService.Setup(svc => svc.GetAsync(FirstItem.Id)).ReturnsAsync(FirstItem);
+
+        var result = await ControllerUnderTest.Delete(FirstItem.Id);
+
+        var viewResult = Assert.IsType<ViewResult>(result);
+        var viewModel = Assert.IsAssignableFrom<DeleteViewModel>(viewResult.ViewData.Model);
+        Assert.Equal(FirstItem.Id, viewModel.Id);
+        Assert.Equal(FirstItem.Name, viewModel.Name);
+    }
+
+    [Fact]
+    public async Task DeletePostShouldReturnRedirectToActionIndex()
+    {
+        var model = new DeleteViewModel();
+
+        var result = await ControllerUnderTest.Delete(model);
+
+        var redirectResult = Assert.IsType<RedirectToActionResult>(result);
+        Assert.Equal(nameof(ToDoController.Index), redirectResult.ActionName);
+    }
+
+    [Fact]
+    public async Task DeletePostShouldCallDeleteItemAsyncOnceIfModelIsValid()
+    {
+        var model = new DeleteViewModel() { Name = nameof(DeletePostShouldCallDeleteItemAsyncOnceIfModelIsValid) };
+
+        await ControllerUnderTest.Delete(model);
+
+        MockService.Verify(mock => mock.DeleteItemAsync(It.IsAny<Guid>()), Times.Once);
+    }
+
+    [Fact]
+    public async Task DeletePostShouldCallDeleteItemAsyncWithCorrectParameter()
+    {
+        var item = new ToDoItem() { Id = FirstItem.Id, Name = nameof(DeletePostShouldCallDeleteItemAsyncWithCorrectParameter) };
+        var model = new DeleteViewModel() { Id = item.Id, Name = item.Name };
+
+        await ControllerUnderTest.Delete(model);
+
+        MockService.Verify(mock => mock.DeleteItemAsync(It.Is<Guid>(id => id.Equals(item.Id))), Times.Once);
+    }
+}
+```
+
+The project is available on [github][2]{:target="_blank"}.
+
+Useful links
+
+* [Testing Controllers][3]{:target="_blank"}
+* [Unit Testing with XUnit][4]{:target="_blank"}
+
+[1]: https://github.com/moq/moq
+[2]: https://github.com/raaaimund/ToDo
+[3]: https://docs.microsoft.com/en-us/aspnet/core/mvc/controllers/testing?view=aspnetcore-2.2
+[4]: https://docs.microsoft.com/en-us/dotnet/core/testing/unit-testing-with-dotnet-test
