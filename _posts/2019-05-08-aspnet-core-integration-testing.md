@@ -17,8 +17,6 @@ tags:
 
 Just a litte example how to do simple integration testing with the Entity Framework Core Sqlite and InMemory Provider in ASP.NET Core with XUnit and [AngleSharp][2]{:target="_blank"}.
 
-For more details take a look at the [ASP.NET Core documentation][4]{:target="_blank"}.
-
 Lets assume we have the following setup.
 
 A Controller *ToDoController*
@@ -494,6 +492,8 @@ public class IndexTestsWithSqlite : BaseIndexTests, IClassFixture<WebApplication
 ```
 
 The project is available on [github][3]{:target="_blank"}.
+
+For more details about integration testing take a look at the [ASP.NET Core documentation][4]{:target="_blank"}.
 
 Useful links
 
