@@ -472,7 +472,7 @@ public class DeleteTests : BaseToDoControllerTests
 }
 ```
 
-The project is available on [github][2]{:target="_blank"}.
+This project is available on [github][2]{:target="_blank"}.
 
 Useful links
 

@@ -150,7 +150,7 @@ public class ToDoItemConfigurationTests : TestWithSqlite
 }
 ```
 
-The project is available on [github][3]{:target="_blank"}.
+This project is available on [github][3]{:target="_blank"}.
 
 [1]: https://docs.microsoft.com/en-us/ef/core/providers/sqlite/
 [2]: https://docs.microsoft.com/en-us/ef/core/miscellaneous/testing/in-memory

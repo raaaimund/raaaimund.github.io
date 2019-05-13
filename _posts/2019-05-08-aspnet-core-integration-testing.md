@@ -491,7 +491,7 @@ public class IndexTestsWithSqlite : BaseIndexTests, IClassFixture<WebApplication
 }
 ```
 
-The project is available on [github][3]{:target="_blank"}.
+This project is available on [github][3]{:target="_blank"}.
 
 For more details about integration testing take a look at the [ASP.NET Core documentation][4]{:target="_blank"}.
 
