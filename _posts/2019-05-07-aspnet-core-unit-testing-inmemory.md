@@ -17,6 +17,11 @@ tags:
 
 Just a litte example how to use [Entity Framework Core Sqlite Provider][1]{:target="_blank"} in-memory database together with simple unit testing in ASP.NET Core and XUnit.
 
+Similar posts
+
+* [Unit testing in ASP.NET Core with Moq][4]{:target="_blank"}
+* [Integration testing in ASP.NET Core with EF Sqlite and InMemory Provider][5]{:target="_blank"}
+
 Lets assume we have the following setup.
 
 An Entity Framework Core DbContext *ToDoDbContext*
@@ -155,3 +160,5 @@ This project is available on [github][3]{:target="_blank"}.
 [1]: https://docs.microsoft.com/en-us/ef/core/providers/sqlite/
 [2]: https://docs.microsoft.com/en-us/ef/core/miscellaneous/testing/in-memory
 [3]: https://github.com/raaaimund/ToDo
+[4]: {% post_url 2019-05-07-aspnet-core-unit-testing-moq %}
+[5]: {% post_url 2019-05-08-aspnet-core-integration-testing %}

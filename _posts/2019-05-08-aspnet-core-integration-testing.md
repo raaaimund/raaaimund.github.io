@@ -17,6 +17,11 @@ tags:
 
 Just a litte example how to do simple integration testing with the Entity Framework Core Sqlite and InMemory Provider in ASP.NET Core with XUnit and [AngleSharp][2]{:target="_blank"}.
 
+Similar posts
+
+* [Unit testing in ASP.NET Core with EF Sqlite in-memory][5]{:target="_blank"}
+* [Unit testing in ASP.NET Core with Moq][6]{:target="_blank"}
+
 Lets assume we have the following setup.
 
 A Controller *ToDoController*
@@ -512,3 +517,5 @@ Useful links
 [2]: https://github.com/AngleSharp/AngleSharp
 [3]: https://github.com/raaaimund/ToDo
 [4]: https://docs.microsoft.com/en-us/aspnet/core/test/integration-tests?view=aspnetcore-2.2
+[5]: {% post_url 2019-05-07-aspnet-core-unit-testing-inmemory %}
+[6]: {% post_url 2019-05-07-aspnet-core-unit-testing-moq %}

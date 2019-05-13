@@ -15,6 +15,11 @@ tags:
 
 Just a litte example how to use [Moq][1]{:target="_blank"} together with simple unit testing in ASP.NET Core and XUnit.
 
+Similar posts
+
+* [Unit testing in ASP.NET Core with EF Sqlite in-memory][5]{:target="_blank"}
+* [Integration testing in ASP.NET Core with EF Sqlite and InMemory Provider][6]{:target="_blank"}
+
 Lets assume we have the following setup.
 
 A Controller *ToDoController*
@@ -483,3 +488,5 @@ Useful links
 [2]: https://github.com/raaaimund/ToDo
 [3]: https://docs.microsoft.com/en-us/aspnet/core/mvc/controllers/testing?view=aspnetcore-2.2
 [4]: https://docs.microsoft.com/en-us/dotnet/core/testing/unit-testing-with-dotnet-test
+[5]: {% post_url 2019-05-07-aspnet-core-unit-testing-inmemory %}
+[6]: {% post_url 2019-05-08-aspnet-core-integration-testing %}
