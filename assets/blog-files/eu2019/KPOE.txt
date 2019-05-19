@@ -1,0 +1,43 @@
+Lfd. Nr.	Familienname	Vorname	Titel	Geb.?Jahr	Beruf	PLZ	Ort
+1	Anastasiou	Aikaterini		1983	Angestellte	1150	Wien
+2	Klaus	Melina		1968	Erwachsenenbildnerin	1020	Wien
+3	Tamas	Cristina-Annamaria	Dipl.-Ing.	1968	Informatikerin	9020	Klagenfurt am Wörthersee/Celovec
+4	Zach	Dietmar	Mag.	1965	Landessprecher der KPÖ Wien	1150	Wien
+5	Erd?di	Katalin		1980	Kunstschaffende	1040	Wien
+6	Cortés Barbado	Luis		1986	Physiker	1090	Wien
+7	Grünn	Gerlinde	Mag.	1968	Sozialpädagogin	4020	Linz
+8	Kurt	Cevdet		1970	Flüchtlingsbetreuer	1090	Wien
+9	Hammer	Heidelinde	Dr.	1973	Angestellte	1170	Wien
+10	Janson	Sven		1985	"Trainer, Workshopleiter"	4020	Linz
+11	Kaltenbrunner-Jeli?	Sanja	Mag.	1973	Freischaffende Künstlerin	1160	Wien
+12	Schäfer	Franz		1968	IT-Techniker	1020	Wien
+13	Cakmak	Eva		1957	Pensionistin	2345	Brunn am Gebirge
+14	Promitzer	Christian	Mag. Dr.	1962	Historiker	8045	Graz
+15	Pastyrik	Gerda		1965	Sozialarbeiterin	6020	Innsbruck
+16	Kohen	Maria		1969	Angestellte	1030	Wien
+17	Weiß	Jörg		1965	Sozialarbeiter	4020	Linz
+18	Wieser	Judith		1975	Angestellte	1220	Wien
+19	Welsch	Werner	Mag.	1974	Übersetzer	2353	Guntramsdorf
+20	Empacher	Susanne		1961	Angestellte	1030	Wien
+21	Enzendorfer	Josef		1955	Lagerarbeiter	5020	Salzburg
+22	Fritz-Klackl	Waltraud	Mag.	1953	Netzwerkerin	1030	Wien
+23	Testasecca	Fabio		1974	Pflegeassistent	1220	Wien
+24	Wanek	Natascha		1983	Erwachsenenbildnerin	1110	Wien
+25	Amiri	Amir Keivan		1957	Taxifahrer	1020	Wien
+26	Kaiser	Patrick		1977	Dipl. Krankenpfleger	1020	Wien
+27	Ambrosch	Heidemarie		1958	Angestellte	1060	Wien
+28	Hobek	Robert		1964	Postzusteller	1230	Wien
+29	Wolfgruber	Helga		1948	Psychotherapeutin	1030	Wien
+30	Jurjans	Wolf-Goetz	Dipl.-Ing.	1952	Betriebsrat	1150	Wien
+31	Dürr	Sylvia	Mag.	1954	Autorin	6020	Innsbruck
+32	Fuxbauer	Herbert		1950	Pensionist	1080	Wien
+33	Helmberger	Sabine		1985	Lehrerin	5020	Salzburg
+34	Ohrhallinger	Stefan		1974	Wissenschaftlicher Mitarbeiter	1020	Wien
+35	Kraus	Jennifer		1986	Grafikerin	1200	Wien
+36	Iraschko	Josef		1942	Mieterberater	1020	Wien
+37	Preinsperger	Alexandra		1974	Lehrerin	7100	Neusiedl am See
+38	Auer	Alfred		1962	Speditionskaufmann	5020	Salzburg
+39	Bruckböck	Kai		1965	Sozialarbeiter	1140	Wien
+40	Moser	Lisa-Carina		1986	Lehrerin	1150	Wien
+41	Eichinger	Christian	Mag.	1976	Programmierer	5020	Salzburg
+42	Birngruber	Florian		1984	Angestellter	1100	Wien

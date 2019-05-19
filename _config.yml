@@ -13,6 +13,14 @@ last_updated: # leave blank if you don't want to display last updated
 google_analytics: "UA-25417012-4"
 
 # -----------------------------------------------------------------------------
+# jekyll-seo-tag
+# -----------------------------------------------------------------------------
+social:
+  name: Raimund Rittnauer
+  links:
+    - https://github.com/raaaimund
+
+# -----------------------------------------------------------------------------
 # Social integration
 # -----------------------------------------------------------------------------
 github_username:  raaaimund

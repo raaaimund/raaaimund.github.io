@@ -1,0 +1,43 @@
+Lfd. Nr.	Familienname	Vorname	Titel	Geb.?Jahr	Beruf	PLZ	Ort
+1	Karas	Othmar	Dr.	1957	Mitglied des Europäischen Parlaments	3370	Ybbs an der Donau
+2	Edtstadler	Karoline	Mag.	1981	Staatssekretärin	5020	Salzburg
+3	Winzig	Angelika	Mag. Dr.	1963	Unternehmerin	4800	Attnang-Puchheim
+4	Schmiedtbauer	Simone		1974	Landwirtin	8151	Hitzendorf
+5	Mandl	Lukas	Mag.	1979	"Mitglied des Europäischen Parlaments, selbstständig"	2201	Gerasdorf bei Wien
+6	Pirchner	Wolfram	Mag.	1958	Lebens- und Sozialberater	2460	Bruck an der Leitha
+7	Sagartz	Christian	"Mag., BA"	1981	Landtagsabgeordneter	7033	Pöttsching
+8	Thaler	Barbara		1982	Unternehmerin	6020	Innsbruck
+9	Zoll	Christian	Mag.	1993	Jurist	6890	Lustenau
+10	Wolf-Schöffmann	Claudia		1969	Lehrerin	9300	Frauenstein
+11	Bernhuber	Alexander	Dipl.-Ing.	1992	"Landwirt, Angestellter"	3233	Kilb
+12	Scharzenberger	Corinna	Mag.	1990	Juristin	8983	Bad Mitterndorf
+13	Pasquali	Paul	Mag.	1980	Bankangestellter	1010	Wien
+14	Hehenberger	Andrea		1970	Kaufmännische Angestellte	4070	Hinzenbach
+15	Stellwag	Michael	BA	1991	Student	2620	Natschbach-Loipersbach
+16	Salomon	Anja-Therese		1993	Angestellte	1080	Wien
+17	Gmeiner	Leonhard	Mag. (FH)	1980	"Selbstständig, Weinbauer"	4320	Perg
+18	Pletzenauer	Stephanie		1992	Studentin	6391	Fieberbrunn
+19	Spiess	Gerald	"BA, MA"	1980	Selbstständig	2601	Sollenau
+20	Wolff	Elisabeth		1992	Geschäftsführerin	1190	Wien
+21	Steindl	Leopold		1946	Pensionist	2111	Harmannsdorf
+22	Foglar-Deinhardstein	Valeria		1985	Angestellte	1180	Wien
+23	Dorner	Patrick		1989	Vertragsbediensteter	8071	Hausmannstätten
+24	Eder	Maria-Theresia	Dipl.-Ing. Dr.	1965	Verfahrenstechnikerin	3400	Klosterneuburg
+25	Gruber	Severin	"Mag., LL.M."	1994	Jurist	4661	Roitham am Traunfall
+26	Höller	Anita		1984	Unternehmerin	8073	Feldkirchen bei Graz
+27	Voller	Patrick	Mag.	1973	Leitender Angestellter	B-1040	"Brüssel, Belgien"
+28	Pumm	Michaela		1980	Vertragsbedienstete	7561	Heiligenkreuz im Lafnitztal
+29	Traxl	Dominik		1994	Lehrer	6511	Zams
+30	Saurer	Beatrice		1995	Verwaltungsassistentin	8510	Stainz
+31	Larndorfer	Markus		1971	Landesbeamter	4222	St. Georgen an der Gusen
+32	Blauensteiner	Anne		1965	Unternehmerin	3910	Zwettl
+33	Höfferer	Meinrad	MMag. Dr.	1978	Leitender Angestellter	9020	Klagenfurt am Wörthersee
+34	Zimmermann	Isabella		1946	Pensionistin	2361	Laxenburg
+35	Riedl	Stefan		1985	"Angestellter, Reiseleiter"	8435	Wagna
+36	Zörnpfenning	Carina		1990	Landwirtin	2232	Aderklaa
+37	Soliman	Maysara		1988	Selbstständig	8020	Graz
+38	Rasinger	Christine		1944	Pensionistin	1150	Wien
+39	Perfler	Romed		1983	Angestellter	4040	Linz
+40	Voglsam	Ursula		1953	Pensionistin	4400	Steyr
+41	Steininger	Christian	"Mag. Dr., M.B.L."	1979	Notarsubstitut	9900	Lienz
+42	Birklbauer	Kerstin		1991	Angestellte	4211	Alberndorf in der Riedmark

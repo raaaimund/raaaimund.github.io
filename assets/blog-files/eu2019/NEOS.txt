@@ -1,0 +1,43 @@
+Lfd. Nr.	Familienname	Vorname	Titel	Geb.?Jahr	Beruf	PLZ	Ort
+1	Gamon	Claudia		1988	Abgeordnete zum Nationalrat	6867	Schwarzenberg
+2	Feldinger	Karin		1975	Unternehmerin	5061	Elsbethen
+3	Windberger	Stefan	Bakk.rer.soc.oec.	1989	Consultant	1090	Wien
+4	Zotti	Stefan		1976	Consultant	1160	Wien
+5	Tsiklauri	Nini		1992	"Autorin, Studentin"	1030	Wien
+6	Margreiter	Johannes	Dr.	1958	Rechtsanwalt	6060	Hall in Tirol
+7	Reiter	Teresa	BA M.A.I.S. MA	1988	Fachreferentin	1080	Wien
+8	Schneider	Isak		1976	Kommunikationsberater	1190	Wien
+9	Berry	Peter	MA	1991	Programmkoordinator	1020	Wien
+10	Reichenhauser	Julia		1996	Studentin	8054	Graz
+11	Mayer	Ulrich	Mag. (FH)	1986	Marketing Manager	3074	Michelbach
+12	Mittermayer	Felix	Dipl.-Ing.	1967	Verwaltungsrat im Europäischen Parlament	8972	Ramsau am Dachstein
+13	Dorn	Sabrina	"MMag. Dr., MSc ETH"	1984	"Ökonomin, Bildungsaktivistin"	CH-8404	"Winterthur, Schweiz"
+14	Posch	Eduard	Mag.	1957	Pensionist	7423	Pinkafeld
+15	Schobesberger	Stefan		1987	Student	4020	Linz
+16	De Monte	Bastian	Dr.	1992	Consultant	1110	Wien
+17	Ritter	Jan-Gabriel		2001	Schüler	1020	Wien
+18	Enenkel	Thomas		1987	Systemarchitekt	1100	Wien
+19	Kitzmüller	Klaus		1960	Kommunikationsmanager	D-86938	"Schondorf, Deutschland"
+20	Hofmann	Alexander	"Dr., LL.M."	1961	Rechtsanwalt	1130	Wien
+21	Pirker	Christian		1962	EDV Trainer	9073	Klagenfurt am Wörthersee
+22	Stemberger	Anton	Mag.	1973	Entwicklungshelfer	6020	Innsbruck
+23	Pastleitner	Ralf	Dr.	1976	Jurist	4400	St. Ulrich bei Steyr
+24	Volko	Claus-Dieter	Dipl.-Ing. Dr.	1983	Softwareentwickler	1230	Wien
+25	Freisais	Pit		1988	Versicherungsfachmann	4400	Steyr
+26	Brenner	Georg	Dipl.-Ing. (FH)	1982	"Referent, Projektmanager"	3430	Tulln an der Donau
+27	D'Aron	Erhard	Mag.	1955	Jurist	1160	Wien
+28	Trubacek	Christian	Dipl.-HTL-Ing. Ing.	1957	Gewerbetreibender	2522	Oberwaltersdorf
+29	Prischl	Markus	Mag.	1978	"Lehrer, selbstständiger Sprachcoach"	4060	Leonding
+30	Dornach	Karlheinz	MSc	1974	IT Consultant	7000	Eisenstadt
+31	Hinterauer	Lorenz	Dr.	1952	Pensionist	6850	Dornbirn
+32	Groschacher	Harald		1982	Angestellter	1130	Wien
+33	Zöllner	Hanns	Dr.	1948	Privatier	CH-6314	"Unterägeri, Schweiz"
+34	Wressnig	Joachim		1980	Selbstständig	1040	Wien
+35	Stürgkh	Anna		1994	Studentin	1040	Wien
+36	Seidl	Julia Maria	Mag.	1981	Unternehmerin	6020	Innsbruck
+37	Raab	Judith		1968	Kundenbetreuerin	4060	Leonding
+38	Pjeta	Otto	Dr.	1949	Arzt für Allgemeinmedizin	4652	Steinerkirchen an der Traun
+39	Milotta	Clemens		1980	Unternehmer	4020	Linz
+40	Holzegger	Ines Elisabeth		1993	"Lehrerin, Studentin"	4484	Kronstorf
+41	Frischenschlager	Friedhelm	Dr.	1943	Pensionist	1010	Wien
+42	Brandstötter	Henrike		1975	Autorin	1050	Wien

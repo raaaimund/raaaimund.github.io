@@ -14,7 +14,7 @@ tags:
  - nes
 ---
 
-While I was searching for a christmas present for my girlfriend I stumbled across this [instruction][1]{:target="_blank"} for a beautiful raspberry pie NES lego case. The next day I visted my three cousins and they helped me out with many lego bricks to build a raspberry pie nes case. We didn't manage to get all correct bricks so we improvised a little bit. I also bought two USB NES controller from [amazon][2]{:target="_blank"}. But we switched to the PS3 controller, because they are wireless.
+While I was searching for a christmas present I stumbled across this [instruction][1]{:target="_blank"} for a beautiful raspberry pie NES lego case. The next day I visted my three cousins and they helped me out with many lego bricks to build a raspberry pie nes case. We didn't manage to get all correct bricks so we improvised a little bit. I also bought two USB NES controller from [amazon][2]{:target="_blank"}. But we switched to the PS3 controller, because they are wireless.
 
 ![raspberry-nes-1][raspberry-nes-1]{:class="image-responsive"}
 
