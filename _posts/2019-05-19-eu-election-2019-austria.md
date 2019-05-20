@@ -51,10 +51,6 @@ and the [.Rmd file][9]{:target="_blank"} containing the code for the plots.
 
 ![teachers][teachers]
 
-## KiwaraRinnen
-
-![kiwararinnen][kiwararinnen]
-
 ## retired girls & guys
 
 ![retired][retired]
