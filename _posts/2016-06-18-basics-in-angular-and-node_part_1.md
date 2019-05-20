@@ -117,7 +117,7 @@ express and server. Just restart your server again and take a look at
 
 On the next part we will integrate [mongodb][3]{:target="_blank"} and add the functionality to add
 images to each entry. We will store all the images on our own [cdn][4]{:target="_blank"} with
-[nginx][5]{:target="_blank"} in a [Docker container on our Fedora server][6].
+[nginx][5]{:target="_blank"} in a Docker container on our Fedora server.
 
 You can find the [source code][7]{:target="_blank"} from this part in my github repo.
 
@@ -126,7 +126,6 @@ You can find the [source code][7]{:target="_blank"} from this part in my github 
 [3]: https://www.mongodb.com/
 [4]: https://en.wikipedia.org/wiki/Content_delivery_network
 [5]: https://nginx.org/
-[6]: {% post_url 2016-06-05-fedora-loves-docker %}
 [7]: https://github.com/raaaimund/raaaimund.github.io/tree/master/assets/blog-files/basics-in-angular-and-node
 [8]: http://localhost:3000
 [9]: https://docs.angularjs.org/misc/downloading

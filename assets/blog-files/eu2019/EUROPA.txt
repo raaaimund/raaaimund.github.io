@@ -1,0 +1,9 @@
+Lfd. Nr.	Familienname	Vorname	Titel	Geb.?Jahr	Beruf	PLZ	Ort
+1	Voggenhuber	Johannes		1950	"Autor, Publizist"	1050	Wien
+2	Krainer	Marion		1963	"Schauspielerin, Regisseurin"	1050	Wien
+3	Faller	Gabriele	Dipl.-Ing.	1970	Angestellte	8041	Graz
+4	Gaupmann	Sandra	Mag.	1972	Psychologin	3430	Tulln an der Donau
+5	Huber	Thomas		1961	AHS-Lehrer	1050	Wien
+6	Ratheiser	Theresa Lisa		1993	AHS-Lehrerin	1170	Wien
+7	Beclin	Barbara	Dr.	1968	Juristin	1080	Wien
+8	Dachler	Marlies	BA MSc	1988	EU-Referentin	1200	Wien
