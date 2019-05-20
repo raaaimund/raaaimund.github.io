@@ -13,7 +13,7 @@ tags:
 ---
 
 Some bar plots with the data from the applicants for the EU election from parties in Austria. You can find the data on the [BMI][1]{:target="_blank"} website.
-All the files I found were PDFs ... so I had to somehow convert the PDFs into a format that I could read and use for the following bar plots.
+All the files I found were PDFs ... so I had to somehow convert the PDFs into a format that I could use for the following bar plots.
 
 Here are the converted files of the parties (tab-separated text file)
 
