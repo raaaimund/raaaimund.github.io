@@ -16,7 +16,6 @@ google_analytics: "UA-25417012-4"
 # jekyll-seo-tag
 # -----------------------------------------------------------------------------
 logo: '/assets/img/favicons/android-chrome-192x192.png'
-image: '/assets/img/favicons/android-chrome-256x256.png'
 social:
   name: Raimund Rittnauer
   links:
