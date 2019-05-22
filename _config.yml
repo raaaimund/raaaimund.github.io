@@ -15,6 +15,7 @@ google_analytics: "UA-25417012-4"
 # -----------------------------------------------------------------------------
 # jekyll-seo-tag
 # -----------------------------------------------------------------------------
+publisher: raimund rittnauer
 social:
   name: Raimund Rittnauer
   links:
