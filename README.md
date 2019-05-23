@@ -1,6 +1,6 @@
 # my blog
 
-Thank you lia bogoev for your awesome theme [*folio](https://github.com/bogoli/-folio)
+Thank you lia bogoev for creating this awesome theme [*folio](https://github.com/bogoli/-folio)
 
 <hr/>
 Copyright of theme:
