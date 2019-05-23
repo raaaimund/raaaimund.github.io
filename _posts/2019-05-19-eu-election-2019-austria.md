@@ -13,8 +13,9 @@ tags:
  - R
 ---
 
-Here in Austria the the European Parliament elections 2019 will take place on Sunday the 26th of May. We have seven parties with 42 applicants each except the EUROPA party, they have 8 applicants. Below are some bar plots with the data from the applicants of these parties. You can find the data on the [BMI][1]{:target="_blank"} website.
-All the files I found were PDFs ... so I had to somehow convert the PDFs into a format that I could use for the following plots.
+Here in Austria the the European Parliament elections 2019 will take place on Sunday the 26th of May. We have seven parties with 42 applicants each except the EUROPA party, they have 8 applicants. Below are some bar plots with the data from the applicants of these parties.
+
+You can find the data on the [BMI][1]{:target="_blank"} website. All the files I found were PDFs ... so I had to somehow convert the PDFs into a format that I could use for the following plots.
 
 Here are the converted files (tab-separated text files) of the parties
 
