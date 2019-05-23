@@ -45,7 +45,7 @@ and the [.Rmd file][9]{:target="_blank"} containing the code for the plots.
 
 ![itgng][itgng]
 
-## KiwaraRinnen
+## KiwaraRinnen (police officers)
 
 ![kiwararinnen][kiwararinnen]
 
