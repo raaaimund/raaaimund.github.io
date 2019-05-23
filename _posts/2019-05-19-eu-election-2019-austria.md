@@ -1,21 +1,22 @@
 ---
 layout:     post
-title:      EU Election 2019 in Austria
+title:      EU elections 2019 in Austria
 date:       2019-05-19 18:00:00
 author:     Raimund Rittnauer
-summary:    Just some bar plots using the data of the applicants from parties in Austria
+summary:    Just some bar plots using the data of the applicants from parties in Austria for the European Parliament election 2019
 categories: tech
 comments: true
 tags:
- - eu election 2019
- - plot
+ - eu elections 2019
+ - european parliament
+ - plots
  - R
 ---
 
-Some bar plots with the data from the applicants for the EU election from parties in Austria. You can find the data on the [BMI][1]{:target="_blank"} website.
-All the files I found were PDFs ... so I had to somehow convert the PDFs into a format that I could use for the following bar plots.
+Here in Austria the the European Parliament elections 2019 will take place on Sunday the 26th of May. We have seven parties with 42 applicants each except the EUROPA party, they have 8 applicants. Below are some bar plots with the data from the applicants of these parties. You can find the data on the [BMI][1]{:target="_blank"} website.
+All the files I found were PDFs ... so I had to somehow convert the PDFs into a format that I could use for the following plots.
 
-Here are the converted files of the parties (tab-separated text file)
+Here are the converted files (tab-separated text files) of the parties
 
 * [EUROPA][2]{:target="_blank"}
 * [FPÖ][3]{:target="_blank"}
@@ -71,6 +72,9 @@ and the [.Rmd file][9]{:target="_blank"} containing the code for the plots.
 
 ![frombgld][frombgld]
 
+For more information about the elections in Austria visit the [BMI Website][10]{:target="_blank"}.
+There is plenty of information about the elections.
+
 [1]: https://www.bmi.gv.at/412/Europawahlen/Europawahl_2019/start.aspx#pk_04
 [2]: {{ site.baseurl }}/assets/blog-files/eu2019/EUROPA.txt
 [3]: {{ site.baseurl }}/assets/blog-files/eu2019/FPOE.txt
@@ -80,6 +84,7 @@ and the [.Rmd file][9]{:target="_blank"} containing the code for the plots.
 [7]: {{ site.baseurl }}/assets/blog-files/eu2019/OEVP.txt
 [8]: {{ site.baseurl }}/assets/blog-files/eu2019/SPOE.txt
 [9]: {{ site.baseurl }}/assets/blog-files/eu2019/eu2019.Rmd
+[10]: https://www.bmi.gv.at/412/Europawahlen/Europawahl_2019/
 
 [avgage]: {{ site.baseurl }}/assets/img/eu2019/avgage.png "average age"
 [consultant]: {{ site.baseurl }}/assets/img/eu2019/consultant.png "consultant"
