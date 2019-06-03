@@ -24,12 +24,7 @@ To use a different user model we have to
 
 ## Create our user model
 
-Lets assume we want to use the following *User* model for authentication. The default implementation of the [*PasswordHasher*][7]{:target="_blank"} uses the following hashing algorithms
-
-* Version 2: PBKDF2 with HMAC-SHA1, 128-bit salt, 256-bit subkey, 1000 iterations
-* Version 3: PBKDF2 with HMAC-SHA256, 128-bit salt, 256-bit subkey, 10000 iterations
-
-If you want to use you own *PasswordHasher*, you just have to implement [*IPasswordHasher*][8]{:target="_blank"} and register it as a service in you startup.
+Lets assume we want to use the following *User* model for authentication.
 
 ``` c#
 public class User
@@ -39,6 +34,13 @@ public class User
     public string PasswordHash { get; set; }
 }
 ```
+
+The default implementation of the [*PasswordHasher*][7]{:target="_blank"} uses the following hashing algorithms
+
+* Version 2: PBKDF2 with HMAC-SHA1, 128-bit salt, 256-bit subkey, 1000 iterations
+* Version 3: PBKDF2 with HMAC-SHA256, 128-bit salt, 256-bit subkey, 10000 iterations
+
+If you want to use you own *PasswordHasher*, you just have to implement [*IPasswordHasher*][8]{:target="_blank"} and register it as a service in you startup.
 
 ## Implement a user store
 
