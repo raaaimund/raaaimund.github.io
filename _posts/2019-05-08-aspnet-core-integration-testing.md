@@ -17,6 +17,15 @@ tags:
 
 Just a litte example how to do simple integration testing with the Entity Framework Core Sqlite and InMemory Provider in ASP.NET Core with XUnit and [AngleSharp][2]{:target="_blank"}.
 
+This post will cover the basics of
+
+* Inject custom database services for testing
+    * EF InMemory provider
+    * EF Sqlite provider with in-memory db
+    * EF Sqlite provider with database file
+* Tests for our ToDoController
+* Tests for a View with [AngleSharp][2]{:target="_blank"}
+
 Similar posts
 
 * [Unit testing in ASP.NET Core with EF Sqlite in-memory][5]{:target="_blank"}
@@ -111,7 +120,7 @@ public class ToDoItem
 }
 ```
 
-Our *Startup*.
+Our *Startup*. The method *ConfigureDatabaseServices* is marked as virtual, because we want to override it and register database services for the test project.
 
 ``` c#
 public class Startup
@@ -142,7 +151,7 @@ public class Startup
         services.AddScoped<IToDoItemService, ToDoItemService>();
     }
 
-    // We have to override this message in our TestStartup, because we want to inject our custom database services
+    // We have to override this method in our TestStartup, because we want to inject our custom database services
     protected virtual void ConfigureDatabaseServices(IServiceCollection services)
     {
         services.AddDbContext<ToDoDbContext>(options =>
@@ -184,7 +193,9 @@ public class Startup
 }
 ```
 
-Now in our test project we have to inherit from *Startup* to use a custom *TestStartup* for injectiong our custom database services and seed some test data for our tests.
+## Inject custom services for testing
+
+Now in our test project we have to inherit from *Startup* to use a custom *TestStartup* to inject our custom database services and seed some test data for our tests.
 
 ``` c#
 public class TestStartup : Startup
@@ -237,7 +248,7 @@ public class TestDataSeeder
 }
 ```
 
-Now we use the [WebApplicationFactory][1]{:target="_blank"} to bootstrap our test server and client.
+Now we use the [WebApplicationFactory][1]{:target="_blank"} to bootstrap our test server and client. We will use this class for our custom *WebApplicationFactory* with different Entity Framework Providers.
 
 ``` c#
 public abstract class BaseWebApplicationFactory<TStartup> : WebApplicationFactory<TStartup>
@@ -248,7 +259,7 @@ public abstract class BaseWebApplicationFactory<TStartup> : WebApplicationFactor
 }
 ```
 
-We can use this as a base class four our custom *WebApplicationFactory* with the different Entity Framework Providers.
+*WebApplicationFactoryWithInMemory* for the InMemoryProvider
 
 ``` c#
 public class WebApplicationFactoryWithInMemory : BaseWebApplicationFactory<TestStartup>
@@ -269,6 +280,8 @@ public class WebApplicationFactoryWithInMemory : BaseWebApplicationFactory<TestS
         });
 }
 ```
+
+*WebApplicationFactoryWithInMemorySqlite* for the SqliteProvider with an in-memory database
 
 ``` c#
 public class WebApplicationFactoryWithInMemorySqlite : BaseWebApplicationFactory<TestStartup>
@@ -302,6 +315,8 @@ public class WebApplicationFactoryWithInMemorySqlite : BaseWebApplicationFactory
 }
 ```
 
+*WebApplicationFactoryWithSqlite* for the SqliteProvider with a database file
+
 ``` c#
 public class WebApplicationFactoryWithSqlite : BaseWebApplicationFactory<TestStartup>
 {
@@ -320,6 +335,8 @@ public class WebApplicationFactoryWithSqlite : BaseWebApplicationFactory<TestSta
         });
 }
 ```
+
+## Tests for ToDoController
 
 With this we can do a basic endpoint test for our GET endpoints.
 
@@ -381,6 +398,8 @@ public class EndpointTestsWithSqlite : BaseEndpointTests, IClassFixture<WebAppli
     }
 }
 ```
+
+## Tests for a View with AngleSharp
 
 Now we can use [AngleSharp][2]{:target="_blank"} to test if our view renders the two items in our test database.
 
