@@ -13,9 +13,23 @@ tags:
  - razor pages
 ---
 
-Just a litte example how to customize [ASP.NET Core Identity][1]{:target="_blank"} and [Identity Razor Pages][2]{:target="_blank"} to use a different user model.
+This Post is a litte example how to customize [ASP.NET Core Identity][1]{:target="_blank"} and the scaffolded [Identity Razor Pages][2]{:target="_blank"} to use a different user model instead of the default *IdentityUser* for authentication.
 
-Lets assume we want to use the following *User* model for authentication
+To use a different user model we have to 
+
+* create our user model
+* implement a user store
+* register our services
+* override scaffolded [Identity Razor Pages][2]{:target="_blank"}
+
+## Create our user model
+
+Lets assume we want to use the following *User* model for authentication. The default implementation of the [*PasswordHasher*][7]{:target="_blank"} uses the following hashing algorithms
+
+* Version 2: PBKDF2 with HMAC-SHA1, 128-bit salt, 256-bit subkey, 1000 iterations
+* Version 3: PBKDF2 with HMAC-SHA256, 128-bit salt, 256-bit subkey, 10000 iterations
+
+If you want to use you own *PasswordHasher*, you just have to implement [*IPasswordHasher*][8]{:target="_blank"} and register it as a service in you startup.
 
 ``` c#
 public class User
@@ -26,7 +40,11 @@ public class User
 }
 ```
 
-We have to create a custom *UserStore* called *ToDoUserStore*, implement the required interfaces and in our *Startup* class we have to tell Identity to use our *User* model and register the new *ToDoUserStore*. For more information see the [documentation][4]{:target="_blank"}.
+## Implement a user store
+
+Now we have to create a custom *UserStore*. In this example I called it *ToDoUserStore*, implemented the required interfaces and registered it in our *Startup* class.
+
+You can implement additional interfaces to add functionality to your new user store. All optional interfaces are listed in the [documentation][4]{:target="_blank"}.
 
 ``` c#
 public class ToDoUserStore : IUserPasswordStore<User>, IUserEmailStore<User>
@@ -194,6 +212,18 @@ public class ToDoUserStore : IUserPasswordStore<User>, IUserEmailStore<User>
 }
 ```
 
+## Register our services
+
+After we created our *ToDoUserStore* we have to register it in our startup class. There is already an *AddUserStore* extension method available.
+
+``` c#
+services.AddDefaultIdentity<User>()
+            .AddDefaultUI(UIFramework.Bootstrap4)
+            .AddUserStore<ToDoUserStore>();
+```
+
+The full source of *Startup.cs*
+
 ``` c#
 public class Startup
 {
@@ -223,7 +253,6 @@ public class Startup
         services.AddScoped<IToDoItemService, ToDoItemService>();
     }
 
-    // We have to override this message in our TestStartup, because we want to inject our own database providers
     protected virtual void ConfigureDatabaseServices(IServiceCollection services)
     {
         services.AddDbContext<ToDoDbContext>(options =>
@@ -265,11 +294,13 @@ public class Startup
 }
 ```
 
+## override scaffolded Identity Razor Pages
+
 After that we can override the Identity Razor Pages for managing just the username and the password. In Visual Studio 2019 you can use the [*New Scaffolded Item...*][5]{:target="_blank"} option to generate the code for the Razor Pages. For the source code see their [AspNetCore GitHub repository][6]{:target="_blank"}.
 
 *Right click on your project -> Add -> New Scaffolded Item...*
 
-In this example we customize the page *Account/Manage/Index*.
+In this example we customize the page *Account/Manage/Index*. Now you just have to modify the generated code to use your custom user model and remove all additional functionality you do not need anymore.
 
 */Account/Manage/_ManageNav.cshtml*
 
@@ -453,3 +484,5 @@ Useful links
 [4]: https://docs.microsoft.com/en-us/aspnet/core/security/authentication/identity-custom-storage-providers?view=aspnetcore-2.2#customize-the-user-store
 [5]: https://docs.microsoft.com/en-us/aspnet/core/security/authentication/scaffold-identity?view=aspnetcore-2.2&tabs=visual-studio#scaffold-identity-into-an-mvc-project-without-existing-authorization
 [6]: https://github.com/aspnet/AspNetCore/tree/master/src/Identity/UI/src
+[7]: https://github.com/aspnet/AspNetCore/blob/master/src/Identity/Extensions.Core/src/PasswordHasher.cs
+[8]: https://github.com/aspnet/AspNetCore/blob/master/src/Identity/Extensions.Core/src/IPasswordHasher.cs
