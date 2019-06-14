@@ -29,22 +29,22 @@ Hard-Match will use the property **sourceAnchor/immutableID**. You can only sele
 
 So we only have to set the **immutableID** property of the existing user in our Azure AD to the Base64 encoded string of the **ObjectId** of the user in our on-premise AD. If you already synchronized your Active Directory then you probably have two users with the same name in your Azure AD. Just follow the following steps to finally merge these users:
 
-You have to execute *OnPrem* PowerShell commands on the machine with your on-premise AD and the *Azure* PowerShell commands via the Azure Cloud Shell. For available PowerShell commands on the Azure Active Directory PowerShell see their [documentation][3]{:target="_blank"}.
+You have to execute the following *OnPrem* PowerShell commands on the machine with your on-premise AD and the *Azure* PowerShell commands via the Azure Cloud Shell. For available PowerShell commands on the Azure Active Directory PowerShell see their [documentation][3]{:target="_blank"}.
 
-1. *OnPrem*: Get ObjectId from AD User
+#### 1. *OnPrem*: Get ObjectId from AD User
 
 ```
 $user = Get-ADUser -Filter 'Name -like "*NAME*"'
 ```
 
-2. *OnPrem*: immutableId = ToBase64(ObjectId)
+#### 2. *OnPrem*: immutableId = ToBase64(ObjectId)
 
 ```
 $immutableid = [System.Convert]::ToBase64String($nicole.ObjectGUID.tobytearray())
 $immutableid
 ```
 
-3. *Azure*: Remove duplicated Azure AD User
+#### 3. *Azure*: Remove duplicated Azure AD User
 
 ```
 Remove-AzureADUser -ObjectId <objectid>
@@ -56,17 +56,17 @@ The following PowerShell command prints a list of all users and their *ObjectId*
 Get-AzureADUser
 ```
 
-4. *Azure*: Remove duplicated Azure AD User permanently
+#### 4. *Azure*: Remove duplicated Azure AD User permanently
 
 On the sidemenu there is a menu item called *Deleted users*. There you can select the user and permanently delete it.
 
-5. *Azure*: Set immutableId for Azure AD User
+#### 5. *Azure*: Set immutableId for Azure AD User
 
 ```
 Set-AzureADUser -ObjectId <objectid> -ImmutableId <immutableid>
 ```
 
-6. *OnPrem*: Start AD Sync
+#### 6. *OnPrem*: Start AD Sync
 
 ```
 Start-ADSyncSyncCycle -PolicyType Delta
