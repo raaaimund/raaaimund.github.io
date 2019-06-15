@@ -76,11 +76,11 @@ Just wait some seconds and your user should get synchronized correctly.
 
 Useful links:
 
-* https://support.microsoft.com/en-us/help/2641663/use-smtp-matching-to-match-on-premises-user-accounts-to-office-365
-* https://chinnychukwudozie.com/2015/04/10/matching-an-office-365-azure-cloud-user-identity-with-an-on-premise-active-directory-user-object/
-* https://www.codetwo.com/admins-blog/how-to-merge-an-office-365-account-with-an-on-premises-ad-account-after-hybrid-configuration/
-* https://support.microsoft.com/en-us/help/2641663/use-smtp-matching-to-match-on-premises-user-accounts-to-office-365
-* https://support.microsoft.com/en-nz/help/2643629/one-or-more-objects-don-t-sync-when-the-azure-active-directory-sync-to
+* <https://support.microsoft.com/en-us/help/2641663/use-smtp-matching-to-match-on-premises-user-accounts-to-office-365>
+* <https://chinnychukwudozie.com/2015/04/10/matching-an-office-365-azure-cloud-user-identity-with-an-on-premise-active-directory-user-object/>
+* <https://www.codetwo.com/admins-blog/how-to-merge-an-office-365-account-with-an-on-premises-ad-account-after-hybrid-configuration/>
+* <https://support.microsoft.com/en-us/help/2641663/use-smtp-matching-to-match-on-premises-user-accounts-to-office-365>
+* <https://support.microsoft.com/en-nz/help/2643629/one-or-more-objects-don-t-sync-when-the-azure-active-directory-sync-to>
 
 
 [1]: https://docs.microsoft.com/en-us/azure/active-directory/hybrid/how-to-connect-install-existing-tenant#sync-with-existing-users-in-azure-ad
