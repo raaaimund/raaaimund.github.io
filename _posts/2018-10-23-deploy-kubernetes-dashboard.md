@@ -38,7 +38,7 @@ NOTE: Dashboard should not be exposed publicly using kubectl proxy command as it
 You can access the dashboard using a secure tunnel.
 
 ````
-sh -L 8001:127.0.0.1:8001 -N username@192.168.1.254
+ssh -L 8001:127.0.0.1:8001 -N username@192.168.1.254
 ````
 
 To sign in we need to create a service accout and a role binding.
