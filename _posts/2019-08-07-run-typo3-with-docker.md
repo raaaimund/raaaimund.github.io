@@ -195,3 +195,7 @@ volumes:
 ```
 
 Now you are good to go and after _docker-compose up_ you should have a fresh installed and running TYPO3 web site with NGINX, PHP-FPM and MySQL.
+
+Checkout the [github repo][1]{:target="_blank"} for the source.
+
+[1]: https://github.com/raaaimund/typo3-docker
