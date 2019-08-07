@@ -12,7 +12,7 @@ tags:
  - nginx
 ---
 
-In this post we will create the required Docker containers to host TYPO3 with NGINX and PHP-FPM.
+In this post we will create the required Docker containers to host TYPO3 with NGINX, PHP-FPM and MySQL.
 I will briefly explain each container with their corresponding Dockerfile and in the end we will have a look at the Docker compose file.
 
 ## web (NGINX)
@@ -124,7 +124,7 @@ memory_limit=512M
 
 _log.conf_
 
-This config is only required if you want to see the logs from the PHP-FPM agent after running the container.
+This configuration file is only required if you want to see the logs from the PHP-FPM agent after running the container.
 
 ``` conf
 php_admin_flag[log_errors] = on
