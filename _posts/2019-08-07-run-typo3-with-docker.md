@@ -14,6 +14,7 @@ tags:
 
 In this post we will create the required Docker containers to host TYPO3 with NGINX, PHP-FPM and MySQL.
 I will briefly explain each container with their corresponding Dockerfile and in the end we will have a look at the Docker compose file.
+When I wrote this post the current TYPO3 version was 9.5.8 LTS.
 
 ## web (NGINX)
 
