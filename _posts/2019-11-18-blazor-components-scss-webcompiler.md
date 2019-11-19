@@ -201,6 +201,6 @@ This project is available on [GitHub][5]{:target="_blank"}.
 [2]: https://github.com/madskristensen/WebCompiler
 [3]: https://github.com/madskristensen/WebCompiler/issues/354#issuecomment-466254831
 [4]: https://marketplace.visualstudio.com/items?itemName=MadsKristensen.WebCompiler
-[5]: https://github.com/raaaimund/BlazorStyling
+[5]: https://github.com/raaaimund/BlazorStyling/tree/blazor-components-scss-webcompiler
 
 [compile-before-build]: {{ site.baseurl }}/assets/img/2019-11-18-blazor-components-scss-webcompiler/compile-before-build.gif "compile before build"
