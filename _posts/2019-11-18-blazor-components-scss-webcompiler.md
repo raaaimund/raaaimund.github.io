@@ -13,7 +13,13 @@ tags:
  - netcore3.0
 ---
 
-In this post we use [Sassy CSS][1]{:target="_blank"} to style our Blazor components and we will integrate [Web Compiler][2]{:target="_blank"} to compile these files to a single file _site.css_. Web Compiler easily integrates with your .Net Core project and also lets you compile SCSS to CSS during a build. The only downside of Web Compiler is, that you can't use it (at the moment) if you plan to build your code on a linux machine. See this [GitHub issue][3]{:target="_blank"} for more information.
+In this post we use [Sassy CSS][1]{:target="_blank"} to style our Blazor components and we will integrate [Web Compiler][2]{:target="_blank"} to compile these files to a single file _site.css_. Web Compiler easily integrates with your .Net Core project and also lets you compile SCSS to CSS during a build.
+
+<blockquote>
+The only downside of Web Compiler is, that you can't use it (at the moment) if you plan to build your code on a linux machine. See this [GitHub issue][3]{:target="_blank"} for more information.
+</blockquote>
+
+If you want to build on a linux machine see my other post for [styling your Blazor components with SCSS and Web Optimizer][6]{:target="_blank"}.
 
 In our server side .Net Core 3.0 Blazor project we got the following project structure
 
@@ -202,5 +208,6 @@ This project is available on [GitHub][5]{:target="_blank"}.
 [3]: https://github.com/madskristensen/WebCompiler/issues/354#issuecomment-466254831
 [4]: https://marketplace.visualstudio.com/items?itemName=MadsKristensen.WebCompiler
 [5]: https://github.com/raaaimund/BlazorStyling/tree/blazor-components-scss-webcompiler
+[6]: {% post_url 2019-11-19-blazor-components-scss-weboptimizer %}
 
 [compile-before-build]: {{ site.baseurl }}/assets/img/2019-11-18-blazor-components-scss-webcompiler/compile-before-build.gif "compile before build"
