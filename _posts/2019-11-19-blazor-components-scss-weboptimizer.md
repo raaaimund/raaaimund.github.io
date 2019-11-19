@@ -15,9 +15,7 @@ tags:
 
 In this post we use [Sassy CSS][1]{:target="_blank"} to style our Blazor components and we will integrate [Web Optimizer][2]{:target="_blank"} to compile these files to a single file __site.css__.
 
-<blockquote>
-    Web Optimizer is an ASP.Net Core middleware for bundling and minification of CSS and JavaScript files at runtime. With full server-side and client-side caching to ensure high performance. No complicated build process and no hassle.
-</blockquote>
+> Web Optimizer is an ASP.Net Core middleware for bundling and minification of CSS and JavaScript files at runtime. With full server-side and client-side caching to ensure high performance. No complicated build process and no hassle.
 
 In our server side .Net Core 3.0 Blazor project we got the following project structure
 

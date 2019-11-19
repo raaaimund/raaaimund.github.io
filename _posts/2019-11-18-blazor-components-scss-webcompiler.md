@@ -15,9 +15,7 @@ tags:
 
 In this post we use [Sassy CSS][1]{:target="_blank"} to style our Blazor components and we will integrate [Web Compiler][2]{:target="_blank"} to compile these files to a single file _site.css_. Web Compiler easily integrates with your .Net Core project and also lets you compile SCSS to CSS during a build.
 
-<blockquote>
-The only downside of Web Compiler is, that you can't use it (at the moment) if you plan to build your code on a linux machine. See this [GitHub issue][3]{:target="_blank"} for more information.
-</blockquote>
+> The only downside of Web Compiler is, that you can't use it (at the moment) if you plan to build your code on a linux machine. See this [GitHub issue][3]{:target="_blank"} for more information.
 
 If you want to build on a linux machine see my other post for [styling your Blazor components with SCSS and Web Optimizer][6]{:target="_blank"}.
 
