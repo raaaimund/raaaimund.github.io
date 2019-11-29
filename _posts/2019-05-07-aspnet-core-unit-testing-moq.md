@@ -485,7 +485,7 @@ Useful links
 * [Unit Testing with XUnit][4]{:target="_blank"}
 
 [1]: https://github.com/moq/moq
-[2]: https://github.com/raaaimund/ToDo
+[2]: https://github.com/raaaimund/ToDo/tree/aspnetcore-unit-testing
 [3]: https://docs.microsoft.com/en-us/aspnet/core/mvc/controllers/testing?view=aspnetcore-2.2
 [4]: https://docs.microsoft.com/en-us/dotnet/core/testing/unit-testing-with-dotnet-test
 [5]: {% post_url 2019-05-07-aspnet-core-unit-testing-inmemory %}

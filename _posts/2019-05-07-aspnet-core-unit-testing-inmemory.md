@@ -159,6 +159,6 @@ This project is available on [github][3]{:target="_blank"}.
 
 [1]: https://docs.microsoft.com/en-us/ef/core/providers/sqlite/
 [2]: https://docs.microsoft.com/en-us/ef/core/miscellaneous/testing/in-memory
-[3]: https://github.com/raaaimund/ToDo
+[3]: https://github.com/raaaimund/ToDo/tree/aspnetcore-unit-testing
 [4]: {% post_url 2019-05-07-aspnet-core-unit-testing-moq %}
 [5]: {% post_url 2019-05-08-aspnet-core-integration-testing %}

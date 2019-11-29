@@ -482,7 +482,7 @@ Useful links
 
 [1]: https://docs.microsoft.com/en-us/aspnet/core/security/authentication/identity?view=aspnetcore-2.2&tabs=visual-studio
 [2]: https://docs.microsoft.com/en-us/aspnet/core/razor-pages/?view=aspnetcore-2.2&tabs=visual-studio
-[3]: https://github.com/raaaimund/ToDo
+[3]: https://github.com/raaaimund/ToDo/tree/aspnetcore-unit-testing
 [4]: https://docs.microsoft.com/en-us/aspnet/core/security/authentication/identity-custom-storage-providers?view=aspnetcore-2.2#customize-the-user-store
 [5]: https://docs.microsoft.com/en-us/aspnet/core/security/authentication/scaffold-identity?view=aspnetcore-2.2&tabs=visual-studio#scaffold-identity-into-an-mvc-project-without-existing-authorization
 [6]: https://github.com/aspnet/AspNetCore/tree/master/src/Identity/UI/src

@@ -534,7 +534,7 @@ Useful links
 
 [1]: https://docs.microsoft.com/en-us/aspnet/core/test/integration-tests?view=aspnetcore-2.2#basic-tests-with-the-default-webapplicationfactory
 [2]: https://github.com/AngleSharp/AngleSharp
-[3]: https://github.com/raaaimund/ToDo
+[3]: https://github.com/raaaimund/ToDo/tree/aspnetcore-unit-testing
 [4]: https://docs.microsoft.com/en-us/aspnet/core/test/integration-tests?view=aspnetcore-2.2
 [5]: {% post_url 2019-05-07-aspnet-core-unit-testing-inmemory %}
 [6]: {% post_url 2019-05-07-aspnet-core-unit-testing-moq %}
