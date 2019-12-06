@@ -86,8 +86,9 @@ When you render a report with [SQL Server Reporting Services][1]{:target="_blank
 </xs:schema>
 ```
 
-The important nodes are _DataSet/Name_, _DataSet/RowsRead_, _DataSet/TotalTimeDataRetrieval_ and _DataSet/ExecuteReaderTime_. This column can increase in size if you use many sub reports with data sets, but luckily you can use SQL to query the XML data in this column.
+This column stores additional information (haha) in XML format about your report. For example information about each of your DataSets in your report and sub reports.
 
+The important nodes are _DataSet/Name_, _DataSet/RowsRead_, _DataSet/TotalTimeDataRetrieval_ and _DataSet/ExecuteReaderTime_. This column can increase in size if you use many sub reports with data sets, but luckily you can use SQL to query the XML data in this column.
 
 Here is an example SQL to get the data from the latest rendered report with the specified _@reportPath_. The _@reportPath_ variable is the path to your report on your SSRS Server. The path is also stored in the column _ItemPath_ of the _ExecutionLog3_ view.
 
