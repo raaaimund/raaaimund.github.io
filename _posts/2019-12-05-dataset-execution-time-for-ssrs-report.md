@@ -1,15 +1,16 @@
 ---
 layout:     post
-title:      Inspect execution time for a SSRS report
+title:      Dataset execution time for a SSRS report
 date:       2019-12-05 11:57
 author:     Raimund Rittnauer
-description:    Inspect execution time for SSRS report to determine slow queries
+description:    Inspect execution time of used datasets for SSRS report to determine slow queries
 categories: tech
 comments: true
 tags:
  - ssrs
  - report
  - sql
+ - dataset
 ---
 
 When you render a report with [SQL Server Reporting Services][1]{:target="_blank"} by default the logs are stored in a table called _[ExecutionLogStorage][2]{:target="_blank"}_  with some views called _[ExecutionLog#][2]{:target="_blank"}_  (# is a number for backwards compatibility - use the view with the highest number) within the database _ReportServer_. Each row contains the logs for a rendered report. However this row only displays the overall time used for generating this report. If you want to know the query time for each of your data set used in your report and your sub reports you have to inspect the column _AdditionalInfo_ which is stored as XML. This column contains the following information about all your data sets used in this report and sub reports.

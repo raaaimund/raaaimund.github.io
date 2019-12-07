@@ -4,10 +4,8 @@ RUN mkdir /app
 WORKDIR /app
 COPY Gemfile /app/Gemfile
 RUN bundle install
-RUN ls
 
 FROM jekyll/jekyll:3.8.5
 COPY --from=builder /usr/local/bundle /usr/local/bundle
 COPY . .
-RUN ls
 CMD [ "jekyll", "serve" ]

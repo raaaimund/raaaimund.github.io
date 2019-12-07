@@ -77,5 +77,5 @@ For more tips there is a nice [YouTube video][5]{:target="_blank"} about perform
 [1]: https://docs.microsoft.com/en-us/sql/reporting-services/create-deploy-and-manage-mobile-and-paginated-reports?view=sql-server-ver15
 [2]: https://docs.microsoft.com/en-us/sql/reporting-services/report-server/report-server-executionlog-and-the-executionlog3-view?view=sql-server-ver15
 [3]: https://docs.microsoft.com/en-us/sql/reporting-services/report-server/report-server-executionlog-and-the-executionlog3-view?view=sql-server-ver15#bkmk_executionlog3
-[4]: {% post_url 2019-12-05-inspect-execution-time-for-ssrs-report %}
+[4]: {% post_url 2019-12-05-dataset-execution-time-for-ssrs-report %}
 [5]: https://www.youtube.com/watch?time_continue=977&v=9WecPsBnBec&feature=emb_logo
