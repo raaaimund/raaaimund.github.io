@@ -3,7 +3,7 @@ layout:     post
 title:      Vodka Watermelon
 date:       2019-06-28 12:00:00
 author:     Raimund Rittnauer
-summary:    How to make a Vodka infused Watermelon
+description:    How to make a Vodka infused Watermelon
 categories: cooking
 comments: true
 tags:

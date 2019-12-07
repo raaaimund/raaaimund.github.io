@@ -3,7 +3,7 @@ layout:     post
 title:      Import a SQL Dump file which exceeds the maximum file size
 date:       2016-08-01 21:30:00
 author:     Raimund Rittnauer
-summary:    Split a SQL Dump file which exceeds the maximul file size in smaller parts, to import this file in phpMyAdmin
+description:    Split a SQL Dump file which exceeds the maximul file size in smaller parts, to import this file in phpMyAdmin
 categories: tech
 thumbnail:  code
 comments: true

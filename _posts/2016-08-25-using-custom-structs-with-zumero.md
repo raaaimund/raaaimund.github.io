@@ -3,7 +3,7 @@ layout:     post
 title:      Using custom structs with Zumero
 date:       2016-08-25 22:30:00
 author:     Raimund Rittnauer
-summary:    How to use Guid, DateTime, Decimal and other structs with Zumero
+description:    How to use Guid, DateTime, Decimal and other structs with Zumero
 categories: tech
 thumbnail:  code
 comments: true

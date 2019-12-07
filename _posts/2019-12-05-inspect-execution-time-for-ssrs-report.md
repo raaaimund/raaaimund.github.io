@@ -3,7 +3,7 @@ layout:     post
 title:      Inspect execution time for a SSRS report
 date:       2019-12-05 11:57
 author:     Raimund Rittnauer
-summary:    Inspect execution time for SSRS report to determine slow queries
+description:    Inspect execution time for SSRS report to determine slow queries
 categories: tech
 comments: true
 tags:

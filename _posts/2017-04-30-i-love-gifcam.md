@@ -3,7 +3,7 @@ layout:     post
 title:      I love GifCam
 date:       2017-04-30 15:37:57
 author:     Raimund Rittnauer
-summary:    I love and use GifCam
+description:    I love and use GifCam
 categories: misc
 thumbnail:  heart
 comments: true

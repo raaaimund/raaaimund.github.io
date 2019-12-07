@@ -3,7 +3,7 @@ layout:     post
 title:      Style your Blazor components with SCSS and Web Compiler
 date:       2019-11-18 21:42:00
 author:     Raimund Rittnauer
-summary:    How to use Web Compiler to style your Blazor components with Sassy CSS
+description:    How to use Web Compiler to style your Blazor components with Sassy CSS
 categories: tech
 comments: true
 tags:

@@ -3,7 +3,7 @@ layout:     post
 title:      Bash on Ubuntu on Windows in Visual Studio Code
 date:       2016-08-09 22:30:00
 author:     Raimund Rittnauer
-summary:    How to use Bash on Ubuntu on Windows in Visual Studio Code
+description:    How to use Bash on Ubuntu on Windows in Visual Studio Code
 categories: tech
 thumbnail:  code
 comments: true

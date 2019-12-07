@@ -3,7 +3,7 @@ layout:     post
 title:      Run TYPO3 with Docker
 date:       2019-08-07 12:00:00
 author:     Raimund Rittnauer
-summary:    How to run Typo3 with NGINX, PHP-FPM and MySQL inside Docker
+description:    How to run Typo3 with NGINX, PHP-FPM and MySQL inside Docker
 categories: tech
 comments: true
 tags:

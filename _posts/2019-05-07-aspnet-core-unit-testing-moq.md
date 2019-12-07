@@ -3,7 +3,7 @@ layout:     post
 title:      Unit testing in ASP.NET Core with Moq and XUnit
 date:       2019-05-07 23:00:00
 author:     Raimund Rittnauer
-summary:    A simple example how to do unit testing in ASP.NET Core with Moq and XUnit
+description:    A simple example how to do unit testing in ASP.NET Core with Moq and XUnit
 categories: tech
 comments: true
 tags:

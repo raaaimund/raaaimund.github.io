@@ -3,7 +3,7 @@ layout:     post
 title:      Integration testing in ASP.NET Core with EF Sqlite and InMemory Provider and XUnit
 date:       2019-05-08 01:00:00
 author:     Raimund Rittnauer
-summary:    A simple example how to do integration testing in ASP.NET Core with Entity Framework Core Sqlite and InMemory Provider
+description:    A simple example how to do integration testing in ASP.NET Core with Entity Framework Core Sqlite and InMemory Provider
 categories: tech
 comments: true
 tags:
@@ -427,9 +427,7 @@ Now we can use [AngleSharp][2]{:target="_blank"} to test if our view renders the
 ````
 
 ``` c#
-/// <summary>
 /// Original: https://github.com/aspnet/AspNetCore.Docs/blob/master/aspnetcore/test/integration-tests/samples/2.x/IntegrationTestsSample/tests/RazorPagesProject.Tests/Helpers/HtmlHelpers.cs
-/// </summary>
 public static class HtmlHelpers
 {
     public static async Task<IHtmlDocument> GetDocumentAsync(HttpResponseMessage response)

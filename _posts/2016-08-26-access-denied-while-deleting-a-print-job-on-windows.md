@@ -3,7 +3,7 @@ layout:     post
 title:      Access denied while deleting a print job on windows
 date:       2016-08-26 20:30:00
 author:     Raimund Rittnauer
-summary:    How to definitively delete a print job, also with access denied on windows
+description:    How to definitively delete a print job, also with access denied on windows
 categories: tech
 thumbnail:  print
 comments: true

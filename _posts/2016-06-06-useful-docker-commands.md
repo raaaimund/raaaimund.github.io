@@ -3,7 +3,7 @@ layout:     post
 title:      Useful Docker Commands
 date:       2016-06-06 14:34:57
 author:     Raimund Rittnauer
-summary:    Collection of some useful Docker commands
+description:    Collection of some useful Docker commands
 categories: tech
 thumbnail:  code
 comments: true

@@ -3,7 +3,7 @@ layout:     post
 title:      Deploy helm on your Kubernetes cluster
 date:       2018-10-23 22:55:00
 author:     Raimund Rittnauer
-summary:    How to deploy helm on your Kubernetes cluster
+description:    How to deploy helm on your Kubernetes cluster
 categories: tech
 thumbnail:  university
 comments: true

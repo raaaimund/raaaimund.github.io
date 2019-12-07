@@ -3,7 +3,7 @@ layout:     post
 title:      Backup and restore GitLab on Docker
 date:       2018-10-04 21:00:00
 author:     Raimund Rittnauer
-summary:    How to backup and restore GitLab on Docker
+description:    How to backup and restore GitLab on Docker
 categories: tech
 thumbnail:  university
 comments: true

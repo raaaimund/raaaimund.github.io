@@ -3,7 +3,7 @@ layout:     post
 title:      Customize ASP.NET Core Identity
 date:       2019-05-13 17:00:00
 author:     Raimund Rittnauer
-summary:    Customize ASP.NET Core Identity and Identity Razor Pages to use a custom user model
+description:    Customize ASP.NET Core Identity and Identity Razor Pages to use a custom user model
 categories: tech
 comments: true
 tags:
@@ -332,7 +332,7 @@ In this example we customize the page *Account/Manage/Index*. Now you just have 
 <div class="row">
     <div class="col-md-6">
         <form id="profile-form" method="post">
-            <div asp-validation-summary="All" class="text-danger"></div>
+            <div asp-validation-description="All" class="text-danger"></div>
             <div class="form-group">
                 <label asp-for="Input.Username"></label>
                 <input asp-for="Input.Username" class="form-control"/>

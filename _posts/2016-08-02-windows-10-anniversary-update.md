@@ -3,7 +3,7 @@ layout:     post
 title:      Windows 10 Anniversary Update
 date:       2016-08-02 00:15:00
 author:     Raimund Rittnauer
-summary:    Microsoft Windows 10 Anniversary Update
+description:    Microsoft Windows 10 Anniversary Update
 categories: tech
 thumbnail:  code
 comments: true

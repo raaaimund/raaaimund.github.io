@@ -3,7 +3,7 @@ layout:     post
 title:      Set the current kubectl context
 date:       2018-10-23 23:00:00
 author:     Raimund Rittnauer
-summary:    How to set the current kuectl context
+description:    How to set the current kuectl context
 categories: tech
 thumbnail:  university
 comments: true

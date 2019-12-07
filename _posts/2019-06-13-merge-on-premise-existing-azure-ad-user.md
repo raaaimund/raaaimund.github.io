@@ -3,7 +3,7 @@ layout:     post
 title:      Merge on-premise with existing Azure AD user
 date:       2019-06-13 12:00:00
 author:     Raimund Rittnauer
-summary:    How to merge an on-premise AD user with an already existing Azure AD user using hard-match (sourceAnchor/immutableID).
+description:    How to merge an on-premise AD user with an already existing Azure AD user using hard-match (sourceAnchor/immutableID).
 categories: tech
 comments: true
 tags:

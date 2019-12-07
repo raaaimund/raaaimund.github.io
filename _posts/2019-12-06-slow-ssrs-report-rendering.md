@@ -3,7 +3,7 @@ layout:     post
 title:      Slow SSRS Report Rendering
 date:       2019-12-06 11:57
 author:     Raimund Rittnauer
-summary:    Some tips to determine why a SSRS report is rendering so slow
+description:    Some tips to determine why a SSRS report is rendering so slow
 categories: tech
 comments: true
 tags:

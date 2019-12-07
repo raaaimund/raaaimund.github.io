@@ -3,7 +3,7 @@ layout:     post
 title:      Deploy Kubernetes dashboard
 date:       2018-10-23 22:00:00
 author:     Raimund Rittnauer
-summary:    How to deploy the Kubernetes dashboard
+description:    How to deploy the Kubernetes dashboard
 categories: tech
 thumbnail:  university
 comments: true

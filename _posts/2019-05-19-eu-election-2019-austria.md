@@ -3,7 +3,7 @@ layout:     post
 title:      EU elections 2019 in Austria
 date:       2019-05-19 18:00:00
 author:     Raimund Rittnauer
-summary:    Just some bar plots using the data of the applicants from parties in Austria for the European Parliament election 2019
+description:    Just some bar plots using the data of the applicants from parties in Austria for the European Parliament election 2019
 categories: tech
 comments: true
 tags:

@@ -3,7 +3,7 @@ layout:     post
 title:      Style your Blazor components with SCSS and Web Optimizer
 date:       2019-11-19 21:42:00
 author:     Raimund Rittnauer
-summary:    How to use Web Optimizer to style your Blazor components with Sassy CSS
+description:    How to use Web Optimizer to style your Blazor components with Sassy CSS
 categories: tech
 comments: true
 tags:

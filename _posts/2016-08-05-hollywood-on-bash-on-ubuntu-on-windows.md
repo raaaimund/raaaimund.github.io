@@ -3,7 +3,7 @@ layout:     post
 title:      Hollywood on Bash on Ubuntu on Windows
 date:       2016-08-05 23:30:00
 author:     Raimund Rittnauer
-summary:    How to install Hollywood on Bash on Ubuntu on Windows
+description:    How to install Hollywood on Bash on Ubuntu on Windows
 categories: tech
 thumbnail:  code
 comments: true

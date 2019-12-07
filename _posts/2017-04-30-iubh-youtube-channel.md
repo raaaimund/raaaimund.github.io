@@ -3,7 +3,7 @@ layout:     post
 title:      IUBH Youtube channel
 date:       2017-04-30 16:00:00
 author:     Raimund Rittnauer
-summary:    Online lectures from International University Bad Honnef
+description:    Online lectures from International University Bad Honnef
 categories: misc
 thumbnail:  university
 comments: true
