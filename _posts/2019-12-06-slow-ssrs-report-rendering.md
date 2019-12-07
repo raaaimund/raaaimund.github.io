@@ -68,6 +68,10 @@ The projection of your select statement should only contain columns you need in 
 
 Use SQL server for filtering or sorting your data to reduce _TimeProcessing_ of your report.
 
+## Disable rendering of sub report
+
+Just setting the visibility based on an expression does not disable rendering of a sub report. Instead pass _Nothing_ as a value for the report parameter.
+
 For more tips there is a nice [YouTube video][5]{:target="_blank"} about performance of SSRS.
 
 [1]: https://docs.microsoft.com/en-us/sql/reporting-services/create-deploy-and-manage-mobile-and-paginated-reports?view=sql-server-ver15
