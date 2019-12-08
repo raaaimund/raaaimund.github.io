@@ -12,9 +12,10 @@ tags:
  - nginx
 ---
 
-In this post we will create the required Docker containers to host TYPO3 with NGINX, PHP-FPM and MySQL.
+In this post we will create Docker containers to run TYPO3 with NGINX, PHP-FPM and MySQL with an optional SQL dump import.
 I will briefly explain each container with their corresponding Dockerfile and in the end we will have a look at the Docker compose file.
-When I wrote this post the current TYPO3 version was 9.5.8 LTS.
+
+> When I wrote this post the current TYPO3 version was 9.5.8 LTS.
 
 ## web (NGINX)
 
@@ -55,34 +56,16 @@ server {
 
 ## composer
 
-Here we download the latest TYPO3 version, copy it to our volume and run the installation with the typo3-console.
+This container just installs everything we defined in the _composer.json_ file.
 
 _Dockerfile_
 
 ``` Dockerfile
-FROM composer:latest AS build
-WORKDIR /src
-RUN composer create-project typo3/cms-base-distribution site
-WORKDIR /src/site
-RUN composer require helhum/typo3-console typo3-ter/introduction:4.0.1
-
-FROM php:7.3.8-fpm-alpine
-USER root
-RUN docker-php-ext-install mysqli
+FROM composer:latest
+RUN apk add --no-cache freetype-dev libjpeg-turbo-dev libpng-dev mysql-client
+RUN docker-php-ext-install mysqli gd
 WORKDIR /site
-COPY --from=build --chown=82:82 /src/site .
-COPY entrypoint.sh .
-RUN chmod +x vendor/bin/typo3cms && \
-    chmod +x entrypoint.sh
-CMD [ "./entrypoint.sh" ]
-```
-
-_entrypoint.sh_
-
-I use sleep to wait until the MySQL server is up and running.
-
-``` sh
-sleep 10 && ./vendor/bin/typo3cms install:setup --no-interaction && ./vendor/bin/typo3cms cache:flush
+CMD [ "composer", "install" ]
 ```
 
 ## php (PHP-FPM)
@@ -104,12 +87,11 @@ RUN apk add --update --no-cache \
     g++ \
     icu
 RUN docker-php-ext-install -j$(nproc) mysqli pdo_mysql zip
-RUN docker-php-ext-configure gd --with-freetype-dir=/usr/include/ --with-jpeg-dir=/usr/include/ && \
+RUN docker-php-ext-configure gd --with-gd --with-freetype-dir=/usr/include/ --with-jpeg-dir=/usr/include/ --with-png-dir=/usr/include/ && \
     docker-php-ext-install -j$(nproc) gd
 RUN docker-php-ext-configure intl && \
     docker-php-ext-install -j$(nproc) intl
 USER www-data
-ENV TYPO3_CONTEXT Development
 ```
 
 _php.ini_
@@ -121,6 +103,7 @@ always_populate_raw_post_data=1
 max_execution_time=1200
 max_input_vars=1500
 memory_limit=512M
+extension=gd.so
 ```
 
 _log.conf_
@@ -143,40 +126,41 @@ _docker-compose.yaml_
 version: '3'
 services:
   web:
-    build: ./config/web/.
+    build: ./container/web/.
     depends_on: 
       - php
       - db
     ports:
       - '80:80'
     volumes:
-      - html:/var/www/html
-      - ./config/web/nginx.conf:/etc/nginx/conf.d/default.conf
-      - ./config/web/AdditionalConfiguration.php:/var/www/html/public/typo3conf/AdditionalConfiguration.php
+      - ./site:/var/www/html
+      - ./container/web/nginx.conf:/etc/nginx/conf.d/default.conf
   
   composer:
-    build: ./config/composer/.
+    build: ./container/composer/.
     depends_on:
         - db
     volumes:
-        - html:/site
+        - ./site:/site
     environment: 
-      TYPO3_INSTALL_DB_USER: typo3
-      TYPO3_INSTALL_DB_PASSWORD: abcdefghi
-      TYPO3_INSTALL_DB_HOST: db
-      TYPO3_INSTALL_DB_PORT: 3306
-      TYPO3_INSTALL_DB_USE_EXISTING: 1
-      TYPO3_INSTALL_DB_DBNAME: typo3
-      TYPO3_INSTALL_ADMIN_USER: admin
-      TYPO3_INSTALL_ADMIN_PASSWORD: abcdefghi
-      TYPO3_INSTALL_SITE_NAME: 'My Site'
+      TYPO3_INSTALL_DB_USER: ${DB_USER}
+      TYPO3_INSTALL_DB_PASSWORD: ${DB_PASS}
+      TYPO3_INSTALL_DB_HOST: ${DB_HOST}
+      TYPO3_INSTALL_DB_PORT: ${DB_PORT}
+      TYPO3_INSTALL_DB_USE_EXISTING: ${DB_USE_EXISTING}
+      TYPO3_INSTALL_DB_DBNAME: ${DB_NAME}
+      TYPO3_INSTALL_ADMIN_USER: ${TYPO3_USER}
+      TYPO3_INSTALL_ADMIN_PASSWORD: ${TYPO3_PASS}
+      TYPO3_INSTALL_SITE_NAME: ${TYPO3_SITE_NAME}
   
   php:
-      build: ./config/php/.
+      build: ./container/php/.
       volumes:
-        - html:/var/www/html
-        - ./config/php/php.ini:/usr/local/etc/php/php.ini
-        - ./config/php/log.conf:/usr/local/etc/php-fpm.d/zz-log.conf
+        - ./site:/var/www/html
+        - ./container/php/php.ini:/usr/local/etc/php/php.ini
+        - ./container/php/log.conf:/usr/local/etc/php-fpm.d/zz-log.conf
+      environment: 
+        TYPO3_CONTEXT: Development
 
   db:
       image: mysql:8.0.17
@@ -184,17 +168,16 @@ services:
       volumes:
           - db-data:/var/lib/mysql
       environment:
-        MYSQL_USER: typo3
-        MYSQL_PASSWORD: abcdefghi
-        MYSQL_DATABASE: typo3
-        MYSQL_ROOT_PASSWORD: abcdefghi
+        MYSQL_USER: ${DB_USER}
+        MYSQL_PASSWORD: ${DB_PASS}
+        MYSQL_DATABASE: ${DB_NAME}
+        MYSQL_ROOT_PASSWORD: ${DB_ROOT_PASS}
 
 volumes:
-  html:
   db-data:
 ```
 
-Now you are good to go and after _docker-compose up_ you should have a fresh installed and running TYPO3 web site with NGINX, PHP-FPM and MySQL.
+Now after running _docker-compose up_ you should have a fresh installed and running TYPO3 web site with NGINX, PHP-FPM and MySQL.
 
 Checkout the [github repo][1]{:target="_blank"} for the source.
 
