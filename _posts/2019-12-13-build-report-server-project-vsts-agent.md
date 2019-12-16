@@ -30,5 +30,8 @@ You have to add the workload __Data storage and processing__ to Visual Studio 20
 
 And install the extension [__Microsoft Reporting Services Project__][1]{:target="_blank"} from the Visual Studio Marketplace.
 
+For a solution with other versions of Visual Studio check out the [Microsoft documentation about SSDT][2]{:target="_blank"}.
+
 [1]: https://marketplace.visualstudio.com/items?itemName=ProBITools.MicrosoftReportProjectsforVisualStudio
+[2]: https://docs.microsoft.com/en-us/sql/ssdt/download-sql-server-data-tools-ssdt?view=sql-server-ver15
 [workload]: {{ site.baseurl }}/assets/img/2019-12-13-build-report-server-project-vsts-agent/workload.png "workload"
