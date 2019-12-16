@@ -1,4 +1,5 @@
 ---
+permalink:	/:categories/:year/:month/:day/:title/
 layout:     post
 title:      Style your Blazor components with SCSS and Web Compiler
 date:       2019-11-18 21:42:00

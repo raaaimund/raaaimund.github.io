@@ -1,4 +1,5 @@
 ---
+permalink:	/:categories/:year/:month/:day/:title/
 layout:     post
 title:      Using custom structs with Zumero
 date:       2016-08-25 22:30:00

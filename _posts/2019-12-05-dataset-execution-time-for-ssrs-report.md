@@ -1,4 +1,5 @@
 ---
+permalink:	/:categories/:year/:month/:day/:title/
 layout:     post
 title:      Dataset execution time for a SSRS report
 date:       2019-12-05 11:57

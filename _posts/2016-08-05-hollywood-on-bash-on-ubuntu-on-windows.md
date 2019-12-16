@@ -1,4 +1,5 @@
 ---
+permalink:	/:categories/:year/:month/:day/:title/
 layout:     post
 title:      Hollywood on Bash on Ubuntu on Windows
 date:       2016-08-05 23:30:00

@@ -1,4 +1,5 @@
 ---
+permalink:	/:categories/:year/:month/:day/:title/
 layout:     post
 title:      Deploy cert-manager with http validation on your Kubernetes cluster
 date:       2018-10-24 20:00:00

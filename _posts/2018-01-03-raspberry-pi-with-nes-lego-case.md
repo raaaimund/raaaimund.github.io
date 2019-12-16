@@ -1,4 +1,5 @@
 ---
+permalink:	/:categories/:year/:month/:day/:title/
 layout:     post
 title:      Raspberry Pie with NES lego case
 date:       2018-01-03 21:00:00

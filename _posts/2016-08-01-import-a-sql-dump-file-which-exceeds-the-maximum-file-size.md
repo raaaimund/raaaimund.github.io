@@ -1,4 +1,5 @@
 ---
+permalink:	/:categories/:year/:month/:day/:title/
 layout:     post
 title:      Import a SQL Dump file which exceeds the maximum file size
 date:       2016-08-01 21:30:00

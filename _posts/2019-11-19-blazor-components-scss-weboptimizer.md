@@ -1,4 +1,5 @@
 ---
+permalink:	/:categories/:year/:month/:day/:title/
 layout:     post
 title:      Style your Blazor components with SCSS and Web Optimizer
 date:       2019-11-19 21:42:00

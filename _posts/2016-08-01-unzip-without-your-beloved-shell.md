@@ -1,4 +1,5 @@
 ---
+permalink:	/:categories/:year/:month/:day/:title/
 layout:     post
 title:      Unzip without your beloved shell
 date:       2016-08-01 21:00:00

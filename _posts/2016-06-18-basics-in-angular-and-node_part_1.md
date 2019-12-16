@@ -1,4 +1,5 @@
 ---
+permalink:	/:categories/:year/:month/:day/:title/
 layout:     post
 title:      Basics in Angular and Node (Part 1)
 date:       2016-06-18 19:00:00

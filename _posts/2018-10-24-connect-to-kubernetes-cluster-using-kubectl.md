@@ -1,4 +1,5 @@
 ---
+permalink:	/:categories/:year/:month/:day/:title/
 layout: post
 title: Connect to a Kubernetes cluster using kubectl and a service account token
 date: 2018-10-24 21:00:00

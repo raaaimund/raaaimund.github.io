@@ -1,4 +1,5 @@
 ---
+permalink:	/:categories/:year/:month/:day/:title/
 layout:     post
 title:      Useful Docker Commands
 date:       2016-06-06 14:34:57

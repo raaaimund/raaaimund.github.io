@@ -1,4 +1,5 @@
 ---
+permalink:	/:categories/:year/:month/:day/:title/
 layout:     post
 title:      Windows 10 Anniversary Update
 date:       2016-08-02 00:15:00

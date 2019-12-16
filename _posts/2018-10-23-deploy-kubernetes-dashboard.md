@@ -1,4 +1,5 @@
 ---
+permalink:	/:categories/:year/:month/:day/:title/
 layout:     post
 title:      Deploy Kubernetes dashboard
 date:       2018-10-23 22:00:00

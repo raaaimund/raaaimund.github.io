@@ -1,4 +1,5 @@
 ---
+permalink:	/:categories/:year/:month/:day/:title/
 layout:     post
 title:      Backup and restore GitLab on k8s
 date:       2018-10-21 21:00:00

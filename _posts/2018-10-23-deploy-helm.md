@@ -1,4 +1,5 @@
 ---
+permalink:	/:categories/:year/:month/:day/:title/
 layout:     post
 title:      Deploy helm on your Kubernetes cluster
 date:       2018-10-23 22:55:00

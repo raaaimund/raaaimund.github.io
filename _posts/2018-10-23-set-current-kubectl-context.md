@@ -1,4 +1,5 @@
 ---
+permalink:	/:categories/:year/:month/:day/:title/
 layout:     post
 title:      Set the current kubectl context
 date:       2018-10-23 23:00:00

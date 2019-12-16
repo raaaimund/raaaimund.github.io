@@ -59,6 +59,8 @@ collections:
   pages:
     output: true
     permalink: /:path/
+  posts:
+    permalink: /:collection/:title/
 
 # -----------------------------------------------------------------------------
 # Jekyll settings

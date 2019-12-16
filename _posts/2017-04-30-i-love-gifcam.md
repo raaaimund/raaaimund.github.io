@@ -1,4 +1,5 @@
 ---
+permalink:	/:categories/:year/:month/:day/:title/
 layout:     post
 title:      I love GifCam
 date:       2017-04-30 15:37:57

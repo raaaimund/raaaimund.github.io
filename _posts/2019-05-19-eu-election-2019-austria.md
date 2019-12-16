@@ -1,4 +1,5 @@
 ---
+permalink:	/:categories/:year/:month/:day/:title/
 layout:     post
 title:      EU elections 2019 in Austria
 date:       2019-05-19 18:00:00

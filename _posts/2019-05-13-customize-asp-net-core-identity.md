@@ -1,4 +1,5 @@
 ---
+permalink:	/:categories/:year/:month/:day/:title/
 layout:     post
 title:      Customize ASP.NET Core Identity
 date:       2019-05-13 17:00:00

@@ -1,4 +1,5 @@
 ---
+permalink:	/:categories/:year/:month/:day/:title/
 layout:     post
 title:      Use Build Definitions with Microsoft Team Services to sign and upload your apk
 date:       2016-09-20 21:30:00

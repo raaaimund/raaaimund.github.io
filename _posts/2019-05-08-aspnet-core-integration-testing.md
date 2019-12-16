@@ -1,4 +1,5 @@
 ---
+permalink:	/:categories/:year/:month/:day/:title/
 layout:     post
 title:      Integration testing in ASP.NET Core with EF Sqlite and InMemory Provider and XUnit
 date:       2019-05-08 01:00:00

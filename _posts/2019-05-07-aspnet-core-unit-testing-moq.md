@@ -1,4 +1,5 @@
 ---
+permalink:	/:categories/:year/:month/:day/:title/
 layout:     post
 title:      Unit testing in ASP.NET Core with Moq and XUnit
 date:       2019-05-07 23:00:00

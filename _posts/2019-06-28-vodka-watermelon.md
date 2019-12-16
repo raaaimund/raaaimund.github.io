@@ -1,4 +1,5 @@
 ---
+permalink:	/:categories/:year/:month/:day/:title/
 layout:     post
 title:      Vodka Watermelon
 date:       2019-06-28 12:00:00

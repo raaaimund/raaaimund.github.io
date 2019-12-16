@@ -1,4 +1,5 @@
 ---
+permalink:	/:categories/:year/:month/:day/:title/
 layout:     post
 title:      IUBH Youtube channel
 date:       2017-04-30 16:00:00

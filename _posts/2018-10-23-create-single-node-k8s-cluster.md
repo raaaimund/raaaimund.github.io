@@ -1,4 +1,5 @@
 ---
+permalink:	/:categories/:year/:month/:day/:title/
 layout:     post
 title:      Create a single node Kubernetes cluster on Ubuntu 18.04.1 (Bionic Beaver) with kubeadm
 date:       2018-10-23 21:00:00

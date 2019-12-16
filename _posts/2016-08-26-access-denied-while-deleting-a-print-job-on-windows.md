@@ -1,4 +1,5 @@
 ---
+permalink:	/:categories/:year/:month/:day/:title/
 layout:     post
 title:      Access denied while deleting a print job on windows
 date:       2016-08-26 20:30:00

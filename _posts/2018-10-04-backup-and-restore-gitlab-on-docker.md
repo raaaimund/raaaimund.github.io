@@ -1,4 +1,5 @@
 ---
+permalink:	/:categories/:year/:month/:day/:title/
 layout:     post
 title:      Backup and restore GitLab on Docker
 date:       2018-10-04 21:00:00

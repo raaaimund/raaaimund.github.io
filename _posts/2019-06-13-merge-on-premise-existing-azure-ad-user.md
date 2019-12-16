@@ -1,4 +1,5 @@
 ---
+permalink:	/:categories/:year/:month/:day/:title/
 layout:     post
 title:      Merge on-premise with existing Azure AD user
 date:       2019-06-13 12:00:00

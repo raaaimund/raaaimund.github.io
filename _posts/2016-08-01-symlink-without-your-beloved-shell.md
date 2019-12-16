@@ -1,4 +1,5 @@
 ---
+permalink:	/:categories/:year/:month/:day/:title/
 layout:     post
 title:      Symlink without your beloved shell
 date:       2016-08-01 09:34:57

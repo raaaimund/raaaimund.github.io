@@ -1,4 +1,5 @@
 ---
+permalink:	/:categories/:year/:month/:day/:title/
 layout:     post
 title:      Bash on Ubuntu on Windows in Visual Studio Code
 date:       2016-08-09 22:30:00

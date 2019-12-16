@@ -1,4 +1,5 @@
 ---
+permalink:	/:categories/:year/:month/:day/:title/
 layout:     post
 title:      Run TYPO3 with Docker
 date:       2019-08-07 12:00:00
