@@ -41,7 +41,7 @@ $user = Get-ADUser -Filter 'Name -like "*NAME*"'
 #### 2. *OnPrem*: immutableId = ToBase64(ObjectId)
 
 ```
-$immutableid = [System.Convert]::ToBase64String($nicole.ObjectGUID.tobytearray())
+$immutableid = [System.Convert]::ToBase64String($user.ObjectGUID.tobytearray())
 $immutableid
 ```
 
