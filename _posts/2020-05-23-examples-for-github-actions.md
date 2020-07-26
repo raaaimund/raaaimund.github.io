@@ -3,7 +3,7 @@ layout: post
 title: Examples for GitHub Actions
 date: 2020-05-23 12:59
 author: Raimund Rittnauer
-description: Examples for GitHub Docker container and JavaScript actions
+description: Examples for GitHub Actions with Docker container and JavaScript actions
 categories: tech
 comments: true
 tags:
