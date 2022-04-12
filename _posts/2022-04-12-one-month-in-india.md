@@ -1,9 +1,9 @@
 ---
 layout: post
-title: Examples for GitHub Actions
+title: One month in India
 date: 2022-04-12 15:00
 author: Raimund Rittnauer
-description: One month in India
+description: As a teacher for Software Engineering at an Indian college
 categories: travel
 comments: true
 tags:
