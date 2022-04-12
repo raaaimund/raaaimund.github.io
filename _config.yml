@@ -85,5 +85,5 @@ plugins:
 # Other settings
 # -----------------------------------------------------------------------------
 jquery_version: "1.12.4"
-katex_version: "0.10.2"
+katex_version: "0.15.3"
 anchorjs_version: "3.2.2"
