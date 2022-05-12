@@ -17,7 +17,7 @@ tags:
         # git
         /ɡɪt/
         ---
-        <img src="/assets/img/2022-05-11-slide/git-logo.png" />
+        <img src="/assets/img/2022-05-11-git-github-workshop/git-logo.png" />
         ---
         ## What does Wikipedia say?
         - Git is a software for __tracking changes__ in any set of files, usually used for __coordinating work among programmers__ collaboratively developing source code during software development.
@@ -28,7 +28,7 @@ tags:
         - Distributed version control system
         - [https://git-scm.com/](https://git-scm.com/)
         ---
-        <img src="/assets/img/2022-05-11-slide/torvalds.png">
+        <img src="/assets/img/2022-05-11-git-github-workshop/torvalds.png">
         <br />
         Linus Torvalds
         ---
@@ -50,14 +50,14 @@ tags:
         - Developers can see the full history of the project.
         - Developers can revert to earlier versions of a project.
         ---
-        <img src="/assets/img/2022-05-11-slide/github-logo.png">
+        <img src="/assets/img/2022-05-11-git-github-workshop/github-logo.png">
         ---
         ## GitHub
         - Offers the distributed version control and source code management (SCM) functionality of Git
         - Provider of Internet hosting for software development and version control using Git
         - [https://github.com/](https://github.com/)
         ---
-        <img src="/assets/img/2022-05-11-slide/gitlab-logo.png">
+        <img src="/assets/img/2022-05-11-git-github-workshop/gitlab-logo.png">
         ---
         ## GitLab
         - DevOps software that combines the ability to develop, secure, and operate software in a single application.
@@ -81,7 +81,7 @@ tags:
         - Branch
         - Merge
         ---
-        <!-- .slide: data-background-image="/assets/img/2022-05-11-slide/mangotime1.jpg" -->
+        <!-- .slide: data-background-image="/assets/img/2022-05-11-git-github-workshop/mangotime1.jpg" -->
         ## ~~Mango~~Demotime
         ---
         ## git vocabularies
@@ -157,7 +157,7 @@ tags:
         ```bash
         git status
         ```
-        <img src="/assets/img/2022-05-11-slide/git-status.png">
+        <img src="/assets/img/2022-05-11-git-github-workshop/git-status.png">
         ---
         ## git vocabularies
         - Repository
@@ -229,9 +229,9 @@ tags:
         - __Merge__
         ---
         ## Branching and Merging
-        <img src="/assets/img/2022-05-11-slide/branches1.png">
+        <img src="/assets/img/2022-05-11-git-github-workshop/branches1.png">
         ---
-        <!-- .slide: data-background-image="/assets/img/2022-05-11-slide/delhi-metro.svg" -->
+        <!-- .slide: data-background-image="/assets/img/2022-05-11-git-github-workshop/delhi-metro.svg" -->
         ---
         ## git branch
         - List all local branches
@@ -280,7 +280,7 @@ tags:
         ```
         ---
         ## Branching and Merging
-        <img src="/assets/img/2022-05-11-slide/branches1.png">
+        <img src="/assets/img/2022-05-11-git-github-workshop/branches1.png">
         ---
         ## Branching and Merging
         - Create a branch for each feature you want do develop
@@ -294,7 +294,7 @@ tags:
         - Use branches for implementing features.
         ---
         ## You do not want to be a sneaky fox!
-        <img class="stretch" src="/assets/img/2022-05-11-slide/sneaky-fox.jpg">
+        <img class="stretch" src="/assets/img/2022-05-11-git-github-workshop/sneaky-fox.jpg">
         ---
         ## Pull Request / Merge Request
         - Merging on GitHub
@@ -313,9 +313,9 @@ tags:
         - Head over to GitHub and create a new public repository named __username.github.io__, where username is your username (or organization name) on GitHub.
         - If the first part of the repository doesn’t exactly match your username, it won’t work, so make sure to get it right.
         ---
-        <img class="stretch" src="/assets/img/2022-05-11-slide/create-githubpages-project.png">
+        <img class="stretch" src="/assets/img/2022-05-11-git-github-workshop/create-githubpages-project.png">
         ---
-        <!-- .slide: data-background-image="/assets/img/2022-05-11-slide/mangotime2.jpg" -->
+        <!-- .slide: data-background-image="/assets/img/2022-05-11-git-github-workshop/mangotime2.jpg" -->
         ## ~~Mango~~Demotime
         ---
         ## Spck Code Editor
@@ -325,7 +325,7 @@ tags:
         - [https://play.google.com/store/apps/details?id=io.spck](https://play.google.com/store/apps/details?id=io.spck)
         - [https://spck.io/](https://spck.io/)
         ---
-        <!-- .slide: data-background-image="/assets/img/2022-05-11-slide/mangotime3.jpg" -->
+        <!-- .slide: data-background-image="/assets/img/2022-05-11-git-github-workshop/mangotime3.jpg" -->
         ## ~~Mango~~Demotime
         ---
         ## Other IDEs
@@ -366,13 +366,13 @@ tags:
         - It addresses the problem of overloading operations teams with manual processes that slow down app delivery. It builds on the benefits of continuous delivery by automating the next stage in the pipeline.
         ---
         ## CI/CD
-        <img src="/assets/img/2022-05-11-slide/ci-cd.jpg">
+        <img src="/assets/img/2022-05-11-git-github-workshop/ci-cd.jpg">
         ---
         ## GitHub Workflows
         - A workflow is a configurable automated process that will run one or more jobs.
         - Workflows are defined by a YAML file checked in to your repository and will run when triggered by an event in your repository, or they can be triggered manually, or at a defined schedule.
         ---
-        <!-- .slide: data-background-image="/assets/img/2022-05-11-slide/mangotime4.jpg" -->
+        <!-- .slide: data-background-image="/assets/img/2022-05-11-git-github-workshop/mangotime4.jpg" -->
         ## ~~Mango~~Demotime
         ---
         ## Short git recap
