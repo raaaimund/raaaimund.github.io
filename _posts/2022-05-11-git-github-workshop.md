@@ -242,7 +242,6 @@ tags:
         ```bash
         git branch -r
         ```
-        ---
         - List all branches
         ```bash
         git branch -a
