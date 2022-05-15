@@ -335,7 +335,7 @@ tags:
            - …
         ---
         ## Now it’s your turn
-        - Go to [https://github.com/raaaimund](https://github.com/)
+        - Go to [https://github.com/](https://github.com/)
         - Create an account
         - Create a public repository for GitHub pages (username.github.io)
         - Continue solo or team up with others (maximum 3 people per team)
