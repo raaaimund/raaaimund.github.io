@@ -372,7 +372,7 @@ tags:
         - Workflows are defined by a YAML file checked in to your repository and will run when triggered by an event in your repository, or they can be triggered manually, or at a defined schedule.
         ---
         <!-- .slide: data-background-image="/assets/img/2022-05-11-git-github-workshop/mangotime4.jpg" -->
-        ## Avoid the ~~Banana~~Mango-Principle
+        ## Avoid the ~~Mango~~Banana-Principle
         ---
         <!-- .slide: data-background-image="/assets/img/2022-05-11-git-github-workshop/mangotime5.jpg" -->
         ## ~~Mango~~Demotime
