@@ -40,6 +40,9 @@ tags:
            - ability to work offline
            - does not rely on a single location for backups
         ---
+        ## Centralized vs Distributed
+        <img src="/assets/img/2022-05-11-git-github-workshop/centralized-distributed.png">
+        ---
         ## git in a nutshell
         - Tracks code changes
         - Tracks who made changes
@@ -371,6 +374,12 @@ tags:
         - A workflow is a configurable automated process that will run one or more jobs.
         - Workflows are defined by a YAML file checked in to your repository and will run when triggered by an event in your repository, or they can be triggered manually, or at a defined schedule.
         ---
+        ## CI/CD - this blog
+        [github.com/raaaimund/raaaimund.github.io/actions](https://github.com/raaaimund/raaaimund.github.io/actions)
+        ---
+        ## CI/CD - Android application
+        [github.com/raaaimund/iwmad22/actions](https://github.com/raaaimund/iwmad22/actions)
+        ---
         <!-- .slide: data-background-image="/assets/img/2022-05-11-git-github-workshop/mangotime4.jpg" -->
         ## Avoid the ~~Mango~~Banana-Principle
         ---
@@ -388,10 +397,23 @@ tags:
         - Branch
         - Merge
         ---
+        ## Continue your git/GitHub journey
+        - [https://lab.github.com/](https://lab.github.com/)
+        - [https://github.com/microsoft/workshop-library](https://github.com/microsoft/workshop-library)
+        - [https://education.github.com/git-cheat-sheet-education.pdf](https://education.github.com/git-cheat-sheet-education.pdf)
+        - [https://education.github.com/](https://education.github.com/)
+        ---
+        ## Apply for a student developer pack
+        [Apply here](https://docs.github.com/en/education/explore-the-benefits-of-teaching-and-learning-with-github-education/use-github-for-your-schoolwork/apply-for-a-student-developer-pack)
+        ---
         ## Credits
         - Images of branching and merging from https://digitalvarys.com/git-branch-and-its-operations/
         - Image of Delhi metro rail map from Government of India
         - CI/CD from [redhat.com](https://redhat.com)
         - [https://www.w3schools.com/git/default.asp?remote=github](https://www.w3schools.com/git/default.asp?remote=github)
+        - Microsoft and GitHub for their educational support of students
+        ---
+        ## Slides
+        are available on [rittnauer.at](http://rittnauer.at)
     </textarea>
 </section>
