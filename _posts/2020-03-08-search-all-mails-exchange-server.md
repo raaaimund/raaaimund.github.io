@@ -4,7 +4,7 @@ title:      Search for sender in all mails on Exchange Server
 date:       2020-03-08 04:20
 author:     Raimund Rittnauer
 description:    How to filter all your emails of your Exchange Server for a specific sender address
-categories: math
+categories: tech
 comments: true
 tags:
  - exchange server
