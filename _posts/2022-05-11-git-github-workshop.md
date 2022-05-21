@@ -343,7 +343,7 @@ tags:
         - Create a public repository for GitHub pages (username.github.io)
         - Continue solo or team up with others (maximum 3 people per team)
            - Invite your team members as collaborators (Settings -> Collaborators)
-        - Create a website about you/your hobby/a project/a movie/a blog/a diary/…
+        - Create a website about you/your hobby/a project/a movie/a blog/a diary/resume/…
         - Check it out on [https://username.github.io/](https://username.github.io/)
         ---
         ## Need some inspiration?
