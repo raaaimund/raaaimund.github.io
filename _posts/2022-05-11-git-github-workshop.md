@@ -346,6 +346,7 @@ tags:
         - Create a website about you/your hobby/a project/a movie/a blog/a diary/…
         - Check it out on [https://username.github.io/](https://username.github.io/)
         - Here is my website -> [https://raaaimund.github.io/](https://raaaimund.github.io/)
+        - Need some inspiration -> [https://education.github.com/pack/gallery](https://education.github.com/pack/gallery)
         ---
         ## CI/CD
         Continuous Integration / Continous Delivery / Continuous Deployment
