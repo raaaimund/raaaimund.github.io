@@ -55,6 +55,8 @@ tags:
         - Each class for three hours per week
         - No school closures
         ---
+        <img class="stretch" src="/assets/img/2022-05-05-one-month-teaching-in-india/we-and-rit-students.jpg">
+        ---
         ## Challenges
         - Availability of personal laptops
         - ~2GB of mobile data per day
