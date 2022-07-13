@@ -16,7 +16,7 @@ tags:
 <section data-markdown>
     <textarea data-template>
         ## No laptop, no problem?
-        Utilize smartphones to bring software development to everyone
+        Utilize smartphones to bring software development to "everyone"
         ---
         # Background
         ---
