@@ -81,6 +81,8 @@ tags:
         ---
         > I prefer recordings, I can watch as often as I need.
         ---
+        Submission reviews are also a challenge in a remote setup due to connection issues, and often background noises due to lack of a quiet learning environment.
+        ---
         ## Placements > Skill development
         (my personal opinion)
         ---
