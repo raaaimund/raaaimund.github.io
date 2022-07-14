@@ -128,6 +128,14 @@ tags:
         - GitHub + Git on [Termux](https://github.com/termux) + [Java N-IDE](https://github.com/shenghuntianlang/java-n-IDE-for-Android)
         - GitHub + [Spck Code Editor](https://play.google.com/store/apps/details?id=io.spck) (integrated Git client)
         ---
+        ## 2022
+        - New 1st year students
+          - ~30% have a laptop
+        - Limited internet availability (at college and mobile data)
+        - Power cuts
+          - Computer labs
+          - Live coding sessions
+        ---
         <img src="/assets/img/2022-07-13-utilize-smartphones-to-bring-software-development-to-everyone/students-and-me.jpg">
         We
         ---
