@@ -32,24 +32,28 @@ tags:
         - learning material is online available at any time
         - students can continue their journey even if semester is over
         ---
+        ## The course(s)
+        - 2nd year - Java fundamentals (multiple small assignments)
+        - 3rd year - Java OOP (project based)
+        ---
+        # The challenges
+        ---
+        ## Availability of laptops and/or desktop computers
+        ---
         <img src="/assets/img/2022-07-13-utilize-smartphones-to-bring-software-development-to-everyone/access-to-computer-internet.png">
         National Sample Survey KI Education 75th Round
         ---
         <img src="/assets/img/2022-07-13-utilize-smartphones-to-bring-software-development-to-everyone/access-to-personal-device.png">
         Survey among students of 2nd and 3rd year (B-Tech)
         ---
-        ## The course(s)
-        - 2nd year - Java fundamentals (multiple small assignments)
-        - 3rd year - Java OOP (project based)
+        ## Let's use smartphones
         ---
-        ## The plan
-        - Set up was completely remotely
+        ## The plan in 2021
+        Set up was completely remotely
         - Learning platform - Moodle
         - Communication - Slack
         - Classes and submission reviews - Zoom
         - Practicing - Android apps & web services
-        ---
-        # The challenges
         ---
         ## Internet connection and power
         ---
@@ -100,7 +104,7 @@ tags:
         ---
         One student streamed the content of his smartphone to his TV and connected a bluetooth keyboard.
         ---
-        > Laptop is more convenient for practical usage like programming and of course maybe because I am used to it.
+        > Laptop is more convenient for practical usage like programming, maybe because I am used to it.
         ---
         During the SSIs, 2nd year students mentioned that in their opinion, all assignments are solvable using a smartphone.
         ---
@@ -110,25 +114,25 @@ tags:
         ---
         > On laptop we have more features to do the programming.
         ---
-        ## Conclusion
+        ## Small summary
         - Lack of physical keyboard and small screen size was mentioned the most
         - Students can participate using only Smartphones
            - Assignments must be designed appropriately
         - Only few Android apps that run entirely offline exist
         - Android apps are not as feature rich as desktop IDEs
-        - Recording classes and providing learning material helps reach students
+        - Recording classes, explanation videos, and providing learning material online helps reach students
         ---
         ## 2022
         - Now I am in India
         - Created a new course for 4th year students
-        - GitHub + Git on Termux + Java N-IDE
-        - GitHub + Spck Code Editor (integrated Git client)
+        - GitHub + Git on [Termux](https://github.com/termux) + [Java N-IDE](https://github.com/shenghuntianlang/java-n-IDE-for-Android)
+        - GitHub + [Spck Code Editor](https://play.google.com/store/apps/details?id=io.spck) (integrated Git client)
         ---
         <img src="/assets/img/2022-07-13-utilize-smartphones-to-bring-software-development-to-everyone/students-and-me.jpg">
         We
         ---
         <img src="/assets/img/2022-07-13-utilize-smartphones-to-bring-software-development-to-everyone/github-workshop.jpg">
-        Workshop about Git and GitHub
+        Workshop on Git and GitHub
         ---
         ## References
         - [NSS 75th round](https://www.thehinducentre.com/resources/article30980071.ece/binary/KI_Education_75th_Final_compressed.pdf)
@@ -141,10 +145,3 @@ tags:
         are available on [rittnauer.at](http://rittnauer.at)
     </textarea>
 </section>
-
-
-<!--
-- class recordings
-- explanation videos
-- practical programming
--->
