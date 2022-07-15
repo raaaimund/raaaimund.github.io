@@ -136,9 +136,6 @@ tags:
           - Computer labs
           - Live coding sessions
         ---
-        <img src="/assets/img/2022-07-13-utilize-smartphones-to-bring-software-development-to-everyone/students-and-me.jpg">
-        We
-        ---
         <img src="/assets/img/2022-07-13-utilize-smartphones-to-bring-software-development-to-everyone/github-workshop.jpg">
         Workshop on Git and GitHub
         ---
