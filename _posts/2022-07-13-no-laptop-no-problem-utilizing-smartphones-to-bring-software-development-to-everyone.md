@@ -40,11 +40,11 @@ tags:
         ---
         ## Availability of laptops and/or desktop computers
         ---
-        <img src="/assets/img/2022-07-13-utilize-smartphones-to-bring-software-development-to-everyone/access-to-computer-internet.png">
-        National Sample Survey KI Education 75th Round
+        <img class="r-stretch" src="/assets/img/2022-07-13-utilize-smartphones-to-bring-software-development-to-everyone/access-to-computer-internet.png">
+        <p>National Sample Survey KI Education 75th Round</p>
         ---
-        <img src="/assets/img/2022-07-13-utilize-smartphones-to-bring-software-development-to-everyone/access-to-personal-device.png">
-        Survey among students of 2nd and 3rd year (B-Tech)
+        <img class="r-stretch" src="/assets/img/2022-07-13-utilize-smartphones-to-bring-software-development-to-everyone/access-to-personal-device.png">
+        <p>Survey among students of 2nd and 3rd year (B-Tech)</p>
         ---
         ## Let's use smartphones
         ---
@@ -57,7 +57,7 @@ tags:
         ---
         ## Internet connection and power
         ---
-        <img src="/assets/img/2022-07-13-utilize-smartphones-to-bring-software-development-to-everyone/daily-internet-data-limit.png">
+        <img class="r-stretch" src="/assets/img/2022-07-13-utilize-smartphones-to-bring-software-development-to-everyone/daily-internet-data-limit.png">
         Survey among students of 3rd and 4th year (B-Tech)
         ---
         ## Internet connection and power
@@ -122,7 +122,10 @@ tags:
         - Android apps are not as feature rich as desktop IDEs
         - Recording classes, explanation videos, and providing learning material online helps reach students
         ---
+        ## At least we could continue practicing programming also during school closures and without laptops!
+        ---
         ## 2022
+        - I quit my job
         - Now I am in India
         - Created a new course for 4th year students
         - GitHub + Git on [Termux](https://github.com/termux) + [Java N-IDE](https://github.com/shenghuntianlang/java-n-IDE-for-Android)
@@ -136,8 +139,11 @@ tags:
           - Computer labs
           - Live coding sessions
         ---
-        <img src="/assets/img/2022-07-13-utilize-smartphones-to-bring-software-development-to-everyone/github-workshop.jpg">
-        Workshop on Git and GitHub
+        <img class="r-stretch" src="/assets/img/2022-07-13-utilize-smartphones-to-bring-software-development-to-everyone/github-workshop.jpg">
+        <p>Workshop on Git and GitHub</p>
+        ---
+        <img class="r-stretch" src="/assets/img/2022-07-13-utilize-smartphones-to-bring-software-development-to-everyone/swag.jpg">
+        <p>Thanks <a href="https://www.linkedin.com/in/mvkaran/" target="_blank">Karan M.V.</a> and <a href="https://github.com/" target="_blank">GitHub</a> for swag!</p>
         ---
         ## References
         - [NSS 75th round](https://www.thehinducentre.com/resources/article30980071.ece/binary/KI_Education_75th_Final_compressed.pdf)
@@ -146,7 +152,11 @@ tags:
         - [Rural households with internet access in the euro area](https://appsso.eurostat.ec.europa.eu/nui/show.do?query=BOOKMARK_DS-053754_QID_68B6462B_UID_-3F171EB0&layout=TIME,C,X,0;GEO,L,Y,0;UNIT,L,Z,0;HHTYP,L,Z,1;INDICATORS,C,Z,2;&zSelection=DS-053754HHTYP,HH_DEG3;DS-053754UNIT,PC_HH;DS-053754INDICATORS,OBS_FLAG;&rankName1=UNIT_1_2_-1_2&rankName2=HHTYP_1_2_-1_2&rankName3=INDICATORS_1_2_-1_2&rankName4=TIME_1_0_0_0&rankName5=GEO_1_2_0_1&sortC=ASC_-1_FIRST&rStp=&cStp=&rDCh=&cDCh=&rDM=true&cDM=true&footnes=false&empty=false&wai=false&time_mode=NONE&time_most_recent=false&lang=EN&cfo=%23%23%23%2C%23%23%23.%23%23%23)
         - [Urban households with internet access in the euro area](https://appsso.eurostat.ec.europa.eu/nui/show.do?query=BOOKMARK_DS-053754_QID_-53411C72_UID_-3F171EB0&layout=TIME,C,X,0;GEO,L,Y,0;UNIT,L,Z,0;HHTYP,L,Z,1;INDICATORS,C,Z,2;&zSelection=DS-053754HHTYP,HH_DEG1;DS-053754UNIT,PC_HH;DS-053754INDICATORS,OBS_FLAG;&rankName1=UNIT_1_2_-1_2&rankName2=HHTYP_1_2_-1_2&rankName3=INDICATORS_1_2_-1_2&rankName4=TIME_1_0_0_0&rankName5=GEO_1_2_0_1&sortC=ASC_-1_FIRST&rStp=&cStp=&rDCh=&cDCh=&rDM=true&cDM=true&footnes=false&empty=false&wai=false&time_mode=NONE&time_most_recent=false&lang=EN&cfo=%23%23%23%2C%23%23%23.%23%23%23)
         ---
-        ## Slides
-        are available on [rittnauer.at](http://rittnauer.at)
+        ## If you have
+        - Ideas
+        - Resources
+        - Feedback
+
+        👉 [rittnauer.at](http://rittnauer.at) 👈
     </textarea>
 </section>
