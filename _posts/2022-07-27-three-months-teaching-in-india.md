@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Three months teaching in India
-date: 2022-07-10 02:30
+date: 2022-07-27 02:30
 author: Raimund Rittnauer
 description: My experience in teaching software engineering for the third month at a rural college in India
 categories: tech
@@ -13,8 +13,8 @@ tags:
 ---
 
 <div class="img_row">
-  <a href="/assets/img/2022-07-10-three-months-teaching-in-india/raj-kachori-bhalla-papadi.jpeg" target="_blank">
-    <img class="col three" src="/assets/img/2022-07-10-three-months-teaching-in-india/raj-kachori-bhalla-papadi.jpeg">
+  <a href="/assets/img/2022-07-27-three-months-teaching-in-india/raj-kachori-bhalla-papadi.jpeg" target="_blank">
+    <img class="col three" src="/assets/img/2022-07-27-three-months-teaching-in-india/raj-kachori-bhalla-papadi.jpeg">
   </a>
 </div>
 <div class="col three caption">
@@ -37,8 +37,8 @@ The classes for module 1 just started. Here we faced some challenges at the begi
 [ICT4D.at](https://www.ict4d.at/){:target="_blank"} conducted an online project forge. During three rounds where different people came together, various projects were presented, problems were discussed, and ideas were gathered. Sadly on this evening my internet connection was really bad and I had disconnects after disconnects. Luckily [Florian](https://www.ict4d.at/about/){:target="_blank"} took over and helped gathering and noting down the input from all participants.
 
 <div class="img_row">
-  <a href="/assets/img/2022-07-10-three-months-teaching-in-india/project-forge.jpg" target="_blank">
-    <img class="col three" src="/assets/img/2022-07-10-three-months-teaching-in-india/project-forge.jpg">
+  <a href="/assets/img/2022-07-27-three-months-teaching-in-india/project-forge.jpg" target="_blank">
+    <img class="col three" src="/assets/img/2022-07-27-three-months-teaching-in-india/project-forge.jpg">
   </a>
 </div>
 <div class="col three caption">
@@ -50,8 +50,8 @@ I really liked the idea of a "showcase day" where students present their project
 ### At the Git workshop
 
 <div class="img_row">
-  <a href="/assets/img/2022-07-10-three-months-teaching-in-india/git-workshop-1.jpg" target="_blank">
-    <img class="col three" src="/assets/img/2022-07-10-three-months-teaching-in-india/git-workshop-1.jpg">
+  <a href="/assets/img/2022-07-27-three-months-teaching-in-india/git-workshop-1.jpg" target="_blank">
+    <img class="col three" src="/assets/img/2022-07-27-three-months-teaching-in-india/git-workshop-1.jpg">
   </a>
 </div>
 <div class="col three caption">
@@ -63,8 +63,8 @@ At the college we had a one day workshop on [Git](https://git-scm.com/){:target=
 The only thing was, that one afternoon was not enough time and sadly we had no computer lab available. Also, I was alone and there were about 70+ students. So next time for such a workshop the computer lab should be reserved and a whole day hands-on workshop would be better instead of only a single afternoon. Maybe also some senior students, like tutors, that help me answering questions and work together with the participants during the hands-on workshop would be a great help. At least one student told me after the workshop that she did not know what the difference between Git and GitHub was, but now she knows. In addition to that, now we have new GitHub users and some students are still working on their website.
 
 <div class="img_row">
-  <a href="/assets/img/2022-07-10-three-months-teaching-in-india/git-workshop-2.jpg" target="_blank">
-    <img class="col three" src="/assets/img/2022-07-10-three-months-teaching-in-india/git-workshop-2.jpg">
+  <a href="/assets/img/2022-07-27-three-months-teaching-in-india/git-workshop-2.jpg" target="_blank">
+    <img class="col three" src="/assets/img/2022-07-27-three-months-teaching-in-india/git-workshop-2.jpg">
   </a>
 </div>
 <div class="col three caption">
@@ -72,8 +72,8 @@ The only thing was, that one afternoon was not enough time and sadly we had no c
 </div>
 
 <div class="img_row">
-  <a href="/assets/img/2022-07-10-three-months-teaching-in-india/git-workshop-3.jpg" target="_blank">
-    <img class="col three" src="/assets/img/2022-07-10-three-months-teaching-in-india/git-workshop-3.jpg">
+  <a href="/assets/img/2022-07-27-three-months-teaching-in-india/git-workshop-3.jpg" target="_blank">
+    <img class="col three" src="/assets/img/2022-07-27-three-months-teaching-in-india/git-workshop-3.jpg">
   </a>
 </div>
 <div class="col three caption">
@@ -83,8 +83,8 @@ The only thing was, that one afternoon was not enough time and sadly we had no c
 ### At the InDIITA workshop
 
 <div class="img_row">
-  <a href="/assets/img/2022-07-10-three-months-teaching-in-india/indiita.jpg" target="_blank">
-    <img class="col three" src="/assets/img/2022-07-10-three-months-teaching-in-india/indiita.jpg">
+  <a href="/assets/img/2022-07-27-three-months-teaching-in-india/indiita.jpg" target="_blank">
+    <img class="col three" src="/assets/img/2022-07-27-three-months-teaching-in-india/indiita.jpg">
   </a>
 </div>
 <div class="col three caption">
@@ -102,13 +102,13 @@ and the law of [Open Space Technology](https://en.wikipedia.org/wiki/Open_Space_
 
 - The law of two feet/motion & responsibility - _If you find yourself in any situation where you are neither learning nor contributing, respectfully get up and go somewhere that you will be!_
 
-Overall, it was a really nice experience and I enjoyed the company of so many passionate people who want to use technology to improve peoples lives and help society for two days a lot. This really motivated me to continue finding solutions and exploring new things on how to include as much people as possible in the education of Software Development. If you want a more detailled insight into what happened at the workshop and the sessions, check out the [blog post about the InDIITA workshop]({% post_url 2022-07-13-indiita-workshop %}){:target="_blank"}.
+Overall, it was a really nice experience and I enjoyed the company of so many passionate people who want to use technology to improve peoples lives and help society for two days a lot. This really motivated me to continue finding solutions and exploring new things on how to include as much people as possible in the education of Software Development. If you want a more detailled insight into what happened at the workshop and the sessions, check out the [blog post about the InDIITA workshop]({% post_url 2022-07-14-indiita-workshop %}){:target="_blank"}.
 
 ### At the break
 
 <div class="img_row">
-  <a href="/assets/img/2022-07-10-three-months-teaching-in-india/kerala-chair.jpeg" target="_blank">
-    <img class="col three" src="/assets/img/2022-07-10-three-months-teaching-in-india/kerala-chair.jpeg">
+  <a href="/assets/img/2022-07-27-three-months-teaching-in-india/kerala-chair.jpeg" target="_blank">
+    <img class="col three" src="/assets/img/2022-07-27-three-months-teaching-in-india/kerala-chair.jpeg">
   </a>
 </div>
 <div class="col three caption">
@@ -122,8 +122,8 @@ It was a really nice trip and a relaxing break, but at the same time sometimes I
 Since we were mostly in places where people speak other languages than Telugu, I could practice a little bit Hindi. One of my favourite places was Hampi. This is a beautiful place with a lot of history and it's also totally safe to go swimming although it is not at the sea. The swimming part was welcoming since it was really hot during that time.
 
 <div class="img_row">
-  <a href="/assets/img/2022-07-10-three-months-teaching-in-india/monstera.jpeg" target="_blank">
-    <img class="col three" src="/assets/img/2022-07-10-three-months-teaching-in-india/monstera.jpeg">
+  <a href="/assets/img/2022-07-27-three-months-teaching-in-india/monstera.jpeg" target="_blank">
+    <img class="col three" src="/assets/img/2022-07-27-three-months-teaching-in-india/monstera.jpeg">
   </a>
 </div>
 <div class="col three caption">
@@ -131,8 +131,8 @@ Since we were mostly in places where people speak other languages than Telugu, I
 </div>
 
 <div class="img_row">
-  <a href="/assets/img/2022-07-10-three-months-teaching-in-india/nutmeg.jpeg" target="_blank">
-    <img class="col three" src="/assets/img/2022-07-10-three-months-teaching-in-india/nutmeg.jpeg">
+  <a href="/assets/img/2022-07-27-three-months-teaching-in-india/nutmeg.jpeg" target="_blank">
+    <img class="col three" src="/assets/img/2022-07-27-three-months-teaching-in-india/nutmeg.jpeg">
   </a>
 </div>
 <div class="col three caption">
@@ -140,8 +140,8 @@ Since we were mostly in places where people speak other languages than Telugu, I
 </div>
 
 <div class="img_row">
-  <a href="/assets/img/2022-07-10-three-months-teaching-in-india/munnar.jpeg" target="_blank">
-    <img class="col three" src="/assets/img/2022-07-10-three-months-teaching-in-india/munnar.jpeg">
+  <a href="/assets/img/2022-07-27-three-months-teaching-in-india/munnar.jpeg" target="_blank">
+    <img class="col three" src="/assets/img/2022-07-27-three-months-teaching-in-india/munnar.jpeg">
   </a>
 </div>
 <div class="col three caption">
@@ -149,8 +149,8 @@ Since we were mostly in places where people speak other languages than Telugu, I
 </div>
 
 <div class="img_row">
-  <a href="/assets/img/2022-07-10-three-months-teaching-in-india/taj-mahal.jpeg" target="_blank">
-    <img class="col three" src="/assets/img/2022-07-10-three-months-teaching-in-india/taj-mahal.jpeg">
+  <a href="/assets/img/2022-07-27-three-months-teaching-in-india/taj-mahal.jpeg" target="_blank">
+    <img class="col three" src="/assets/img/2022-07-27-three-months-teaching-in-india/taj-mahal.jpeg">
   </a>
 </div>
 <div class="col three caption">
