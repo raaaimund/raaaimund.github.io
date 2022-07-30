@@ -3,7 +3,7 @@ layout: post
 title: InDIITA Workshop 2022
 date: 2022-07-14 10:26
 author: Raimund Rittnauer
-description: A two day workshop about Dignity, Inclusion, Identity, Trust, and Agency held by IEEE India
+description: A two-day workshop about Dignity, Inclusion, Identity, Trust, and Agency held by IEEE India
 categories: tech
 comments: true
 tags:
@@ -23,7 +23,7 @@ tags:
 
 ## Open Space Technology
 
-In an email [Paul](https://www.ict4d.at/about/){:target="_blank"} sent me after he attended the [World Summit on the Information Society](https://www.ict4d.at/2022/06/19/ict4d-at-at-the-world-summit-on-the-information-society-forum-2022-discussing-desc-and-acting-as-a-hltf/){:target="_blank"}, he mentioned the [InDIITA workshop](https://engagestandards.ieee.org/InDIITA2022.html){:target="_blank"} organized by [IEEE](https://www.ieee.org/about/ieee-india.html/){:target="_blank"} in Bengaluru. InDIITA stands for __Dignity, Inclusion, Identity, Trust and Agency__. Since I am working near Bengaluru, immediately I took the chance to attend the workshop. The location of the workshop was in the beautiful [Ramanujam](https://en.wikipedia.org/wiki/Srinivasa_Ramanujan){:target="_blank"} building within the [IIIT-B Campus](https://www.iiitb.ac.in/){:target="_blank"}. For setting the two days agenda, the [Open Space Technology](https://en.wikipedia.org/wiki/Open_Space_Technology){:target="_blank"} concept was used, which was totally new to me and to be honest I could not imagine how such a workshop will be like. Before beginning each day, the agenda was dynamically set by the participants themself. Topics and talks were proposed and put into time slots that were spread throughout the day. Afterward, participants could freely move between sessions. I really liked the four principles
+In an email [Paul](https://www.ict4d.at/about/){:target="_blank"} sent me after he attended the [World Summit on the Information Society](https://www.ict4d.at/2022/06/19/ict4d-at-at-the-world-summit-on-the-information-society-forum-2022-discussing-desc-and-acting-as-a-hltf/){:target="_blank"}, he mentioned the [InDIITA workshop](https://engagestandards.ieee.org/InDIITA2022.html){:target="_blank"} organized by [IEEE](https://www.ieee.org/about/ieee-india.html/){:target="_blank"} in Bengaluru. InDIITA stands for __Dignity, Inclusion, Identity, Trust and Agency__. Since I am working near Bengaluru, immediately I took the chance to attend the workshop. The location of the workshop was in the beautiful [Ramanujam](https://en.wikipedia.org/wiki/Srinivasa_Ramanujan){:target="_blank"} building within the [IIIT-B Campus](https://www.iiitb.ac.in/){:target="_blank"}. For setting the two days agenda, the [Open Space Technology](https://en.wikipedia.org/wiki/Open_Space_Technology){:target="_blank"} concept was used, which was totally new to me, and to be honest, I could not imagine how such a workshop would be like. Before beginning each day, the agenda was dynamically set by the participants themself. Topics and talks were proposed and put into time slots spread throughout the day. Afterward, participants could freely move between sessions. I really liked the four principles
 
 - Whoever comes are the right people
 - Whatever happens is the only thing that could have
@@ -36,13 +36,13 @@ and the law of Open Space Technology
 
 ## The expectations
 
-To be honest, I was a little bit nervous at the beginning. Thoughts like "What if there are only a few participants and everyone comes up with a really nice session except for me?", "Everyone is rooted in the Indian tech scene, except for me, hopefully I can connect with people.", or "Are during the workshop also that many cultural events like candle lightings, or dance performances?".
+To be honest, I was a little bit nervous at the beginning. Thoughts like "What if there are only a few participants and everyone comes up with a really nice session except for me?", "Everyone is rooted in the Indian tech scene, except for me, hopefully, I can connect with people.", or "Are during the workshop also that many cultural events like candle lighting or dance performances?".
 
-A colleage and good friend at the college where I am volunteering told me before I headed to Bengaluru, that I should have no expectations and just go with whatever comes to benefit the most from the workshop end enjoy everymoment. It is hard to adapt that kind of thinking anyways, but yea, she was totally right and it also aligned pretty well with the four principles and the one law of Open Space Technology.
+A colleague and good friend at the college where I am volunteering told me before I headed to Bengaluru that I should have no expectations and just go with whatever comes to benefit the most from the workshop end enjoy every moment. It is hard to adapt that kind of thinking anyways, but yea, she was totally right, and it also aligned pretty well with the four principles and the one law of Open Space Technology.
 
 ## The sessions
 
-The sessions were an interesting mixture of topics about various technical and social aspects. Since participants came up with really interesting topics, it was really sad, that I could not attend all of them.
+The sessions were an interesting mixture of topics about various technical and social aspects. Since participants came up with really interesting topics, it was really sad that I could not attend all of them.
 
 ### Day 1
 - Blockchain and Web 3.0 - Intro to Metaverse 
@@ -64,7 +64,7 @@ The sessions were an interesting mixture of topics about various technical and s
 	I got a gift from Nikhil
 </div>
 
-The first day started with a really interesting session and also discussion about [Blockchain](https://andersbrownworth.com/blockchain/){:target="_blank"} and [Web 3.0](https://en.wikipedia.org/wiki/Web3){:target="_blank"}. The team from [Lumos Labs](https://www.lumoslabs.co/){:target="blank"} did a great job in introducing Blockchain, how Blockchain works, [NFTs](https://en.wikipedia.org/wiki/Non-fungible_token){:target="_blank"}, and Web 3.0 to an mixed audience of people who already know and also people who are totally new to those topics. They are really passionate about Web 3.0 and also about educating and spreading knowledge about that important topic. In a distributed future, Blockchain indeed plays it's role, but is not everytime the solution of any use case and/or problem. There are also other concepts, not only but also, the [Fediverse](https://fediverse.info/){:target="blank"} that should also be taken into consideration when building some decentralized applications to solve a specific problem. Another interesting tool for building distributed applications is the [Distributed Application Runtime (Dapr)](https://dapr.io/){:target="blank"}. There is a [really great talk](https://www.youtube.com/watch?v=Ks13Qa5HtWw){:target="blank"} from [Rodrigo Díaz Concha](https://www.linkedin.com/in/rdiazconcha/){:target="_blank"} about Dapr and .NET at the [NDC Porto 2022](https://ndcporto.com/){:target="_blank"}.
+The first day started with a really interesting session and also a discussion about [Blockchain](https://andersbrownworth.com/blockchain/){:target="_blank"} and [Web 3.0](https://en.wikipedia.org/wiki/Web3){:target="_blank"}. The team from [Lumos Labs](https://www.lumoslabs.co/){:target="blank"} did a great job in introducing Blockchain, how Blockchain works, [NFTs](https://en.wikipedia.org/wiki/Non-fungible_token){:target="_blank"}, and Web 3.0 to a mixed audience of people who already know and also people who are totally new to those topics. They are really passionate about Web 3.0 and also about educating and spreading knowledge about that important topic. In a distributed future, Blockchain indeed plays its role, but is not every time the solution of any use case and/or problem. There are also other concepts, not only but also the [Fediverse](https://fediverse.info/){:target="blank"}, that should also be taken into consideration when building some decentralized applications to solve a specific problem. Another interesting tool for building distributed applications is the [Distributed Application Runtime (Dapr)](https://dapr.io/){:target="blank"}. There is a [really great talk](https://www.youtube.com/watch?v=Ks13Qa5HtWw){:target="blank"} from [Rodrigo Díaz Concha](https://www.linkedin.com/in/rdiazconcha/){:target="_blank"} about Dapr and .NET at the [NDC Porto 2022](https://ndcporto.com/){:target="_blank"}.
 
 <div class="img_row">
   <iframe class="col three" src="https://www.youtube.com/embed/Ks13Qa5HtWw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -73,21 +73,21 @@ The first day started with a really interesting session and also discussion abou
 	Rodrigo Díaz Concha - Build powerful distributed applications with Dapr and .NET - NDC Porto 2022
 </div>
 
-At the [IndiaFOSS 2.0 conference]({% post_url 2022-07-28-indiafoss-2022 %}){:target="_blank"} I got introduced to another really interesting tool called [Beckn](https://becknprotocol.io/){:target="_blank"} for creating open and decentralized applications.
+At the [IndiaFOSS 2.0 conference]({% post_url 2022-07-28-indiafoss-2022 %}){:target="_blank"}, I got introduced to another really interesting tool called [Beckn](https://becknprotocol.io/){:target="_blank"} for creating open and decentralized applications.
 
 > Beckn is an open protocol that allows local businesses across any industry to be discovered and engaged by any beckn-enabled application.
 >
 > (Beckn)
 
-Also many kudos to [Osheen Mahajan](https://www.linkedin.com/in/osheen-mahajan/){:target="_blank"} for the really nice presentation and thanks to [Nikhil Aparajit](https://www.linkedin.com/in/nikhil-aparajit/){:target="_blank"} for the lovely gift - a IEEE usb stick.
+Also many kudos to [Osheen Mahajan](https://www.linkedin.com/in/osheen-mahajan/){:target="_blank"} for the really nice presentation and thanks to [Nikhil Aparajit](https://www.linkedin.com/in/nikhil-aparajit/){:target="_blank"} for the lovely gift - an IEEE usb stick.
 
-Another interesting session at day 1 was "Fairness in Platform Labor". Please do not mistake me - all sessions were really interesting. The team from [Fairwork](https://fair.work/){:target="_blank"} introduced the project's goal, principles, how companies get rated, and some ratings of platform work companies that make business in India.
+Another interesting session on day 1 was "Fairness in Platform Labor". Please do not mistake me - all sessions were really interesting. The team from [Fairwork](https://fair.work/){:target="_blank"} introduced the project's goal, principles, how companies get rated, and some ratings of platform work companies that make business in India.
 
-> Our goal is to show that better, and fairer, jobs are possible in the platform economy.
+> Our goal is to show that better, and fairer jobs are possible in the platform economy.
 >
 > (The Fairwork project)
 
-The rating or scoring is based on the [five principles fair pay, fair conditions, fair contracts, fair management, and fair representation](https://fair.work/en/fw/principles/){:target="_blank"}. Points for fullfillment of the next principles will be only given if the previous principles are fullfilled (e.g. if fair pay is not fullfilled, then there cannot be any points for the next principles like fair conditions, fair contracts, ...). In India the most common mobility as a service providers (e.g. Uber, Ola) score 0 points in the [ratings of 2021 in India](https://fair.work/en/ratings/india/){:target="_blank"}. If you are interested, there are also [ratings for companies in Austria in 2022](https://fair.work/en/ratings/austria/){:target="_blank"}.
+The rating or scoring is based on the [five principles fair pay, fair conditions, fair contracts, fair management, and fair representation](https://fair.work/en/fw/principles/){:target="_blank"}. Points for the fulfillment of the next principles will be only given if the previous principles are fulfilled (e.g. if fair pay is not fulfilled, then there cannot be any points for the next principles like fair conditions, fair contracts, ...). In India the most common mobility-as-a-service providers (e.g. Uber, Ola) score 0 points in the [ratings of 2021 in India](https://fair.work/en/ratings/india/){:target="_blank"}. If you are interested, there are also [ratings for companies in Austria in 2022](https://fair.work/en/ratings/austria/){:target="_blank"}.
 
 > The gig economy is growing fast, but workers on these platforms often experience low pay, poor conditions, and a lack of job security.
 >
@@ -100,16 +100,16 @@ If you are interested in supporting the work of Fairwork, check out (or even joi
 - Biometric Device Identity
 - Identity in IoT
 - Cost of Privacy
-- IEEE P2989 Authentication in a Multi server environment/Privacy Preserving Machine learning
+- IEEE P2989 Authentication in a multi-server environment/Privacy Preserving Machine learning
 - Technologies for Transparency in Governance
 - Agriculture - The Good, Bad, Ugly of the Technology
-- No Laptop, No Problem - Utilize Smartphones to bring software development to everone
+- No Laptop, No Problem - Utilize Smartphones to bring software development to everyone
 
-At the beginning of the second day, it looked like we have to finish the day early, because only a few people showed up at the start time. But this was only caused to the mixture of the rain together with the heavy traffic in Bengaluru on that day. So after a while people came and at the end of the day we even struggled to finish all sessions on time.
+At the beginning of the second day, it looked like we have to finish the day early because only a few people showed up at the start time. But this was only caused to the mixture of the rain together with the heavy traffic in Bengaluru on that day. So after a while, people came and at the end of the day, we even struggled to finish all sessions on time.
 
-Again, the team of Lumos Labs held a nice interactive workshop on how to deploy a [smart contract](https://en.wikipedia.org/wiki/Smart_contract){:target="_blank"} using [Ethereum](https://en.wikipedia.org/wiki/Smart_contract){:target="_blank"}. We used [Solidity](https://soliditylang.org/){:target="_blank"} for creating the smart contract and used a bootsrapped project from the [Scaffold-ETH GitHub repo](https://github.com/scaffold-eth/scaffold-eth){:target="_blank"}.
+Again, the team of Lumos Labs held a nice interactive workshop on how to deploy a [smart contract](https://en.wikipedia.org/wiki/Smart_contract){:target="_blank"} using [Ethereum](https://en.wikipedia.org/wiki/Smart_contract){:target="_blank"}. We used [Solidity](https://soliditylang.org/){:target="_blank"} for creating the smart contract and used a bootstrapped project from the [Scaffold-ETH GitHub repo](https://github.com/scaffold-eth/scaffold-eth){:target="_blank"}.
 
-Afterwards there was a really interesting introduction to a new [standard P2989 for authentication in a multi-server environment](https://standards.ieee.org/ieee/2989/10566/){:target="_blank"}, that is currently in work. The working group is still being formed and there will be a kick-off meeting this July in 2022.
+Afterward, there was a really interesting introduction to a new [standard P2989 for authentication in a multi-server environment](https://standards.ieee.org/ieee/2989/10566/){:target="_blank"}, that is currently in work. The working group is still being formed, and there will be a kick-off meeting this July in 2022.
 
 <div class="img_row">
   <a href="/assets/img/2022-07-14-indiita-workshop/session.jpg" target="_blank">
