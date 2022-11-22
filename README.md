@@ -2,6 +2,11 @@
 
 Thank you lia bogoev for creating this awesome theme [*folio](https://github.com/bogoli/-folio)
 
+## useful links
+
+- live reload https://svrooij.io/2020/12/31/github-pages-live-reload/
+- live reload https://www.brianweet.com/2017/09/17/trying-out-docker-build-jekyll-blog.html
+
 <hr/>
 Copyright of theme:
 

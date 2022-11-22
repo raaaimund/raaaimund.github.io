@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
+gem 'webrick'
 gem 'github-pages', group: :jekyll_plugins
 gem 'jekyll-email-protect', group: :jekyll_plugins
 gem 'jekyll-paginate', group: :jekyll_plugins
