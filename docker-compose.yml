@@ -8,4 +8,4 @@ services:
     ports:
       - '4000:4000'
       - '35729:35729'
-    command: jekyll serve --incremental --livereload --force_polling
+    command: jekyll serve --livereload --force_polling
