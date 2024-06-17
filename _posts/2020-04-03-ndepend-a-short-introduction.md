@@ -50,7 +50,7 @@ The next days I will set up NDepend for one of my projects and integrate it in A
 [1]: https://www.ndepend.com/
 [2]: https://dev.azure.com/rittnauer/noe-club
 [3]: https://nö-club.at
-[4]: https://www.ndepend.com/docs
+[4]: https://www.ndepend.com/docs/getting-started-with-ndepend
 [5]: https://www.ndepend.com/docs/technical-debt#Debt
 
 [dashboard]: {{ site.baseurl }}/assets/img/2020-04-03-ndepend-a-short-introduction/ndepend-dashboard.png "dashboard"
