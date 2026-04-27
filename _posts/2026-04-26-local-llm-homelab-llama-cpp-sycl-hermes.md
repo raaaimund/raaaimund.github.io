@@ -230,14 +230,40 @@ curl -fsSL https://apt.repos.intel.com/intel-gpg-keys/GPG-PUB-KEY-INTEL-SW-PRODU
 
 ```bash
 apt-get install -y \
-  intel-level-zero-gpu libze1 libze-dev \
+  libze-intel-gpu1 libze1 libze-dev \
   intel-oneapi-compiler-dpcpp-cpp-2025.2 \
   intel-oneapi-mkl-devel-2025.2 \
   intel-oneapi-dnnl-2025.2 \
   cmake ninja-build git
 ```
 
-Note the package naming: Level Zero is split across `intel-level-zero-gpu`, `libze1`, and `libze-dev` — there is no single `level-zero` package. DNN is `intel-oneapi-dnnl-*` (with an `l`), not `intel-oneapi-dnn-*`.
+Note the package naming: Level Zero is split across `libze-intel-gpu1`, `libze1`, and `libze-dev` — there is no single `level-zero` package. DNN is `intel-oneapi-dnnl-*` (with an `l`), not `intel-oneapi-dnn-*`.
+
+**Do not use `intel-level-zero-gpu`.** It is the old Level Zero GPU driver package stuck at compute-runtime release 950, and was replaced by `libze-intel-gpu1` in newer releases. If you install the old package alongside modern `intel-opencl-icd`, you will get a runtime crash — see the [Intel GPU driver conflict](#intel-gpu-driver-conflict) section below.
+
+### Intel GPU Driver Conflict
+
+Ubuntu 25.x (questing) ships newer Intel compute-runtime packages (`libigc2`, `libigdfcl2`, `libze1`, `intel-opencl-icd`) from its own universe repository. These conflict with the older `intel-level-zero-gpu` from Intel's GPU apt repo.
+
+The root cause: both `libigc1` (needed by the old `intel-level-zero-gpu`) and `libigc2` (needed by the newer `intel-opencl-icd`) depend on `libllvm14t64`. When both IGC versions are loaded simultaneously by the same process, LLVM's global option registry gets the `simd-mode` option registered twice, crashing any SYCL tool with:
+
+```
+CommandLine Error: Option 'simd-mode' registered more than once!
+LLVM ERROR: inconsistency in registered CommandLine options
+```
+
+This manifests as `sycl-ls` aborting and `llama-server` crashing mid-inference with `Error OP SCALE`.
+
+**Fix:** use `libze-intel-gpu1` (the modern package that depends on `libigc2` only) and pin the relevant packages to Intel's GPU repo so Ubuntu's versions do not re-install on `apt upgrade`:
+
+```
+# /etc/apt/preferences.d/intel-gpu-runtime
+Package: intel-opencl-icd libze1 libze-dev libze-intel-gpu1 libigc2 libigdfcl2 libigdgmm12
+Pin: origin repositories.intel.com
+Pin-Priority: 1001
+```
+
+The `Pin-Priority: 1001` overrides Ubuntu's default priority (500) and ensures `apt upgrade` keeps pulling from Intel's repo rather than upgrading to Ubuntu's conflicting versions.
 
 ### Build
 
@@ -260,13 +286,23 @@ ninja llama-server
 
 ### Runtime Wrapper Script
 
-systemd services cannot `source` shell scripts directly, so oneAPI environment setup needs a wrapper:
+systemd services cannot `source` shell scripts directly, so oneAPI environment setup needs a wrapper. There are three non-obvious pitfalls:
+
+1. **`HOME` is empty in system services.** `setvars.sh` writes a cache file under `$HOME/.intel/...`. With `HOME` unset it calls `exit 1` internally, killing the shell before any output is produced. Fix: `export HOME=/root` *before* sourcing.
+
+2. **`set -e` propagates into sourced scripts.** With `set -euo pipefail` active, any command that returns non-zero inside `setvars.sh` causes bash to exit immediately — before the `|| true` on the outer `source` line can fire. A launch script does not need strict error handling; drop `set -euo pipefail` entirely.
+
+3. **Use `#!/bin/bash`, not `#!/usr/bin/env bash`.** The `PATH` in a systemd system service is minimal. `env` may not find `bash` depending on how `PATH` is constructed, while `/bin/bash` is always absolute.
 
 ```bash
-#!/usr/bin/env bash
-set -euo pipefail
+#!/bin/bash
 
-source /opt/intel/oneapi/setvars.sh --force >/dev/null 2>&1
+# HOME must be set: setvars.sh writes cache to $HOME/.intel — systemd starts with HOME empty
+export HOME=/root
+
+# Do NOT use set -euo pipefail here: set -e propagates into sourced scripts and causes
+# setvars.sh to exit the shell on any internal non-zero return, before || true can catch it
+source /opt/intel/oneapi/setvars.sh --force >/dev/null 2>&1 || true
 
 export ONEAPI_DEVICE_SELECTOR=level_zero:0
 export GGML_SYCL_DEVICE=0
@@ -409,10 +445,19 @@ llama_cpp_sycl_f16: true
   ansible.builtin.apt:
     update_cache: true
 
+- name: Pin Intel GPU packages to Intel repo to prevent Ubuntu version conflicts
+  ansible.builtin.copy:
+    dest: /etc/apt/preferences.d/intel-gpu-runtime
+    content: |
+      Package: intel-opencl-icd libze1 libze-dev libze-intel-gpu1 libigc2 libigdfcl2 libigdgmm12
+      Pin: origin repositories.intel.com
+      Pin-Priority: 1001
+    mode: "0644"
+
 - name: Install Intel GPU Level Zero runtime
   ansible.builtin.apt:
     name:
-      - intel-level-zero-gpu
+      - libze-intel-gpu1
       - libze1
       - libze-dev
     state: present
@@ -697,9 +742,14 @@ Flash attention (`--flash-attn on`) and batch tuning (`--batch-size 512`) showed
 - **Intel repo keys must be dearmored** — keys are distributed as ASCII PEM, apt needs binary GPG. Always use `curl | gpg --dearmor`, not `get_url`.
 - **oneAPI 2025.3 crashes** — use 2025.2. Pin the version. Never use the unversioned metapackage.
 - **llama.cpp commits after mid-2025 need oneAPI 2025.2+** — for `intel_gpu_bmg_g31`/`intel_gpu_wcl` GPU arch symbols in `sycl_hw.cpp`.
-- **`SYCL_CACHE_PERSISTENT=1` is essential** — without it, every restart recompiles SYCL kernels (~30–60s warmup).
+- **Use `libze-intel-gpu1`, not `intel-level-zero-gpu`** — the old package is stuck at compute-runtime release 950 and depends on `libigc1`. Ubuntu 25.x ships `libigc2` for everything else. Loading both IGC versions in the same process double-registers the LLVM `simd-mode` option and crashes any SYCL binary. `libze-intel-gpu1` is the replacement that depends only on `libigc2`.
+- **Pin Intel GPU packages against Ubuntu upgrades** — Ubuntu's universe repo ships newer compute-runtime packages that conflict with Intel's GPU repo. Use an apt preferences file with `Pin-Priority: 1001` for `intel-opencl-icd`, `libze1`, `libze-intel-gpu1`, `libigc2`, `libigdfcl2`, and `libigdgmm12`.
+- **`HOME` is empty in systemd system services** — `setvars.sh` writes state to `$HOME/.intel/...`. With `HOME` unset it calls `exit` internally, silently killing the bash process. Always `export HOME=/root` before sourcing it.
+- **`set -e` propagates into sourced scripts** — with `set -euo pipefail` active in the wrapper, any failing command inside `setvars.sh` exits bash before the `|| true` on the `source` line can catch it. Drop `set -euo pipefail` from launch wrapper scripts.
+- **Use `#!/bin/bash` not `#!/usr/bin/env bash`** — systemd system services start with a minimal PATH. `env` may not find `bash`; `/bin/bash` is always absolute.
+- **`SYCL_CACHE_PERSISTENT=1` is essential** — without it, every restart recompiles SYCL kernels (~5–15 min on first run, several seconds on warm cache).
 - **`UR_L0_ENABLE_RELAXED_ALLOCATION_LIMITS=1`** — required for large model allocations on UMA hardware.
-- **Level Zero package names** — it is `libze1` + `libze-dev`, not `level-zero`. DNN is `intel-oneapi-dnnl-*` (with an `l`).
+- **Level Zero package names** — it is `libze1` + `libze-dev` (not `level-zero`). DNN is `intel-oneapi-dnnl-*` (with an `l`), not `intel-oneapi-dnn-*`.
 - **LocalAI `gpu_layers: -1` silently falls back to CPU** — llama.cpp SYCL does not treat -1 as "all layers". Use `99` to safely cover any model up to ~100 transformer layers.
 - **LocalAI healthcheck port** — the base image checks port 8080. A sidecar on a different port needs a custom `healthcheck:` block with a long `start_period` (180s+).
 - **Traefik idle timeout** — default 180s kills long inference. Set `idleTimeout=600s` or `0` for unlimited.
