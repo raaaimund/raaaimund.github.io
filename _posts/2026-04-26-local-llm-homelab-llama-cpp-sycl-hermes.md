@@ -254,16 +254,9 @@ LLVM ERROR: inconsistency in registered CommandLine options
 
 This manifests as `sycl-ls` aborting and `llama-server` crashing mid-inference with `Error OP SCALE`.
 
-**Fix:** use `libze-intel-gpu1` (the modern package that depends on `libigc2` only) and pin the relevant packages to Intel's GPU repo so Ubuntu's versions do not re-install on `apt upgrade`:
+**Fix:** install `libze-intel-gpu1` (the modern package) from Ubuntu's repos. Ubuntu's version of this package does not carry a hard `libigc` dependency at all — it embeds or dynamically opens IGC without declaring a shared-library dep — so only one IGC instance is loaded (from `intel-opencl-icd`'s dependency on `libigc2`). The LLVM registry gets the option registered exactly once. No conflict.
 
-```
-# /etc/apt/preferences.d/intel-gpu-runtime
-Package: intel-opencl-icd libze1 libze-dev libze-intel-gpu1 libigc2 libigdfcl2 libigdgmm12
-Pin: origin repositories.intel.com
-Pin-Priority: 1001
-```
-
-The `Pin-Priority: 1001` overrides Ubuntu's default priority (500) and ensures `apt upgrade` keeps pulling from Intel's repo rather than upgrading to Ubuntu's conflicting versions.
+Additionally, Ubuntu's `libigc2 2.16.0` is measurably faster than Intel's GPU repo `2.11.12` on Iris Xe: generation speed improves from ~2.7 to ~5.6 tok/s. **Do not pin these packages to Intel's GPU repo** — Ubuntu's versions are both bug-free and faster here.
 
 ### Build
 
@@ -445,14 +438,10 @@ llama_cpp_sycl_f16: true
   ansible.builtin.apt:
     update_cache: true
 
-- name: Pin Intel GPU packages to Intel repo to prevent Ubuntu version conflicts
-  ansible.builtin.copy:
-    dest: /etc/apt/preferences.d/intel-gpu-runtime
-    content: |
-      Package: intel-opencl-icd libze1 libze-dev libze-intel-gpu1 libigc2 libigdfcl2 libigdgmm12
-      Pin: origin repositories.intel.com
-      Pin-Priority: 1001
-    mode: "0644"
+- name: Remove Intel GPU runtime pin if present
+  ansible.builtin.file:
+    path: /etc/apt/preferences.d/intel-gpu-runtime
+    state: absent
 
 - name: Install Intel GPU Level Zero runtime
   ansible.builtin.apt:
@@ -707,14 +696,17 @@ Hermes sends prompts that can reach 13,000+ tokens for agentic tasks. At ~82 tok
 
 ## Performance
 
-Qwen3.5-4B Q4_K_M on Intel Iris Xe (UMA, Ubuntu 25.10):
+Qwen3.5-4B Q4_K_M on Intel Iris Xe (UMA, Ubuntu 25.10), compute-runtime 25.31 (IGC 2.16.0):
 
 | Metric | Value |
 |--------|-------|
-| Generation speed | ~7.4 tok/s |
-| Prompt eval (150 tokens) | ~82 tok/s |
-| Time to first token (150-token prompt) | ~1.8s |
+| Generation speed | ~5.6 tok/s |
+| Prompt eval (74 tokens) | ~40 tok/s |
 | Context size | 32768 tokens |
+
+Prompt eval scales with batch size — longer prompts process faster per token due to better GPU utilization. Generation speed is limited by the Mamba/SSM recurrent layers in Qwen3.5 (every 3 out of 4 layers), which require sequential state updates at decode time rather than the purely parallel attention computation.
+
+**Compute-runtime version matters.** Intel's GPU repo release 1146 (IGC 2.11.12) gives ~2.7 tok/s generation on Iris Xe. Ubuntu's 25.31 package (IGC 2.16.0) gives ~5.6 tok/s — a 2× improvement from the same binary and same model.
 
 Benchmarked with the native `/completion` endpoint:
 
@@ -743,7 +735,7 @@ Flash attention (`--flash-attn on`) and batch tuning (`--batch-size 512`) showed
 - **oneAPI 2025.3 crashes** — use 2025.2. Pin the version. Never use the unversioned metapackage.
 - **llama.cpp commits after mid-2025 need oneAPI 2025.2+** — for `intel_gpu_bmg_g31`/`intel_gpu_wcl` GPU arch symbols in `sycl_hw.cpp`.
 - **Use `libze-intel-gpu1`, not `intel-level-zero-gpu`** — the old package is stuck at compute-runtime release 950 and depends on `libigc1`. Ubuntu 25.x ships `libigc2` for everything else. Loading both IGC versions in the same process double-registers the LLVM `simd-mode` option and crashes any SYCL binary. `libze-intel-gpu1` is the replacement that depends only on `libigc2`.
-- **Pin Intel GPU packages against Ubuntu upgrades** — Ubuntu's universe repo ships newer compute-runtime packages that conflict with Intel's GPU repo. Use an apt preferences file with `Pin-Priority: 1001` for `intel-opencl-icd`, `libze1`, `libze-intel-gpu1`, `libigc2`, `libigdfcl2`, and `libigdgmm12`.
+- **Do not pin `libze-intel-gpu1` to Intel's GPU repo** — Ubuntu's version of this package drops the `libigc` shared-library dependency entirely (no double-load, no conflict) *and* ships a faster IGC (2.16 vs 2.11 gives 2× generation speed on Iris Xe). Intel's GPU repo version is older and slower here. Use Ubuntu's packages.
 - **`HOME` is empty in systemd system services** — `setvars.sh` writes state to `$HOME/.intel/...`. With `HOME` unset it calls `exit` internally, silently killing the bash process. Always `export HOME=/root` before sourcing it.
 - **`set -e` propagates into sourced scripts** — with `set -euo pipefail` active in the wrapper, any failing command inside `setvars.sh` exits bash before the `|| true` on the `source` line can catch it. Drop `set -euo pipefail` from launch wrapper scripts.
 - **Use `#!/bin/bash` not `#!/usr/bin/env bash`** — systemd system services start with a minimal PATH. `env` may not find `bash`; `/bin/bash` is always absolute.
