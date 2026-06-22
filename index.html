@@ -6,9 +6,14 @@ layout: default
   <div class="header-bar">
     <h1>{{ site.blog_name }}</h1>
   </div>
+
+  <div class="search-container">
+    <md-outlined-text-field id="search-input" label="Search posts..." autocomplete="off" type="search"></md-outlined-text-field>
+  </div>
+  <ul class="post-list" id="search-results" style="display:none;"></ul>
 {% endif %}
 
-<ul class="post-list">
+<ul class="post-list" id="paginated-posts">
   {% for post in paginator.posts %}
     <li>
       <h2><a class="post-title" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h2>
@@ -19,3 +24,56 @@ layout: default
 </ul>
 
 {% include pagination.html %}
+
+{% if paginator.page < 2 %}
+<script type="module">import 'https://esm.run/@material/web/textfield/outlined-text-field.js';</script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js/dist/fuse.min.js"></script>
+<script>
+(function () {
+  const input = document.getElementById('search-input');
+  const paginatedPosts = document.getElementById('paginated-posts');
+  const pagination = document.querySelector('.pagination');
+  const searchResults = document.getElementById('search-results');
+  let fuse;
+
+  async function initFuse() {
+    if (fuse) return;
+    const res = await fetch('{{ site.baseurl }}/search.json');
+    const posts = await res.json();
+    fuse = new Fuse(posts, {
+      keys: ['title', 'description', 'tags'],
+      threshold: 0.4,
+      ignoreLocation: true
+    });
+  }
+
+  input.addEventListener('input', async function () {
+    const query = this.value.trim();
+    if (!query) {
+      searchResults.style.display = 'none';
+      searchResults.innerHTML = '';
+      paginatedPosts.style.display = '';
+      if (pagination) pagination.style.display = '';
+      return;
+    }
+    await initFuse();
+    paginatedPosts.style.display = 'none';
+    if (pagination) pagination.style.display = 'none';
+    searchResults.style.display = '';
+    const matches = fuse.search(query);
+    if (matches.length === 0) {
+      searchResults.innerHTML = '<li><p class="search-no-results">No posts found.</p></li>';
+    } else {
+      searchResults.innerHTML = matches.map(function (r) {
+        const p = r.item;
+        return '<li>' +
+          '<h2><a class="post-title" href="' + p.url + '">' + p.title + '</a></h2>' +
+          '<p class="post-meta">' + p.date + '</p>' +
+          (p.description ? '<p>' + p.description + '</p>' : '') +
+          '</li>';
+      }).join('');
+    }
+  });
+})();
+</script>
+{% endif %}

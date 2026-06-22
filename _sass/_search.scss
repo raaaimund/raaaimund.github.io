@@ -1,0 +1,21 @@
+.search-container {
+  margin-bottom: $space-3;
+
+  md-outlined-text-field {
+    width: 100%;
+    --md-sys-color-primary: #{$purple};
+    --md-outlined-text-field-input-text-font: #{$font-family};
+    --md-outlined-text-field-label-text-font: #{$font-family};
+    --md-outlined-text-field-outline-color: transparent;
+    --md-outlined-text-field-hover-outline-color: transparent;
+    --md-outlined-text-field-focus-outline-color: transparent;
+    --md-outlined-text-field-outline-width: 0;
+    --md-outlined-text-field-hover-outline-width: 0;
+    --md-outlined-text-field-focus-outline-width: 0;
+  }
+}
+
+.search-no-results {
+  color: $grey-color;
+  padding: $space-3 0;
+}
