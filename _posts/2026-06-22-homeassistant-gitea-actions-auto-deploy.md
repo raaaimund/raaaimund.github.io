@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Auto-deploying Home Assistant config via Gitea Actions
-date: 2026-06-22 18:00
+date: 2026-06-22
 author: Raimund Rittnauer
 description: How to set up a Gitea (or GitHub) Actions workflow that SSHes into a Home Assistant OS instance, runs git pull on the config directory, and fires a persistent web UI notification with a restart link when changes land
 categories: tech
