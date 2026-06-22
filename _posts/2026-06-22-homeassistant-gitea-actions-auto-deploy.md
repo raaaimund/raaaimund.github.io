@@ -112,7 +112,7 @@ jobs:
 
 ### Why an unquoted heredoc?
 
-The SSH command uses `<< ENDSSH` (unquoted delimiter). This lets Gitea Actions expand `${% raw %}{{ gitea.sha }}{% endraw %}` etc. before sending the script to the remote shell. Remote shell variables (`$RESULT`, `$SUPERVISOR_TOKEN`) are escaped with `\$` so they survive the local expansion and get evaluated on the HA host.
+The SSH command uses `<< ENDSSH` (unquoted delimiter). This lets Gitea Actions expand `${{ "{{" }} gitea.sha {{ "}}" }}` etc. before sending the script to the remote shell. Remote shell variables (`$RESULT`, `$SUPERVISOR_TOKEN`) are escaped with `\$` so they survive the local expansion and get evaluated on the HA host.
 
 A quoted heredoc (`<< 'ENDSSH'`) would block all local expansion — fine for most variables, but then you cannot inject Gitea context values like the commit SHA into the script.
 
@@ -182,7 +182,7 @@ Subsequent deploys trigger the webhook and update the notification automatically
 | `exit code 7` (curl) | `localhost:8123` unreachable from SSH addon container | Resolve HA core IP dynamically via `supervisor/core/info` |
 | `exit code 6` (curl) | Quoted heredoc + inner quotes caused curl to run on the runner, not the HA host | Use unquoted heredoc `<< ENDSSH` with `\$` escaping for remote variables |
 | `HTTP 401` from supervisor proxy | Supervisor proxy requires its own auth for webhook endpoints | Call HA core directly on its IP instead of going through `http://supervisor/core/api/...` |
-| Notification shows no commit link | `${% raw %}{{ gitea.sha }}{% endraw %}` inside a quoted heredoc is not expanded | Use unquoted heredoc so Gitea context variables are substituted before the script is sent to SSH |
+| Notification shows no commit link | `${{ "{{" }} gitea.sha {{ "}}" }}` inside a quoted heredoc is not expanded | Use unquoted heredoc so Gitea context variables are substituted before the script is sent to SSH |
 
 ## No restart button in the web UI
 
