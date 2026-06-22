@@ -6,11 +6,11 @@ email: raimund@rittnauer.at
 description: >
   Blog mostly about tech related stuff
 
-url: "https://raaaimund.github.io"
+url: "https://rittnauer.at"
 baseurl: ""
 last_updated: # leave blank if you don't want to display last updated
 
-google_analytics: "UA-25417012-4"
+google_analytics: "G-2ETM30Q7HX"
 
 # -----------------------------------------------------------------------------
 # jekyll-seo-tag
