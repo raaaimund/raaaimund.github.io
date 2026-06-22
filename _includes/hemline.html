@@ -1,14 +1,8 @@
-<!-- Load jQuery -->
-<script src="//code.jquery.com/jquery-{{ site.jquery_version }}.min.js"></script>
-
-<!-- Load Common JS -->
-<script src="{{ '/assets/js/common.js' | prepend: site.baseurl }}"></script>
-
 {% if site.enable_katex %}
 <!-- Load KaTeX -->
 <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/KaTeX/{{ site.katex_version }}/katex.min.css">
 <script src="//cdnjs.cloudflare.com/ajax/libs/KaTeX/{{ site.katex_version }}/katex.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/KaTeX/{{ site.katex_version }}/contrib/auto-render.min.js" integrity="sha512-ZA/RPrAo88DlwRnnoNVqKINnQNcWERzRK03PDaA4GIJiVZvGFIWQbdWCsUebMZfkWohnfngsDjXzU6PokO4jGw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/KaTeX/{{ site.katex_version }}/contrib/auto-render.min.js" integrity="sha512-iWiuBS5nt6r60fCz26Nd0Zqe0nbk1ZTIQbl3Kv7kYsX+yKMUFHzjaH2+AnM6vp2Xs+gNmaBAVWJjSmuPw76Efg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script>
   document.addEventListener("DOMContentLoaded", function() {
       renderMathInElement(document.body, {
