@@ -76,7 +76,6 @@ exclude: [vendor]
 plugins:
     - jekyll-email-protect
     - jekyll-paginate
-    - jekyll/scholar
     - jekyll-seo-tag
     - jekyll-sitemap
     - jemoji
