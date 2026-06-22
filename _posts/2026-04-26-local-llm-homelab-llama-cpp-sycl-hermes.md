@@ -73,6 +73,7 @@ local_ai_image: localai/localai:master-sycl-f16-ffmpeg-core
 
 ### docker-compose.yml.j2
 
+{% raw %}
 ```yaml
 services:
   local-ai:
@@ -105,6 +106,7 @@ networks:
   default:
     driver: bridge
 ```
+{% endraw %}
 
 ### defaults/main.yml
 
@@ -130,6 +132,7 @@ local_ai_api_key: ""
 
 The bundled llama.cpp in older LocalAI images predates Qwen3.5 architecture support. The workaround is a sidecar container running a custom-built binary mounted from the host:
 
+{% raw %}
 ```yaml
   llama-server-qwen35:
     image: {{ local_ai_image }}
@@ -162,11 +165,13 @@ The bundled llama.cpp in older LocalAI images predates Qwen3.5 architecture supp
     networks:
       - default
 ```
+{% endraw %}
 
 The `start_period: 180s` in the healthcheck matters: the LocalAI image has a built-in healthcheck on port 8080, and the sidecar's model warmup takes up to 2 minutes on first start. Without a long start_period, Docker marks the container unhealthy before the model finishes loading.
 
 ### Traefik Dynamic Config (LocalAI)
 
+{% raw %}
 ```yaml
 http:
   routers:
@@ -181,6 +186,7 @@ http:
         servers:
           - url: http://local-ai:8080
 ```
+{% endraw %}
 
 ### Open WebUI with Two Backends
 
@@ -402,6 +408,7 @@ llama_cpp_sycl_f16: true
 
 #### tasks/intel-repos.yml
 
+{% raw %}
 ```yaml
 - name: Download and dearmor Intel GPU drivers signing key
   ansible.builtin.shell:
@@ -459,9 +466,11 @@ llama_cpp_sycl_f16: true
       - intel-oneapi-dnnl-{{ llama_cpp_oneapi_version }}
     state: present
 ```
+{% endraw %}
 
 #### tasks/build.yml
 
+{% raw %}
 ```yaml
 - name: Clone llama.cpp repository
   ansible.builtin.git:
@@ -518,9 +527,11 @@ llama_cpp_sycl_f16: true
   when: llama_build is changed
   notify: restart llama-server
 ```
+{% endraw %}
 
 #### tasks/models.yml
 
+{% raw %}
 ```yaml
 - name: Create model directory
   ansible.builtin.file:
@@ -551,6 +562,7 @@ llama_cpp_sycl_f16: true
       Add it to llama_cpp_models with a url, or place it manually.
   when: not active_model_stat.stat.exists
 ```
+{% endraw %}
 
 #### host_vars for the AI host
 
@@ -575,6 +587,7 @@ traefik_extra_hosts:
   - "host-gateway:host-gateway"
 ```
 
+{% raw %}
 ```yaml
 # traefik.dynamic.yml.j2
 http:
@@ -590,11 +603,13 @@ http:
         servers:
           - url: http://host-gateway:8080
 ```
+{% endraw %}
 
 ### Open WebUI (host-native)
 
 Same `host-gateway` trick for Open WebUI:
 
+{% raw %}
 ```yaml
 # docker-compose.yml.j2
 services:
@@ -612,6 +627,7 @@ services:
     networks:
       - dmznet
 ```
+{% endraw %}
 
 `ENABLE_API_KEYS=true` activates Bearer token auth on the `/api/v1/` endpoints, required for programmatic access from Hermes or other clients.
 
@@ -636,6 +652,7 @@ traefik_commands:
 
 ### config.yaml.j2
 
+{% raw %}
 ```yaml
 model:
   provider: custom
@@ -650,9 +667,11 @@ providers:
 terminal:
   backend: local
 ```
+{% endraw %}
 
 ### hermes-gateway.service.j2
 
+{% raw %}
 ```ini
 [Unit]
 Description=Hermes Gateway
@@ -667,6 +686,7 @@ User=root
 WorkingDirectory={{ hermes_data_dir }}
 Environment=HOME=/root
 ```
+{% endraw %}
 
 `User=root` is **not optional**. Hermes reads its own systemd unit file at startup via `_read_systemd_user_from_unit()` and raises `ValueError: Refusing to install the gateway system service as root` if the unit does not explicitly declare `User=root`. The `--run-as-user root` flag only exists on `gateway install`, not on `gateway run`.
 

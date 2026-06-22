@@ -252,6 +252,7 @@ mcp_servers:
 
 If you manage Hermes with Ansible, store the token in `host_vars` and template it in:
 
+{% raw %}
 ```yaml
 # host_vars/agent.home.rittnauer.at/hermes.yml
 hermes_penpot_mcp_token: "<your-token>"
@@ -260,7 +261,9 @@ hermes_mcp_servers:
   penpot:
     url: "https://mcp.design.home.rittnauer.at/mcp?userToken={{ hermes_penpot_mcp_token }}"
 ```
+{% endraw %}
 
+{% raw %}
 ```jinja
 # config.yaml.j2
 {% if hermes_mcp_servers %}
@@ -272,6 +275,7 @@ mcp_servers:
 {% endfor %}
 {% endif %}
 ```
+{% endraw %}
 
 ## Ansible Role Summary
 
@@ -289,14 +293,17 @@ roles/penpot/
 
 Relevant `defaults/main.yml` variables:
 
+{% raw %}
 ```yaml
 penpot_mcp_enabled: false
 penpot_mcp_version: "2.14.1"
 penpot_mcp_public_host: "mcp.{{ public_fqdn }}"
 ```
+{% endraw %}
 
 The task that builds the MCP image only runs when `penpot_mcp_enabled: true`:
 
+{% raw %}
 ```yaml
 - name: Template Dockerfile.mcp
   ansible.builtin.template:
@@ -305,6 +312,7 @@ The task that builds the MCP image only runs when `penpot_mcp_enabled: true`:
   when: penpot_mcp_enabled
   notify: Restart penpot
 ```
+{% endraw %}
 
 ## Gotchas Summary
 
