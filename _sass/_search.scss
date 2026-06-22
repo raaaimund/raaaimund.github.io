@@ -6,6 +6,8 @@
     --md-sys-color-primary: #{$purple};
     --md-outlined-text-field-input-text-font: #{$font-family};
     --md-outlined-text-field-label-text-font: #{$font-family};
+    --md-outlined-text-field-label-text-color: #{$theme-color};
+    --md-outlined-text-field-hover-label-text-color: #{$theme-color};
     --md-outlined-text-field-outline-color: transparent;
     --md-outlined-text-field-hover-outline-color: transparent;
     --md-outlined-text-field-focus-outline-color: transparent;

@@ -14,6 +14,11 @@
     line-height: $nav-height;
     letter-spacing: -1px;
     margin-bottom: 0;
+    color: $theme-color;
+
+    a, a:visited, a:hover {
+        color: $theme-color;
+    }
 }
 .site-nav {
     float: right;

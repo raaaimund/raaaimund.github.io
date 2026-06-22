@@ -4,7 +4,7 @@
 
     {% if page.layout != "about" %}
     <span class="site-title">
-      <strong>{{ site.name }}</strong>
+      <a class="page-link" href="{{ site.baseurl }}/">{{ site.blog_name }}</a>
     </span>
     {% endif %}
 
@@ -24,16 +24,12 @@
       </label>
 
       <div class="trigger">
-        <!-- Home -->
-        <a class="page-link" href="{{ site.baseurl }}/">home</a>
-
         <!-- Pages -->
         {% for page in site.pages %}
         {% if page.title and page.url != "/" %}
         <a class="page-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
         {% endif %}
         {% endfor %}
-
       </div>
     </nav>
 
